@@ -1,3 +1,8 @@
+:root {
+  --btn-gradient: linear-gradient(195deg, rgba(0, 255, 41, 1) 0%, rgba(10, 255, 255, 1) 87%);
+  --bg-gradient: linear-gradient(171deg, rgba(252, 242, 2, 1) 27%, rgba(255, 107, 0, 1) 100%);
+}
+
 html {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -15,4 +20,8 @@ ul {
 
 ol {
   list-style-type: disc;
+}
+
+.btn-background {
+  background: var(--btn-gradient);
 }
