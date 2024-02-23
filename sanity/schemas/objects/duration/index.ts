@@ -5,20 +5,15 @@ import { DurationInput } from './DurationInput'
 export default defineField({
   type: 'object',
   name: 'duration',
-  title: 'Duration',
+  title: 'Publication Date',
   components: {
     input: DurationInput,
   },
   fields: [
     defineField({
       type: 'datetime',
-      name: 'start',
-      title: 'Start',
-    }),
-    defineField({
-      type: 'datetime',
-      name: 'end',
-      title: 'End',
+      name: 'publishedAt',
+      title: 'Published on',
     }),
   ],
 })

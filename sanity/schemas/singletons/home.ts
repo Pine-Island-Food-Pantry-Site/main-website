@@ -59,15 +59,15 @@ export default defineType({
       validation: (rule) => rule.max(155).required(),
     }),
     defineField({
-      name: 'showcaseProjects',
-      title: 'Showcase projects',
+      name: 'Posts',
+      title: 'Posts for the website',
       description:
-        'These are the projects that will appear first on your landing page.',
+        'These are the posts that will be shown on the /posts page.',
       type: 'array',
       of: [
         defineArrayMember({
           type: 'reference',
-          to: [{ type: 'project' }],
+          to: [{ type: 'post' }],
         }),
       ],
     }),

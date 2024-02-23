@@ -26,15 +26,13 @@ export const pagesBySlugQuery = groq`
   }
 `
 
-export const projectBySlugQuery = groq`
-  *[_type == "project" && slug.current == $slug][0] {
+export const postBySlugQuery = groq`
+  *[_type == "post" && slug.current == $slug][0] {
     _id,
-    client,
     coverImage,
     description,
     duration,
     overview,
-    site,
     "slug": slug.current,
     tags,
     title,

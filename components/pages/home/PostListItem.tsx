@@ -2,15 +2,15 @@ import type { PortableTextBlock } from '@portabletext/types'
 
 import { CustomPortableText } from '@/components/shared/CustomPortableText'
 import ImageBox from '@/components/shared/ImageBox'
-import type { ShowcaseProject } from '@/types'
+import type { Posts } from '@/types'
 
-interface ProjectProps {
-  project: ShowcaseProject
+interface PostProps {
+  post: Posts
   odd: number
 }
 
-export function ProjectListItem(props: ProjectProps) {
-  const { project, odd } = props
+export function PostListItem(props: PostProps) {
+  const { post, odd } = props
 
   return (
     <div
@@ -20,34 +20,34 @@ export function ProjectListItem(props: ProjectProps) {
     >
       <div className="w-full xl:w-9/12">
         <ImageBox
-          image={project.coverImage}
-          alt={`Cover image from ${project.title}`}
+          image={post.coverImage}
+          alt={`Cover image from ${post.title}`}
           classesWrapper="relative aspect-[16/9]"
         />
       </div>
       <div className="flex xl:w-1/4">
-        <TextBox project={project} />
+        <TextBox post={post} />
       </div>
     </div>
   )
 }
 
-function TextBox({ project }: { project: ShowcaseProject }) {
+function TextBox({ post }: { post: Posts }) {
   return (
     <div className="relative mt-2 flex w-full flex-col justify-between p-3 xl:mt-0">
       <div>
         {/* Title */}
         <div className="mb-2 text-xl font-extrabold tracking-tight md:text-2xl">
-          {project.title}
+          {post.title}
         </div>
         {/* Overview  */}
         <div className="font-serif text-gray-500">
-          <CustomPortableText value={project.overview as PortableTextBlock[]} />
+          <CustomPortableText value={post.overview as PortableTextBlock[]} />
         </div>
       </div>
       {/* Tags */}
       <div className="mt-4 flex flex-row gap-x-2">
-        {project.tags?.map((tag, key) => (
+        {post.tags?.map((tag, key) => (
           <div className="text-sm font-medium lowercase md:text-lg" key={key}>
             #{tag}
           </div>

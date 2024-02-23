@@ -12,7 +12,7 @@ import { apiVersion, dataset, projectId, studioUrl } from '@/sanity/lib/api'
 import { locate } from '@/sanity/plugins/locate'
 import { pageStructure, singletonPlugin } from '@/sanity/plugins/settings'
 import page from '@/sanity/schemas/documents/page'
-import project from '@/sanity/schemas/documents/project'
+import post from '@/sanity/schemas/documents/post'
 import duration from '@/sanity/schemas/objects/duration'
 import milestone from '@/sanity/schemas/objects/milestone'
 import timeline from '@/sanity/schemas/objects/timeline'
@@ -21,7 +21,7 @@ import settings from '@/sanity/schemas/singletons/settings'
 
 const title =
   process.env.NEXT_PUBLIC_SANITY_PROJECT_TITLE ||
-  'Next.js Personal Website with Sanity.io'
+  'Pine Island Food Pantry'
 
 export default defineConfig({
   basePath: studioUrl,
@@ -37,7 +37,7 @@ export default defineConfig({
       // Documents
       duration,
       page,
-      project,
+      post,
       // Objects
       milestone,
       timeline,
