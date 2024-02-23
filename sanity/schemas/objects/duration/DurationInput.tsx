@@ -16,8 +16,7 @@ export function DurationInput(props: ObjectInputProps) {
     [members],
   )
 
-  const start = fieldMembers.find((mem) => mem.name === 'start')
-  const end = fieldMembers.find((mem) => mem.name === 'end')
+  const pubDate = fieldMembers.find((mem) => mem.name === 'publishedAt')
 
   const renderField: RenderFieldCallback = useCallback(
     (props) => props.children,
@@ -32,14 +31,9 @@ export function DurationInput(props: ObjectInputProps) {
   return (
     <Flex align="center" gap={3}>
       <Box flex={1}>
-        {start && <MemberField {...renderProps} member={start} />}
+        {pubDate && <MemberField {...renderProps} member={pubDate} />}
       </Box>
-      <Box>
-        <Text muted>
-          <ArrowRightIcon />
-        </Text>
-      </Box>
-      <Box flex={1}>{end && <MemberField {...renderProps} member={end} />}</Box>
+      <ArrowRightIcon />
     </Flex>
   )
 }

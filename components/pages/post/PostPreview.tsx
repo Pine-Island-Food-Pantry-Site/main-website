@@ -2,21 +2,21 @@
 
 import { type QueryResponseInitial } from '@sanity/react-loader'
 
-import { projectBySlugQuery } from '@/sanity/lib/queries'
+import { postBySlugQuery } from '@/sanity/lib/queries'
 import { useQuery } from '@/sanity/loader/useQuery'
-import { ProjectPayload } from '@/types'
+import { PostPayload } from '@/types'
 
-import ProjectPage from './ProjectPage'
+import ProjectPage from './PostPage'
 
 type Props = {
   params: { slug: string }
-  initial: QueryResponseInitial<ProjectPayload | null>
+  initial: QueryResponseInitial<PostPayload | null>
 }
 
 export default function ProjectPreview(props: Props) {
   const { params, initial } = props
-  const { data, encodeDataAttribute } = useQuery<ProjectPayload | null>(
-    projectBySlugQuery,
+  const { data, encodeDataAttribute } = useQuery<PostPayload | null>(
+    postBySlugQuery,
     params,
     { initial },
   )

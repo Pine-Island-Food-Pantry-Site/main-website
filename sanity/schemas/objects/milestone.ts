@@ -20,7 +20,7 @@ export default defineType({
       name: 'image',
       title: 'Image',
       type: 'image',
-      description: "This image will be used as the milestone's cover image.",
+      description: "This image will be used as the posts's cover image.",
       options: {
         hotspot: true,
       },
@@ -30,7 +30,7 @@ export default defineType({
       title: 'Tags',
       type: 'array',
       description:
-        'Tags to help categorize the milestone. For example: name of the university course, name of the project, the position you held within the project etc. ',
+        'Tags to help categorize the post. This can help with search later on.',
       of: [{ type: 'string' }],
       options: {
         layout: 'tags',
@@ -53,8 +53,7 @@ export default defineType({
       return {
         media: image,
         subtitle: [
-          duration?.start && new Date(duration.start).getFullYear(),
-          duration?.end && new Date(duration.end).getFullYear(),
+          duration?.publishedAt && new Date(duration.publishedAt).getFullYear(),
         ]
           .filter(Boolean)
           .join(' - '),

@@ -4,13 +4,11 @@ import dynamic from 'next/dynamic'
 import { draftMode } from 'next/headers'
 import { notFound } from 'next/navigation'
 
-import { ProjectPage } from '@/components/pages/project/ProjectPage'
+import { PostPage } from '@/components/pages/post/PostPage'
 import { urlForOpenGraphImage } from '@/sanity/lib/utils'
 import { generateStaticSlugs } from '@/sanity/loader/generateStaticSlugs'
-import { loadProject } from '@/sanity/loader/loadQuery'
-const ProjectPreview = dynamic(
-  () => import('@/components/pages/project/ProjectPreview'),
-)
+import { loadPost } from '@/sanity/loader/loadQuery'
+const PostPreview = dynamic(() => import('@/components/pages/post/PostPreview'))
 
 type Props = {
   params: { slug: string }
@@ -20,13 +18,13 @@ export async function generateMetadata(
   { params }: Props,
   parent: ResolvingMetadata,
 ): Promise<Metadata> {
-  const { data: project } = await loadProject(params.slug)
-  const ogImage = urlForOpenGraphImage(project?.coverImage)
+  const { data: post } = await loadPost(params.slug)
+  const ogImage = urlForOpenGraphImage(post?.coverImage)
 
   return {
-    title: project?.title,
-    description: project?.overview
-      ? toPlainText(project.overview)
+    title: post?.title,
+    description: post?.overview
+      ? toPlainText(post.overview)
       : (await parent).description,
     openGraph: ogImage
       ? {
@@ -37,19 +35,19 @@ export async function generateMetadata(
 }
 
 export function generateStaticParams() {
-  return generateStaticSlugs('project')
+  return generateStaticSlugs('post')
 }
 
 export default async function ProjectSlugRoute({ params }: Props) {
-  const initial = await loadProject(params.slug)
+  const initial = await loadPost(params.slug)
 
   if (draftMode().isEnabled) {
-    return <ProjectPreview params={params} initial={initial} />
+    return <PostPreview params={params} initial={initial} />
   }
 
   if (!initial.data) {
     notFound()
   }
 
-  return <ProjectPage data={initial.data} />
+  return <PostPage data={initial.data} />
 }

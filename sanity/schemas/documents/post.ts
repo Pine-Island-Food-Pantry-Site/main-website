@@ -2,8 +2,8 @@ import { DocumentIcon, ImageIcon } from '@sanity/icons'
 import { defineArrayMember, defineField, defineType } from 'sanity'
 
 export default defineType({
-  name: 'project',
-  title: 'Project',
+  name: 'post',
+  title: 'Post',
   type: 'document',
   icon: DocumentIcon,
   // Uncomment below to have edits publish automatically as you type
@@ -11,7 +11,7 @@ export default defineType({
   fields: [
     defineField({
       name: 'title',
-      description: 'This field is the title of your project.',
+      description: 'This field is the title of your post.',
       title: 'Title',
       type: 'string',
       validation: (rule) => rule.required(),
@@ -30,7 +30,7 @@ export default defineType({
     defineField({
       name: 'overview',
       description:
-        'Used both for the <meta> description tag for SEO, and project subheader.',
+        'Used both for the <meta> description tag for SEO, and post subheader.',
       title: 'Overview',
       type: 'array',
       of: [
@@ -60,7 +60,7 @@ export default defineType({
       name: 'coverImage',
       title: 'Cover Image',
       description:
-        'This image will be used as the cover image for the project. If you choose to add it to the show case projects, this is the image displayed in the list within the homepage.',
+        'This image will be used as the cover image for the post. It will also be used as the preview image for social media sharing.',
       type: 'image',
       options: {
         hotspot: true,
@@ -69,18 +69,8 @@ export default defineType({
     }),
     defineField({
       name: 'duration',
-      title: 'Duration',
+      title: 'Publish Date',
       type: 'duration',
-    }),
-    defineField({
-      name: 'client',
-      title: 'Client',
-      type: 'string',
-    }),
-    defineField({
-      name: 'site',
-      title: 'Site',
-      type: 'url',
     }),
     defineField({
       name: 'tags',
@@ -93,7 +83,7 @@ export default defineType({
     }),
     defineField({
       name: 'description',
-      title: 'Project Description',
+      title: 'Post Description',
       type: 'array',
       of: [
         defineArrayMember({
