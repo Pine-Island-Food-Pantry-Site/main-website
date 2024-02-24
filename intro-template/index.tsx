@@ -45,14 +45,14 @@ export default memo(function IntroTemplate() {
   }
 
   return (
-    <div className="flex flex-col bg-white">
+    <div className="flex flex-col bg-gradient">
       <div className="flex gap-5 justify-between items-end px-11 py-2.5 w-full text-2xl text-center text-black bg-white max-md:flex-wrap max-md:px-5 max-md:max-w-full">
         <div className="flex gap-5 justify-between self-stretch max-md:flex-wrap max-md:max-w-full">
-          <img
-            alt="stuff"
-            loading="lazy"
-            srcSet="https://cdn.builder.io/api/v1/image/assets/TEMP/d457472f6ba8243cc2a56ac6df56938d7caf723433057465e3948cd54742856c?apiKey=52b45eda92454e888b0e2206ab05c02c&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/d457472f6ba8243cc2a56ac6df56938d7caf723433057465e3948cd54742856c?apiKey=52b45eda92454e888b0e2206ab05c02c&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/d457472f6ba8243cc2a56ac6df56938d7caf723433057465e3948cd54742856c?apiKey=52b45eda92454e888b0e2206ab05c02c&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/d457472f6ba8243cc2a56ac6df56938d7caf723433057465e3948cd54742856c?apiKey=52b45eda92454e888b0e2206ab05c02c&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/d457472f6ba8243cc2a56ac6df56938d7caf723433057465e3948cd54742856c?apiKey=52b45eda92454e888b0e2206ab05c02c&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/d457472f6ba8243cc2a56ac6df56938d7caf723433057465e3948cd54742856c?apiKey=52b45eda92454e888b0e2206ab05c02c&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/d457472f6ba8243cc2a56ac6df56938d7caf723433057465e3948cd54742856c?apiKey=52b45eda92454e888b0e2206ab05c02c&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/d457472f6ba8243cc2a56ac6df56938d7caf723433057465e3948cd54742856c?apiKey=52b45eda92454e888b0e2206ab05c02c&"
-            className="aspect-[1.43] w-[90px]"
+          <Image
+            src="/logo.svg"
+            alt="food pantry logo"
+            width={100}
+            height={100}
           />
           <div className="flex-auto self-end mt-7">Pine Island Food Pantry</div>
         </div>
@@ -68,10 +68,10 @@ export default memo(function IntroTemplate() {
           Providing food assistance for those in need
         </div>
         <div className="flex gap-5 justify-between mt-16 max-w-full text-3xl text-center text-black whitespace-nowrap w-[495px] max-md:flex-wrap max-md:mt-10">
-          <div className="grow justify-center py-5 border border-black border-solid shadow-sm rounded-[46px]">
+          <div className="w-[207px] h-[68px] pt-3 bg-gradient-to-r from-green-500 to-cyan-400 rounded-[46px] shadow border border-black">
             Get Help
           </div>
-          <div className="grow justify-center py-5 border border-black border-solid shadow-sm rounded-[46px]">
+          <div className="w-[207px] h-[68px] pt-3 bg-gradient-to-r from-green-500 to-cyan-400 rounded-[46px] shadow border border-black">
             Give Help
           </div>
         </div>
@@ -82,35 +82,39 @@ export default memo(function IntroTemplate() {
           <br />
           USA
         </div>
-        <div className="px-16 py-12 mt-14 max-w-full bg-white rounded-xl w-[1000px] max-md:px-5 max-md:mt-10">
+        <div className="px-16 py-12 mt-14 max-w-full bg-white rounded-[10px] w-[1000px] max-md:px-5 max-md:mt-10">
           <div className="flex gap-5 max-md:flex-col max-md:gap-0 max-md:">
             <div className="flex flex-col w-[36%] max-md:ml-0 max-md:w-full">
-              <img
-                alt="stuff"
-                loading="lazy"
-                srcSet="https://cdn.builder.io/api/v1/image/assets/TEMP/c453f3a7fc40c0d1ceeb016657ef391128dba1e917f6c7522075ae8ba43718d0?apiKey=52b45eda92454e888b0e2206ab05c02c&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/c453f3a7fc40c0d1ceeb016657ef391128dba1e917f6c7522075ae8ba43718d0?apiKey=52b45eda92454e888b0e2206ab05c02c&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/c453f3a7fc40c0d1ceeb016657ef391128dba1e917f6c7522075ae8ba43718d0?apiKey=52b45eda92454e888b0e2206ab05c02c&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/c453f3a7fc40c0d1ceeb016657ef391128dba1e917f6c7522075ae8ba43718d0?apiKey=52b45eda92454e888b0e2206ab05c02c&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/c453f3a7fc40c0d1ceeb016657ef391128dba1e917f6c7522075ae8ba43718d0?apiKey=52b45eda92454e888b0e2206ab05c02c&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/c453f3a7fc40c0d1ceeb016657ef391128dba1e917f6c7522075ae8ba43718d0?apiKey=52b45eda92454e888b0e2206ab05c02c&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/c453f3a7fc40c0d1ceeb016657ef391128dba1e917f6c7522075ae8ba43718d0?apiKey=52b45eda92454e888b0e2206ab05c02c&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/c453f3a7fc40c0d1ceeb016657ef391128dba1e917f6c7522075ae8ba43718d0?apiKey=52b45eda92454e888b0e2206ab05c02c&"
-                className="mt-2.5 w-full aspect-square max-md:mt-10"
+              <Image
+                src="/logo.svg"
+                alt="food pantry logo"
+                layout="fixed"
+                objectFit="contain"
+                width={250}
+                height={250}
               />
             </div>
             <div className="flex flex-col ml-5 w-[64%] max-md:ml-0 max-md:w-full">
               <div className="flex flex-col grow mt-2.5 text-3xl text-blue-950 max-md:mt-10 max-md:max-w-full">
                 <div className="max-md:max-w-full">Our Mission</div>
                 <div className="mt-4 text-2xl max-md:max-w-full">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
-                  commodo, lorem id pharetra tristique, mauris odio condimentum
-                  sem, at lobortis quam nibh ac ante. Nulla facilisi. Donec
-                  condimentum vulputate eros tempus pulvinar. Nulla facilisi.
-                  Aliquam volutpat ipsum purus, vel tincidunt erat congue eu.
-                  Vestibulum et blandit ante.
+                  Our pantry’s mission is to ensure “No One Goes Hungry” on
+                  Greater Pine Island (Pine island and Matlacha).
+                  <br></br>
+                  Our donations and volunteers provide a place for all families
+                  in our community who are “in need” to stop by and pick up food
+                  so they never have to worry about being hungry.
                 </div>
-                <div className="btn-background justify-center self-end py-5 mt-12 mr-16 text-center text-black whitespace-nowrap border border-black border-solid shadow-sm rounded-[46px] max-md:mt-10 max-md:mr-2.5">
-                  About Us
+                <div className="w-[207px] h-[68px] mt-6 bg-gradient-to-r from-green-500 to-cyan-400 rounded-[46px] shadow border border-black">
+                  <div className="w-[207px] pt-3 text-center text-black text-[28px] font-normal">
+                    About Us
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <div className="px-11 py-12 mt-10 max-w-full bg-white rounded-xl w-[1000px] max-md:px-5 max-md:mt-10">
+        <div className="px-11 py-12 mt-10 max-w-full bg-white rounded-[10px] w-[1000px] max-md:px-5 max-md:mt-10">
           <div className="flex gap-5 max-md:flex-col max-md:gap-0 max-md:">
             <div className="flex flex-col w-[59%] max-md:ml-0 max-md:w-full">
               <div className="flex flex-col text-3xl text-neutral-700 max-md:mt-10 max-md:max-w-full">
@@ -123,8 +127,10 @@ export default memo(function IntroTemplate() {
                   Aliquam volutpat ipsum purus, vel tincidunt erat congue eu.
                   Vestibulum et blandit ante.
                 </div>
-                <div className="justify-center self-end py-5 mt-10 mr-24 text-center text-black whitespace-nowrap border border-black border-solid shadow-sm rounded-[46px] max-md:mr-1">
-                  Donate Time
+                <div className="w-[207px] h-[74px] mt-6 bg-gradient-to-r from-green-500 to-cyan-400 rounded-[46px] shadow border border-black">
+                  <div className="w-[207px] h-[34px] pt-3 text-center text-black text-[28px] font-normal">
+                    Donate Time
+                  </div>
                 </div>
               </div>
             </div>
@@ -135,12 +141,7 @@ export default memo(function IntroTemplate() {
             </div>
           </div>
         </div>
-        <img
-          alt="stuff"
-          loading="lazy"
-          srcSet="https://cdn.builder.io/api/v1/image/assets/TEMP/e25c635d2471d322f9ac564e616a756139a0a98ecf5ebf8ffcbd3e9146f98d93?apiKey=52b45eda92454e888b0e2206ab05c02c&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/e25c635d2471d322f9ac564e616a756139a0a98ecf5ebf8ffcbd3e9146f98d93?apiKey=52b45eda92454e888b0e2206ab05c02c&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/e25c635d2471d322f9ac564e616a756139a0a98ecf5ebf8ffcbd3e9146f98d93?apiKey=52b45eda92454e888b0e2206ab05c02c&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/e25c635d2471d322f9ac564e616a756139a0a98ecf5ebf8ffcbd3e9146f98d93?apiKey=52b45eda92454e888b0e2206ab05c02c&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/e25c635d2471d322f9ac564e616a756139a0a98ecf5ebf8ffcbd3e9146f98d93?apiKey=52b45eda92454e888b0e2206ab05c02c&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/e25c635d2471d322f9ac564e616a756139a0a98ecf5ebf8ffcbd3e9146f98d93?apiKey=52b45eda92454e888b0e2206ab05c02c&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/e25c635d2471d322f9ac564e616a756139a0a98ecf5ebf8ffcbd3e9146f98d93?apiKey=52b45eda92454e888b0e2206ab05c02c&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/e25c635d2471d322f9ac564e616a756139a0a98ecf5ebf8ffcbd3e9146f98d93?apiKey=52b45eda92454e888b0e2206ab05c02c&"
-          className="self-stretch mt-20 w-full aspect-[10] max-md:mt-10 max-md:max-w-full"
-        />
+        <div className="ankor-bg-div w-full min-h-[200px] mt-6"></div>
         <div className="px-16 py-12 mt-20 max-w-full bg-white rounded-xl w-[989px] max-md:px-5 max-md:mt-10">
           <div className="flex gap-5 max-md:flex-col max-md:gap-0 max-md:">
             <div className="flex flex-col w-6/12 max-md:ml-0 max-md:w-full">
@@ -155,8 +156,8 @@ export default memo(function IntroTemplate() {
             </div>
           </div>
         </div>
-        <div className="flex flex-col px-14 py-12 mt-16 max-w-full text-xl bg-white rounded-xl text-neutral-700 w-[989px] max-md:px-5 max-md:mt-10">
-          <div className="text-3xl max-md:max-w-full">About Us</div>
+        <div className="flex flex-col px-14 py-12 mt-16 max-w-full text-xl bg-white rounded-[10px] text-neutral-700 w-[989px] max-md:px-5 max-md:mt-10">
+          <div className="text-3xl max-md:max-w-full mb-5">About Us</div>
           <div className="tracking-wide max-md:max-w-full">
             The Pine Island Food Pantry is a non-denominational, 501c3
             non-profit organization serving the residents of Pine Island and the
@@ -173,8 +174,10 @@ export default memo(function IntroTemplate() {
             Other personal care grooming and hygiene products, as well as pet
             food and baby products are also frequently available.
           </div>
-          <div className="justify-center self-end mt-12 mr-16 mb-6 max-w-full text-center text-black border border-black border-solid shadow-sm rounded-[46px] w-[207px] max-md:mt-10 max-md:mr-2.5">
-            See Additional Resources
+          <div className="w-[207px] h-[74px] mt-6 bg-gradient-to-r from-green-500 to-cyan-400 rounded-[46px] shadow border border-black">
+            <div className="w-[207px] h-[74px] pt-2 text-center text-black text-xl font-normal font-['Arial']">
+              See Additional Resources
+            </div>
           </div>
         </div>
         <div className="mt-40 text-4xl text-center text-black max-md:mt-10 max-md:max-w-full">
@@ -186,17 +189,11 @@ export default memo(function IntroTemplate() {
           srcSet="https://cdn.builder.io/api/v1/image/assets/TEMP/c71baaa711dbccde10dff872090b1ffda6c29032bea05d909321186d10877bad?apiKey=52b45eda92454e888b0e2206ab05c02c&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/c71baaa711dbccde10dff872090b1ffda6c29032bea05d909321186d10877bad?apiKey=52b45eda92454e888b0e2206ab05c02c&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/c71baaa711dbccde10dff872090b1ffda6c29032bea05d909321186d10877bad?apiKey=52b45eda92454e888b0e2206ab05c02c&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/c71baaa711dbccde10dff872090b1ffda6c29032bea05d909321186d10877bad?apiKey=52b45eda92454e888b0e2206ab05c02c&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/c71baaa711dbccde10dff872090b1ffda6c29032bea05d909321186d10877bad?apiKey=52b45eda92454e888b0e2206ab05c02c&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/c71baaa711dbccde10dff872090b1ffda6c29032bea05d909321186d10877bad?apiKey=52b45eda92454e888b0e2206ab05c02c&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/c71baaa711dbccde10dff872090b1ffda6c29032bea05d909321186d10877bad?apiKey=52b45eda92454e888b0e2206ab05c02c&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/c71baaa711dbccde10dff872090b1ffda6c29032bea05d909321186d10877bad?apiKey=52b45eda92454e888b0e2206ab05c02c&"
           className="max-w-full aspect-[1.61] w-[989px]"
         />
-        <div className="flex overflow-hidden relative flex-col px-12 py-12 mt-8 max-w-full min-h-[537px] w-[990px] max-md:px-5">
-          <img
-            alt="stuff"
-            loading="lazy"
-            srcSet="https://cdn.builder.io/api/v1/image/assets/TEMP/e3a1169657debbf76e1575ba981f7d3be3c935adfa39bd3fb15ed4c3d6991887?apiKey=52b45eda92454e888b0e2206ab05c02c&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/e3a1169657debbf76e1575ba981f7d3be3c935adfa39bd3fb15ed4c3d6991887?apiKey=52b45eda92454e888b0e2206ab05c02c&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/e3a1169657debbf76e1575ba981f7d3be3c935adfa39bd3fb15ed4c3d6991887?apiKey=52b45eda92454e888b0e2206ab05c02c&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/e3a1169657debbf76e1575ba981f7d3be3c935adfa39bd3fb15ed4c3d6991887?apiKey=52b45eda92454e888b0e2206ab05c02c&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/e3a1169657debbf76e1575ba981f7d3be3c935adfa39bd3fb15ed4c3d6991887?apiKey=52b45eda92454e888b0e2206ab05c02c&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/e3a1169657debbf76e1575ba981f7d3be3c935adfa39bd3fb15ed4c3d6991887?apiKey=52b45eda92454e888b0e2206ab05c02c&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/e3a1169657debbf76e1575ba981f7d3be3c935adfa39bd3fb15ed4c3d6991887?apiKey=52b45eda92454e888b0e2206ab05c02c&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/e3a1169657debbf76e1575ba981f7d3be3c935adfa39bd3fb15ed4c3d6991887?apiKey=52b45eda92454e888b0e2206ab05c02c&"
-            className="object-cover absolute inset-0 size-full"
-          />
+        <div className="flex relative flex-col px-12 py-12 mt-8 max-w-full min-h-[600px] w-[990px] max-md:px-5 rounded-[10px] ankor-bg">
           <div className="relative max-md:max-w-full">
             <div className="flex gap-5 max-md:flex-col max-md:gap-0 max-md:">
               <div className="flex flex-col w-6/12 max-md:ml-0 max-md:w-full">
-                <div className="flex relative flex-col grow pt-7 pr-4 pb-12 pl-12 mt-1.5 w-full text-black bg-white rounded-3xl border-2 border-red-500 border-solid shadow-sm max-md:pl-5 max-md:mt-10">
+                <div className="flex relative flex-col grow pt-7 pr-4 pb-12 pl-12 mt-1.5 w-full text-black bg-white rounded-3xl border-2 border-red-500 border-solid shadow-sm max-md:pl-5 max-md:mt-10 rounded-[10px]">
                   <div className="self-start ml-3 text-4xl text-center max-md:ml-2.5">
                     Address
                   </div>
@@ -210,7 +207,7 @@ export default memo(function IntroTemplate() {
                 </div>
               </div>
               <div className="flex flex-col ml-5 w-6/12 max-md:ml-0 max-md:w-full">
-                <div className="relative grow px-8 pt-20 pb-0.5 w-full text-2xl text-black bg-white rounded-3xl border-2 border-red-500 border-solid shadow-sm max-md:pl-5 max-md:mt-10">
+                <div className="relative grow px-8 pt-20 pb-0.5 w-full text-2xl text-black bg-white rounded-3xl border-2 border-red-500 border-solid shadow-sm max-md:pl-5 max-md:mt-10 rounded-[10px]">
                   Mon: 9:00-11:00 AM
                   <br />
                   Tue: Closed
@@ -228,8 +225,10 @@ export default memo(function IntroTemplate() {
               </div>
             </div>
           </div>
-          <div className="relative justify-center self-center py-5 mt-11 mb-5 text-3xl text-center text-black whitespace-nowrap border border-black border-solid shadow-sm rounded-[46px] max-md:mt-10">
-            Contact Us
+          <div className="w-[207px] mt-10 bg-gradient-to-r from-green-500 to-cyan-400 rounded-[46px] shadow border border-black">
+            <div className="w-[207px] text-center text-black text-[28px] font-normal">
+              Contact Us
+            </div>
           </div>
         </div>
         <div className="mt-20 mb-24 text-2xl text-blue-950 max-md:my-10 max-md:max-w-full">
