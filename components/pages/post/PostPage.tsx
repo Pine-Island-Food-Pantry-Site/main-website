@@ -37,10 +37,10 @@ export function PostPage({ data, encodeDataAttribute }: PostPageProps) {
           />
 
           <div className="divide-inherit grid grid-cols-1 divide-y lg:grid-cols-4 lg:divide-x lg:divide-y-0">
-            {/* Duration */}
+            {/* Publish Date */}
             {!!year && (
               <div className="p-3 lg:p-4">
-                <div className="text-xs md:text-sm">Duration</div>
+                <div className="text-xs md:text-sm">Publish Date</div>
                 <div className="text-md md:text-lg">
                   <span
                     data-sanity={encodeDataAttribute?.('duration.publishedAt')}
