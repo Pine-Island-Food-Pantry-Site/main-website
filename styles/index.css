@@ -1,6 +1,7 @@
 :root {
   --btn-gradient: linear-gradient(195deg, rgba(0, 255, 41, 1) 0%, rgba(10, 255, 255, 1) 87%);
   --bg-gradient: linear-gradient(151deg, #FCF202 14.21%, rgba(255, 107, 0, 0.83) 94.18%, #FF6B00 94.18%);
+  --font-blue: #1B315E;
 }
 
 html {
