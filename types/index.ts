@@ -37,7 +37,9 @@ export interface HomePagePayload {
 }
 
 export interface PagePayload {
-  body?: PortableTextBlock[]
+  coverImage: Image
+  description: PortableTextBlock[]
+  body: PortableTextBlock[]
   name?: string
   overview?: PortableTextBlock[]
   title?: string
@@ -52,6 +54,12 @@ export interface PostPayload {
   slug: string
   tags?: string[]
   title?: string
+}
+
+export interface LandingPagePayload {
+  coverImage?: Image
+  overview?: PortableTextBlock[]
+  slug?: string
 }
 
 export interface SettingsPayload {
