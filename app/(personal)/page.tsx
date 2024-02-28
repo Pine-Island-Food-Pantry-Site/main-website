@@ -26,10 +26,10 @@ async function getDescription() {
       console.error('Error:', error)
     })
 
-  return client.fetch(latestPostQuery)
+  return await client.fetch(latestPostQuery)
 }
 
-export default async function IndexRoute() {
+async function IndexRoute() {
   const initial = await loadLandingPage()
   const { coverImage, overview } = await getDescription()
 
@@ -39,18 +39,6 @@ export default async function IndexRoute() {
 
   if (draftMode().isEnabled) {
     return <HomePagePreview initial={initial} />
-  }
-
-  if (!initial.data) {
-    return (
-      <div className="text-center">
-        You don&rsquo;t have a homepage yet,{' '}
-        <Link href={`${studioUrl}/desk/home`} className="underline">
-          create one now
-        </Link>
-        !
-      </div>
-    )
   }
 
   return (
@@ -146,3 +134,5 @@ export default async function IndexRoute() {
     </main>
   )
 }
+
+export default IndexRoute
