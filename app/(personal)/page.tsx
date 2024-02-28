@@ -26,31 +26,22 @@ async function getDescription() {
       console.error('Error:', error)
     })
 
-  return client.fetch(latestPostQuery)
+  return await client.fetch(latestPostQuery)
 }
 
-export default async function IndexRoute() {
-  const initial = await loadLandingPage()
-  const { coverImage, overview } = await getDescription()
 
-  const imageUrl =
-    coverImage &&
-    urlForImage(coverImage)?.height(250).width(250).fit('crop').url()
+
+async function IndexRoute() {
+
+  const initial = await loadLandingPage()
+  // const { coverImage, overview } = await getDescription()
+
+  // const imageUrl =
+  //   coverImage &&
+  //   urlForImage(coverImage)?.height(250).width(250).fit('crop').url()
 
   if (draftMode().isEnabled) {
     return <HomePagePreview initial={initial} />
-  }
-
-  if (!initial.data) {
-    return (
-      <div className="text-center">
-        You don&rsquo;t have a homepage yet,{' '}
-        <Link href={`${studioUrl}/desk/home`} className="underline">
-          create one now
-        </Link>
-        !
-      </div>
-    )
   }
 
   return (
@@ -99,7 +90,7 @@ export default async function IndexRoute() {
       {/* end of 2nd card */}
       {/* Ankor SVG background in div below */}
       <div className={styles.ankor_bg} />
-      <div className={styles.home_card}>
+      {/* <div className={styles.home_card}>
         <Image
           src={imageUrl}
           alt="Image from latest post"
@@ -108,7 +99,7 @@ export default async function IndexRoute() {
         />
         <Link href="/post">View Our Latest Posts Here.</Link>
         <CustomPortableText value={overview} />
-      </div>
+      </div> */}
       {/* About Us card */}
       <div className={styles.home_card}>
         <h3>About Us</h3>
@@ -146,3 +137,5 @@ export default async function IndexRoute() {
     </main>
   )
 }
+
+export default IndexRoute
