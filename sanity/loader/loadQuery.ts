@@ -5,6 +5,7 @@ import { draftMode } from 'next/headers'
 
 import { client } from '@/sanity/lib/client'
 import {
+  allPostsQuery,
   homePageQuery,
   latestPostQuery,
   pagesBySlugQuery,
@@ -103,5 +104,13 @@ export function loadPage(slug: string) {
     pagesBySlugQuery,
     { slug },
     { next: { tags: [`page:${slug}`] } },
+  )
+}
+
+export function loadAllPosts() {
+  return loadQuery<PostPayload[]>(
+    allPostsQuery,
+    {},
+    { next: { tags: ['post'] } },
   )
 }

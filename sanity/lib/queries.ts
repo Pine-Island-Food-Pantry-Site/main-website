@@ -64,3 +64,17 @@ export const latestPostQuery = groq`
     title,
   }
 `
+
+// groq query to get all posts
+export const allPostsQuery = groq`
+  *[_type == "post"] | order(publishedAt desc) {
+    _id,
+    coverImage,
+    description,
+    duration,
+    overview,
+    "slug": slug.current,
+    tags,
+    title,
+  }
+`
