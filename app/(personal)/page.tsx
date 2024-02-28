@@ -4,7 +4,6 @@ import Image from 'next/image'
 import Link from 'next/link'
 
 import ContactCard from '@/components/global/ContactCard'
-import { PageProps } from '@/components/pages/page/Page'
 import { CustomPortableText } from '@/components/shared/CustomPortableText'
 import { studioUrl } from '@/sanity/lib/api'
 import { client } from '@/sanity/lib/client'
@@ -30,7 +29,7 @@ async function getDescription() {
   return client.fetch(latestPostQuery)
 }
 
-export default async function IndexRoute({ data }: PageProps) {
+export default async function IndexRoute() {
   const initial = await loadLandingPage()
   const { coverImage, overview } = await getDescription()
 
