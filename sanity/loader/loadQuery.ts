@@ -6,6 +6,7 @@ import { draftMode } from 'next/headers'
 import { client } from '@/sanity/lib/client'
 import {
   homePageQuery,
+  latestPostQuery,
   pagesBySlugQuery,
   postBySlugQuery,
   settingsQuery,
@@ -13,6 +14,7 @@ import {
 import { token } from '@/sanity/lib/token'
 import {
   HomePagePayload,
+  LandingPagePayload,
   PagePayload,
   PostPayload,
   SettingsPayload,
@@ -77,6 +79,14 @@ export function loadHomePage() {
     homePageQuery,
     {},
     { next: { tags: ['home', 'project'] } },
+  )
+}
+
+export function loadLandingPage() {
+  return loadQuery<LandingPagePayload | null>(
+    latestPostQuery,
+    {},
+    { next: { tags: ['home'] } },
   )
 }
 

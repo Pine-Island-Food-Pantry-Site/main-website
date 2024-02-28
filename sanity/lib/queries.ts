@@ -50,3 +50,17 @@ export const settingsQuery = groq`
     ogImage,
   }
 `
+
+// groq query to get the latest post
+export const latestPostQuery = groq`
+  *[_type == "post"] | order(publishedAt desc) [0] {
+    _id,
+    coverImage,
+    description,
+    duration,
+    overview,
+    "slug": slug.current,
+    tags,
+    title,
+  }
+`
