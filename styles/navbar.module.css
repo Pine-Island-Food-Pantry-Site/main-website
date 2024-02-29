@@ -1,0 +1,55 @@
+@import "./index.css";
+
+.navbar_main {
+  background: var(--background-color);
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 10vh;
+  align-items: center;
+  justify-content: space-around;
+  position: sticky;
+  top: 90vh;
+  border: var(--nav-border);
+}
+
+.navbar_logo {
+  display: none;
+}
+
+.image {
+  display: none;
+}
+
+.nav_text {
+  margin-left: 2em;
+  color: var(--font-blue);
+}
+
+.link_styles {
+  text-decoration: underline;
+  color: var(--font-blue);
+}
+
+@media screen and (min-width: 800px) {
+  .navbar_main {
+    position: relative;
+    top: 0vh;
+    border: none;
+  }
+
+  .navbar_logo {
+    display: inline-flex;
+    width: 40%;
+    padding-left: 0;
+    height: 8vh;
+    align-items: center;
+  }
+
+
+  .image {
+    display: block;
+    padding-top: 10px;
+  }
+
+}
