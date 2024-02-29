@@ -13,5 +13,5 @@ export async function Navbar() {
     return <NavbarPreview initial={initial} />
   }
 
-  return <NavbarLayout data={initial.data} />
+  return <NavbarLayout />
 }
