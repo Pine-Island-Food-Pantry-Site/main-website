@@ -29,16 +29,13 @@ async function getDescription() {
   return client.fetch(latestPostQuery)
 }
 
-
-
 async function IndexRoute() {
-
   const initial = await loadLandingPage()
-  // const { coverImage, overview } = await getDescription()
+  const { coverImage, overview } = await getDescription()
 
-  // const imageUrl =
-  //   coverImage &&
-  //   urlForImage(coverImage)?.height(250).width(250).fit('crop').url()
+  const imageUrl =
+    coverImage &&
+    urlForImage(coverImage)?.height(250).width(250).fit('crop').url()
 
   if (draftMode().isEnabled) {
     return <HomePagePreview initial={initial} />
@@ -90,7 +87,7 @@ async function IndexRoute() {
       {/* end of 2nd card */}
       {/* Ankor SVG background in div below */}
       <div className={styles.ankor_bg} />
-      {/* <div className={styles.home_card}>
+      <div className={styles.home_card}>
         <Image
           src={imageUrl}
           alt="Image from latest post"
@@ -99,7 +96,7 @@ async function IndexRoute() {
         />
         <Link href="/post">View Our Latest Posts Here.</Link>
         <CustomPortableText value={overview} />
-      </div> */}
+      </div>
       {/* About Us card */}
       <div className={styles.home_card}>
         <h3>About Us</h3>
