@@ -73,6 +73,7 @@ export function PostPage({ data, encodeDataAttribute }: PostPageProps) {
           />
         )}
       </div>
+      <Link href="/posts">Back To Posts</Link>
       <div className="absolute left-0 w-screen border-t" />
     </div>
   )

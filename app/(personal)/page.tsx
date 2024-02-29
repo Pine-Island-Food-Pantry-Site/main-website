@@ -29,7 +29,10 @@ async function getDescription() {
   return client.fetch(latestPostQuery)
 }
 
+
+
 async function IndexRoute() {
+
   const initial = await loadLandingPage()
   // const { coverImage, overview } = await getDescription()
 

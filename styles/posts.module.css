@@ -1,0 +1,32 @@
+.posts_page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+}
+
+.card {
+  width: 80%;
+  margin: 1em 0.5em;
+  border-radius: 10px;
+  border: 3px solid #C1694F;
+  background: #FFF;
+  box-shadow: 7px 4px 10px 5px rgba(255, 227, 106, 0.50);
+}
+
+.card_image {
+  position: relative;
+  width: 250px;
+  height: 250px;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.r_10 {
+  border-radius: 10px;
+}
+
+.r_20 {
+  border-radius: 20px;
+}
