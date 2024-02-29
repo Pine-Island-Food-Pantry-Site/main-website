@@ -31,11 +31,11 @@ async function getDescription() {
 
 async function IndexRoute() {
   const initial = await loadLandingPage()
-  const { coverImage, overview } = await getDescription()
+  // const { coverImage, overview } = await getDescription()
 
-  const imageUrl =
-    coverImage &&
-    urlForImage(coverImage)?.height(250).width(250).fit('crop').url()
+  // const imageUrl =
+  //   coverImage &&
+  //   urlForImage(coverImage)?.height(250).width(250).fit('crop').url()
 
   if (draftMode().isEnabled) {
     return <HomePagePreview initial={initial} />
