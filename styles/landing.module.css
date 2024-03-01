@@ -1,36 +1,152 @@
 .landing_container {
-  margin: 1em auto;
+  margin-top: -10vh;
   padding: 1em;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: #bababa;
+  background: var(--bg-gradient);
+}
+
+.top_section {
+  margin: 2em 2em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.text {
+  color: var(--font-blue);
+}
+
+.top_text {
+  margin-top: 2em;
+  margin-bottom: 1em;
+  color: var(--font-blue);
+}
+
+.h1_text {
+  font-size: 30px;
+  text-align: center;
+  margin-bottom: 1em;
+}
+
+.h2_text {
+  font-size: 20px;
+  margin-top: 2em;
+}
+
+.top_link {
+  text-decoration: underline;
+}
+
+.text {
+  font-size: 22px;
+  color: var(--font-blue);
 }
 
 .home_card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  margin: 2em 2em;
+  padding: 1em;
   border-radius: 10px;
-  background: #FFFFFF;
+  width: 90%;
+  max-width: 1000px;
+  min-height: 500px;
+  background: var(--background-color);
 }
 
-.ankor_bg {
-  height: 150px;
-  width: 100vw;
-  background: transparent;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 80 80' width='80' height='80'%3E%3Cpath fill='%23257001' fill-opacity='0.7' d='M14 16H9v-2h5V9.87a4 4 0 1 1 2 0V14h5v2h-5v15.95A10 10 0 0 0 23.66 27l-3.46-2 8.2-2.2-2.9 5a12 12 0 0 1-21 0l-2.89-5 8.2 2.2-3.47 2A10 10 0 0 0 14 31.95V16zm40 40h-5v-2h5v-4.13a4 4 0 1 1 2 0V54h5v2h-5v15.95A10 10 0 0 0 63.66 67l-3.47-2 8.2-2.2-2.88 5a12 12 0 0 1-21.02 0l-2.88-5 8.2 2.2-3.47 2A10 10 0 0 0 54 71.95V56zm-39 6a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm40-40a2 2 0 1 1 0-4 2 2 0 0 1 0 4zM15 8a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm40 40a2 2 0 1 0 0-4 2 2 0 0 0 0 4z'%3E%3C/path%3E%3C/svg%3E");
+.mission {
+  color: var(--font-blue);
+  font-size: 28px;
 }
+
+.about_us {
+  margin-top: 3em;
+  padding: 0.5em;
+  border-radius: 46px;
+  border: 1px solid #000;
+  background: var(--btn-gradient);
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.30);
+  font-size: 28px;
+  margin-bottom: 1em;
+}
+
+.rounded_image {
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.volunteer {
+  font-size: 28px;
+  color: var(--font-blue);
+  text-align: center;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+.volunteer_text {
+  font-size: 20px;
+  color: var(--font-blue);
+  text-align: left;
+}
+
+.btn_styles {
+  border-radius: 46px;
+  border: 1px solid #000;
+  background: var(--btn-gradient);
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.30);
+  font-size: 22px;
+  margin-top: 3em;
+  margin-bottom: 1em;
+  padding: 0.5em;
+}
+
+.latest {
+  font-size: 20px;
+  color: var(--font-blue);
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.overview {
+  margin: 2em;
+}
+
+.about_header {
+  font-size: 30px;
+  color: var(--font-blue);
+  text-align: center;
+  margin-bottom: 1em;
+  margin-top: 0.5em;
+}
+
+.about_text {
+  font-size: 18px;
+  color: var(--font-blue);
+  text-align: left;
+}
+
+
 
 .location {
   display: flex;
   flex-direction: column;
   width: 100vw;
   height: auto;
-  position: relative;
+  z-index: 1;
 }
 
 .location_header {
   text-align: center;
   margin-top: 4em;
+  margin-bottom: 1em;
+  font-size: 30px;
+  color: var(--font-blue);
 }
 
 .location_image {
@@ -38,4 +154,28 @@
   width: 100%;
   height: 300px;
   border-radius: 10px;
+  z-index: 1;
+  margin-bottom: 4em;
+}
+
+/* media queries */
+@media screen and (min-width: 800px) {
+  .landing_container {
+    margin-top: -0vh;
+  }
+
+  .h1_text {
+    font-size: 36px;
+  }
+
+  .h2_text {
+    font-size: 24px;
+  }
+}
+
+.ankor_bg {
+  height: 150px;
+  width: 100vw;
+  background: transparent;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 80 80' width='80' height='80'%3E%3Cpath fill='%23257001' fill-opacity='0.7' d='M14 16H9v-2h5V9.87a4 4 0 1 1 2 0V14h5v2h-5v15.95A10 10 0 0 0 23.66 27l-3.46-2 8.2-2.2-2.9 5a12 12 0 0 1-21 0l-2.89-5 8.2 2.2-3.47 2A10 10 0 0 0 14 31.95V16zm40 40h-5v-2h5v-4.13a4 4 0 1 1 2 0V54h5v2h-5v15.95A10 10 0 0 0 63.66 67l-3.47-2 8.2-2.2-2.88 5a12 12 0 0 1-21.02 0l-2.88-5 8.2 2.2-3.47 2A10 10 0 0 0 54 71.95V56zm-39 6a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm40-40a2 2 0 1 1 0-4 2 2 0 0 1 0 4zM15 8a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm40 40a2 2 0 1 0 0-4 2 2 0 0 0 0 4z'%3E%3C/path%3E%3C/svg%3E");
 }

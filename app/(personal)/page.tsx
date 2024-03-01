@@ -43,64 +43,85 @@ async function IndexRoute() {
 
   return (
     <main className={styles.landing_container}>
-      <h1>Welcome to The Pine Island Food Pantry</h1>
-      <h2>Providing food assistance for those in need.</h2>
-      <Image
-        src={'logo.svg'}
-        alt="Pine Island Food Pantry Logo"
-        width={200}
-        height={200}
-      />
-      <a href="https://maps.app.goo.gl/DTgw8M5Lgby9eFvY6">
-        12175 Stringfellow Road Bokeelia, FL 33922 USA
-      </a>
+      <div className={styles.top_section}>
+        <h1 className={styles.top_text && styles.h1_text}>
+          Welcome to The Pine Island Food Pantry
+        </h1>
+        <h2 className={styles.top_text && styles.h2_text}>
+          Providing food assistance for those in need.
+        </h2>
+        <Image
+          src={'logo.svg'}
+          alt="Pine Island Food Pantry Logo"
+          width={200}
+          height={200}
+        />
+        <a
+          href="https://maps.app.goo.gl/DTgw8M5Lgby9eFvY6"
+          className={styles.top_link && styles.text}
+        >
+          12175 Stringfellow Road Bokeelia, FL 33922 USA
+        </a>
+      </div>
       <div className={styles.home_card}>
-        <h3>Our Mission</h3>
-        <p>
+        <h3 className={styles.mission}>Our Mission</h3>
+        <p className={styles.text}>
           Our pantry&apos;s mission is to ensure “No One Goes Hungry” on Greater
           Pine Island (Pine island and Matlacha). Our donations and volunteers
           provide a place for all families in our community who are “in need” to
           stop by and pick up food so they never have to worry about being
           hungry.{' '}
         </p>
-        <Link href={'/about'}>About Us</Link>
+        <Link href={'/about'} className={styles.btn_styles}>
+          About Us
+        </Link>
       </div>
       {/* end of first card */}
       <div className={styles.home_card}>
-        <Image
-          src={'/food_pantry_image.jpg'}
-          alt="Inside of the pantry stocked with food."
-          height={250}
-          width={250}
-        />
-        <h3>Volunteer Opportunities</h3>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
-          commodo, lorem id pharetra tristique, mauris odio condimentum sem, at
-          lobortis quam nibh ac ante. Nulla facilisi. Donec condimentum
-          vulputate eros tempus pulvinar. Nulla facilisi. Aliquam volutpat ipsum
-          purus, vel tincidunt erat congue eu. Vestibulum et blandit ante.
+        <div className={styles.rounded_image}>
+          <Image
+            src={'/food_pantry_image.jpg'}
+            alt="Inside of the pantry stocked with food."
+            height={250}
+            width={250}
+          />
+        </div>
+        <h3 className={styles.volunteer}>Volunteer Opportunities</h3>
+        <p className={styles.volunteer_text}>
+          Local food pantries are always in need of volunteers to help with
+          tasks such as sorting and packing food, assisting with deliveries, and
+          organizing fundraising events. Volunteering at a food pantry not only
+          provides essential support to your community, but it also offers a
+          rewarding experience and the chance to develop new skills.
         </p>
 
-        <Link href={'/about'}>Donate Time</Link>
+        <Link href={'/contact'} className={styles.btn_styles}>
+          Donate Time
+        </Link>
       </div>
       {/* end of 2nd card */}
       {/* Ankor SVG background in div below */}
       <div className={styles.ankor_bg} />
       <div className={styles.home_card}>
-        <Image
-          src={imageUrl}
-          alt="Image from latest post"
-          height={200}
-          width={200}
-        />
-        <Link href="/post">View Our Latest Posts Here.</Link>
-        <CustomPortableText value={overview} />
+        <div className={styles.rounded_image}>
+          <Image
+            src={imageUrl}
+            alt="Image from latest post"
+            height={200}
+            width={200}
+          />
+        </div>
+        <Link href="/posts" className={styles.latest}>
+          View Our Latest Posts Here.
+        </Link>
+        <span className={styles.overview}>
+          <CustomPortableText value={overview} />
+        </span>
       </div>
       {/* About Us card */}
       <div className={styles.home_card}>
-        <h3>About Us</h3>
-        <p>
+        <h3 className={styles.about_header}>About Us</h3>
+        <p className={styles.about_text}>
           The Pine Island Food Pantry is a non-denominational, 501c3 non-profit
           organization serving the residents of Pine Island and the greater
           Matlacha area and is open Mondays and Thursdays from 9am to 11am.
@@ -116,7 +137,9 @@ async function IndexRoute() {
           personal care grooming and hygiene products, as well as pet food and
           baby products are also frequently available.
         </p>
-        <Link href={'/about'}>See Additional Resources</Link>
+        <Link href={'/about'} className={styles.btn_styles}>
+          See Additional Resources
+        </Link>
       </div>
       {/* Our Location Section */}
       <div className={styles.location}>

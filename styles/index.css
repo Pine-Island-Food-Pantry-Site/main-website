@@ -10,6 +10,7 @@ html {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
+  box-sizing: border-box;
 }
 
 p:not(:last-child) {
@@ -31,6 +32,10 @@ ol {
 
 .bg-gradient {
   background: var(--bg-gradient);
+}
+
+.footer-styles {
+  background: transparent;
 }
 
 .ankor-bg {
