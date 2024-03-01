@@ -3,25 +3,30 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  background: var(--bg-gradient);
 }
 
 .contact_button {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  width: 100%;
+  max-width: 200px;
   font-size: 22px;
-  padding: 1em 1em;
+  padding: 0.5em;
+  margin-bottom: 2em;
+  margin-top: 1em;
   border-radius: 46px;
   border: 1px solid #000;
-  background: linear-gradient(102deg, #00FF29 -10.98%, #0AFFFF 88.84%);
+  background: var(--btn-gradient);
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.30);
 }
 
 .header_1 {
   color: var(--font-blue);
   text-align: center;
-  font-family: Arial;
   font-size: 30px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
+  margin-top: 1em;
 }
 
 .header_2 {
@@ -46,35 +51,50 @@
   text-decoration-line: underline;
 }
 
-.about_us_card {
+.card {
   border-radius: 10px;
-  background: #FFF;
+  background: var(--background-color);
   margin-top: 2em;
+  width: 80%;
+  max-width: 1000px;
+  display: flex;
+  flex-direction: column;
 }
 
 .header_3 {
-  margin-top: 2em;
+  margin-top: 1em;
   color: var(--font-blue);
   text-align: center;
-  font-family: Arial;
   font-size: 28px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
 }
 
 .p_about_us_text {
-  margin-top: 3em;
+  margin-top: 2em;
+  margin-left: 1em;
+  margin-right: 1em;
   color: var(--font-blue);
   font-family: Inter;
   font-size: 20px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
   letter-spacing: 0.4px;
 }
 
 .additional_resources {
   display: flex;
   flex-direction: column;
+  min-height: 450px;
+  border-radius: 10px;
+  background: var(--background-color);
+  margin-top: 1em;
+  margin-bottom: 2em;
+  width: 80%;
+  max-width: 1000px;
+}
+
+.a_additional_resources {
+  text-decoration: underline;
+  font-size: 20px;
+  color: var(--font-blue);
+  margin-left: 2em;
+  margin-right: 1em;
+  margin-bottom: 0.5em;
 }

@@ -27,7 +27,7 @@ const About: React.FC = () => {
         12175 Stringfellow Road Bokeelia, FL 33922 USA
       </a>
       {/* about us card button */}
-      <div className={styles.about_us_card}>
+      <div className={styles.card}>
         <h3 className={styles.header_3}>About Us</h3>
         <p className={styles.p_about_us_text}>
           The Pine Island Food Pantry is a non-denominational, 501c3 non-profit
@@ -45,9 +45,9 @@ const About: React.FC = () => {
           personal care grooming and hygiene products, as well as pet food and
           baby products are also frequently available.
         </p>
-        <button className={styles.contact_button}>
-          <Link href={'/contact'}>Contact Us</Link>{' '}
-        </button>
+        <Link href={'/contact'} className={styles.contact_button}>
+          Contact Us
+        </Link>{' '}
       </div>
       {/* additional resources with links below  */}
       <div className={styles.additional_resources}>
