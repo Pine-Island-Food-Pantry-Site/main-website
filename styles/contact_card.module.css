@@ -15,8 +15,11 @@
 }
 
 .contact_button {
+  margin-top: 2em;
+  max-width: 210px;
+  text-align: center;
   font-size: 22px;
-  padding: 1em 1em;
+  padding: 0.5em 0.5em;
   border-radius: 46px;
   border: 1px solid #000;
   background: linear-gradient(102deg, #00FF29 -10.98%, #0AFFFF 88.84%);
