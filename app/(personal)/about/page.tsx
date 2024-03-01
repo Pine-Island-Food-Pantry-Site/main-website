@@ -46,7 +46,7 @@ const About: React.FC = () => {
           baby products are also frequently available.
         </p>
         <button className={styles.contact_button}>
-          <Link href={'home'}>Contact Us</Link>{' '}
+          <Link href={'/contact'}>Contact Us</Link>{' '}
         </button>
       </div>
       {/* additional resources with links below  */}
