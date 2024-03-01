@@ -1,16 +1,21 @@
 .main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   width: 100vw;
   padding-bottom: 2em;
-  background-color: #ffffff;
+  background-color: var(--background-color);
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 80 80' width='80' height='80'%3E%3Cpath fill='%23257001' fill-opacity='0.7' d='M14 16H9v-2h5V9.87a4 4 0 1 1 2 0V14h5v2h-5v15.95A10 10 0 0 0 23.66 27l-3.46-2 8.2-2.2-2.9 5a12 12 0 0 1-21 0l-2.89-5 8.2 2.2-3.47 2A10 10 0 0 0 14 31.95V16zm40 40h-5v-2h5v-4.13a4 4 0 1 1 2 0V54h5v2h-5v15.95A10 10 0 0 0 63.66 67l-3.47-2 8.2-2.2-2.88 5a12 12 0 0 1-21.02 0l-2.88-5 8.2 2.2-3.47 2A10 10 0 0 0 54 71.95V56zm-39 6a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm40-40a2 2 0 1 1 0-4 2 2 0 0 1 0 4zM15 8a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm40 40a2 2 0 1 0 0-4 2 2 0 0 0 0 4z'%3E%3C/path%3E%3C/svg%3E");
 }
 
 .card {
   width: 90%;
+  min-height: 125px;
   margin-top: 2em;
   border-radius: 20px;
   border: 2px solid #C1694F;
-  background: #FFF;
+  background: var(--background-color);
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
 
@@ -22,17 +27,36 @@
   padding: 0.5em 0.5em;
   border-radius: 46px;
   border: 1px solid #000;
-  background: linear-gradient(102deg, #00FF29 -10.98%, #0AFFFF 88.84%);
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.30);
+  background: var(--btn-gradient);
 }
 
 .hours_list {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  color: var(--font-blue);
+  margin-right: 1em;
 }
 
 .header_4 {
   text-align: center;
   color: var(--font-blue);
-
+  margin: 1em 0;
+  padding: 0.5em;
+  font-size: 26px;
 }
+
+.p_text {
+  text-align: center;
+  color: var(--font-blue);
+  font-size: 20px;
+  margin: 1em 0;
+  padding: 1em;
+}
+
+/* try to work in media queries to get the cards to lay side by side on large screens */
+/* @media screen and (min-width: 768px) {
+  .main {
+    flex-direction: row;
+  }
+
+} */

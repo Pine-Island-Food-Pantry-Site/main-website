@@ -26,6 +26,14 @@ ol {
   list-style-type: disc;
 }
 
+dt,
+dd {
+  margin-left: 1em;
+  font-size: 20px;
+
+}
+
+
 .btn-background {
   background: var(--btn-gradient);
 }
