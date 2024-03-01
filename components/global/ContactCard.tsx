@@ -29,9 +29,9 @@ const ContactCard: React.FC = () => {
         </dl>
         <h4>Closed On All Federal Holidays</h4>
       </div>
-      <button className={styles.contact_button}>
+      <div className={styles.contact_button}>
         <Link href={'home'}>Contact Us</Link>
-      </button>
+      </div>
     </div>
   )
 }
