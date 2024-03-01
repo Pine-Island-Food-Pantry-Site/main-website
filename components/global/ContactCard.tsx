@@ -30,7 +30,7 @@ const ContactCard: React.FC = () => {
         <h4>Closed On All Federal Holidays</h4>
       </div>
       <div className={styles.contact_button}>
-        <Link href={'home'}>Contact Us</Link>
+        <Link href={'/contact'}>Contact Us</Link>
       </div>
     </div>
   )
