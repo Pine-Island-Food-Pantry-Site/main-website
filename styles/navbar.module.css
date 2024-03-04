@@ -9,6 +9,7 @@
   position: sticky;
   top: 90vh;
   border: var(--nav-border);
+  z-index: 1000;
 }
 
 .navbar_logo {
