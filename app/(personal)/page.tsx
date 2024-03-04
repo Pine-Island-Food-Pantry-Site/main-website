@@ -50,12 +50,14 @@ async function IndexRoute() {
         <h2 className={styles.top_text && styles.h2_text}>
           Providing food assistance for those in need.
         </h2>
-        <Image
-          src={'logo.svg'}
-          alt="Pine Island Food Pantry Logo"
-          width={200}
-          height={200}
-        />
+        <div className={styles.image_div}>
+          <Image
+            src={'/logo.svg'}
+            alt="Pine Island Food Pantry Logo"
+            fill={true}
+            sizes="(max-width: 768px) 75vw, (max-width: 1200px) 50vw"
+          />
+        </div>
         <a
           href="https://maps.app.goo.gl/DTgw8M5Lgby9eFvY6"
           className={styles.top_link && styles.text}
@@ -122,12 +124,15 @@ async function IndexRoute() {
       <div className={styles.home_card}>
         <h3 className={styles.about_header}>About Us</h3>
         <p className={styles.about_text}>
-          The Pine Island Food Pantry is a non-denominational, 501c3 non-profit
-          organization serving the residents of Pine Island and the greater
-          Matlacha area and is open Mondays and Thursdays from 9am to 11am.
-          Clients may pick up groceries twice per month. The pantry is housed in
-          the Life Center of Our Lady of the Miraculous Medal Church at 12175
-          Stringfellow Rd, Bokeelia, FL 33922.
+          The Pine Island Food Pantry was founded in 1993 with the goal to
+          ensure “No One Goes Hungry” on Greater Pine Island. The organization
+          was incorporated under the laws of the State of Florida on January 2,
+          2010 and is now a non-denominational, 501c3 non-profit organization -
+          The Pine Island Food Pantry, Inc. We serve the residents of Pine
+          Island and the greater Matlacha area and are open Mondays and
+          Thursdays from 9am to 11am. Clients may pick up groceries twice per
+          month. The pantry is housed in the Life Center of Our Lady of the
+          Miraculous Medal Church at 12175 Stringfellow Rd, Bokeelia, FL 33922.
           <br></br>
           <br></br>
           New clients are welcome. An ID is required at each visit to verify

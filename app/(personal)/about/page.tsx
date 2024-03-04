@@ -30,12 +30,15 @@ const About: React.FC = () => {
       <div className={styles.card}>
         <h3 className={styles.header_3}>About Us</h3>
         <p className={styles.p_about_us_text}>
-          The Pine Island Food Pantry is a non-denominational, 501c3 non-profit
-          organization serving the residents of Pine Island and the greater
-          Matlacha area and is open Mondays and Thursdays from 9am to 11am.
-          Clients may pick up groceries twice per month. The pantry is housed in
-          the Life Center of Our Lady of the Miraculous Medal Church at 12175
-          Stringfellow Rd, Bokeelia, FL 33922.
+          The Pine Island Food Pantry was founded in 1993 with the goal to
+          ensure “No One Goes Hungry” on Greater Pine Island. The organization
+          was incorporated under the laws of the State of Florida on January 2,
+          2010 and is now a non-denominational, 501c3 non-profit organization -
+          The Pine Island Food Pantry, Inc. We serve the residents of Pine
+          Island and the greater Matlacha area and are open Mondays and
+          Thursdays from 9am to 11am. Clients may pick up groceries twice per
+          month. The pantry is housed in the Life Center of Our Lady of the
+          Miraculous Medal Church at 12175 Stringfellow Rd, Bokeelia, FL 33922.
           <br></br>
           <br></br>
           New clients are welcome. An ID is required at each visit to verify
