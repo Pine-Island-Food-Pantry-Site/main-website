@@ -14,12 +14,14 @@ const About: React.FC = () => {
       <h2 className={styles.header_2}>
         Providing food assistance for those in need
       </h2>
-      <Image
-        src={'logo.svg'}
-        alt="Pine Island Food Pantry Logo"
-        width={200}
-        height={200}
-      />
+      <div className={styles.image_div}>
+        <Image
+          src={'logo.svg'}
+          alt="Pine Island Food Pantry Logo"
+          fill={true}
+          sizes="(max-width: 768px) 75vw, (max-width: 1200px) 50vw"
+        />
+      </div>
       <a
         className={styles.a_address}
         href="https://maps.app.goo.gl/DTgw8M5Lgby9eFvY6"
