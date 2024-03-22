@@ -37,7 +37,7 @@
   position: relative;
 }
 
-.reach_out_card {
+.reach_outer_card {
   border-radius: 10px;
   margin-top: 2em;
   padding: 1em;
@@ -47,8 +47,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background: var(--background-color);
-  background-image: var(--food-background);
+  box-shadow: var(--drop-shadow-1);
 }
 
 .reach_inner_card {
@@ -85,9 +84,8 @@
   padding: 1em;
   width: 100%;
   max-width: 1000px;
-  background: var(--background-color);
-  background-image: var(--food-background);
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  box-shadow: var(--drop-shadow-1);
+  border-radius: 10px;
 }
 
 .form_card {

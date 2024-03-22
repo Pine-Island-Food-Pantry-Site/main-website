@@ -61,7 +61,7 @@ export default function Contact() {
           sizes="(max-width: 768px) 75vw, (max-width: 1200px) 50vw"
         />
       </div>
-      <div className={styles.reach_out_card}>
+      <div className={`food_background ${styles.reach_outer_card}`}>
         <div className={styles.reach_inner_card}>
           <h3 className={styles.header_3}>Reach Out</h3>
           <p>
@@ -81,7 +81,7 @@ export default function Contact() {
           </p>
         </div>
       </div>
-      <div className={styles.outer_card}>
+      <div className={`food_background ${styles.outer_card}`}>
         <form className={styles.form_card} onSubmit={handleSubmit(onSubmit)}>
           <input
             type="checkbox"

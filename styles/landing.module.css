@@ -72,6 +72,7 @@
   max-width: 1000px;
   min-height: 500px;
   background: var(--background-color);
+  box-shadow: var(--drop-shadow-1);
 }
 
 .mission {
