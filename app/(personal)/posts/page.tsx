@@ -44,19 +44,31 @@ export default async function PostsPage() {
 
   return (
     <div className={styles.posts_page}>
-      <h1>Welcome to The Pine Island Food Pantry</h1>
-      <h2>Providing food assistance for those in need.</h2>
-      <Image
-        src={'logo.svg'}
-        alt="Pine Island Food Pantry Logo"
-        width={200}
-        height={200}
-      />
-      <a href="https://maps.app.goo.gl/DTgw8M5Lgby9eFvY6">
+      <h1 className={styles.h1_text}>Welcome to The Pine Island Food Pantry</h1>
+      <h2 className={styles.h2_text}>
+        Providing food assistance for those in need.
+      </h2>
+      <div className={styles.image_div}>
+        <Image
+          src={'/logo.svg'}
+          alt="Pine Island Food Pantry Logo"
+          fill={true}
+          sizes="(max-width: 768px) 75vw, (max-width: 1200px) 50vw"
+        />
+      </div>
+      <a
+        href="https://maps.app.goo.gl/DTgw8M5Lgby9eFvY6"
+        className={styles.top_link}
+      >
         12175 Stringfellow Road Bokeelia, FL 33922 USA
       </a>
-      <a href="#">Donate</a>
-      <h2>Our Posts</h2>
+      <a
+        href="https://www.paypal.com/donate?hosted_button_id=45JBRR8VRXJ76"
+        target="_blank"
+      >
+        Donate
+      </a>
+      <h3>Our Posts</h3>
       {posts.map((post, index) => {
         const imageUrl =
           post.coverImage &&
