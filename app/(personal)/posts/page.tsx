@@ -63,33 +63,45 @@ export default async function PostsPage() {
         12175 Stringfellow Road Bokeelia, FL 33922 USA
       </a>
       <a
+        className={styles.donate_button}
         href="https://www.paypal.com/donate?hosted_button_id=45JBRR8VRXJ76"
         target="_blank"
       >
         Donate
       </a>
-      <h3>Our Posts</h3>
-      {posts.map((post, index) => {
-        const imageUrl =
-          post.coverImage &&
-          urlForImage(post.coverImage)?.height(250).width(250).fit('crop').url()
+      <div className={`food_background ${styles.food_card}`}>
+        <div className={styles.inner_card}>
+          <h3 className={styles.h3_text}>Our Posts</h3>
+          <h4 className={styles.h4_text}>Newest First</h4>
+          {posts.map((post, index) => {
+            const imageUrl =
+              post.coverImage &&
+              urlForImage(post.coverImage)
+                ?.height(250)
+                .width(250)
+                .fit('crop')
+                .url()
 
-        return (
-          <div key={index} className={styles.card}>
-            <div className={styles.card_image}>
-              <Image
-                src={imageUrl}
-                alt={post.title}
-                layout="fill"
-                objectFit="contain"
-              />
-            </div>
-            <h3>{post.title}</h3>
-            <p>{toPlainText(post.overview).substring(0, 155)}</p>
-            <Link href={`/posts/${post.slug}`}>Read More</Link>
-          </div>
-        )
-      })}
+            return (
+              <div key={index} className={styles.card}>
+                <div className={styles.card_image}>
+                  <Image src={imageUrl} alt={post.title} fill={true} />
+                </div>
+                <h4 className={styles.post_h4}>{post.title}</h4>
+                <p className={styles.card_text}>
+                  {toPlainText(post.overview).substring(0, 100)}
+                </p>
+                <Link className={styles.card_link} href={`/posts/${post.slug}`}>
+                  Read More
+                </Link>
+              </div>
+            )
+          })}
+        </div>
+      </div>
+      <Link className={styles.contact_button} href="/contact">
+        Contact Us
+      </Link>
     </div>
   )
 }

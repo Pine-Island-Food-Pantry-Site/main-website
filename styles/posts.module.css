@@ -3,8 +3,6 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 100vw;
-  padding: 1em;
   margin-top: -10vh;
   background: var(--bg-gradient);
 }
@@ -13,7 +11,7 @@
   display: flex;
   justify-content: center;
   align-content: center;
-  margin: 1em;
+  margin-top: -2em;
   width: 100%;
   height: 75vh;
   object-fit: "contain";
@@ -23,7 +21,7 @@
 .h1_text {
   font-size: 30px;
   text-align: center;
-  margin-bottom: 1em;
+  margin-bottom: 0.5em;
   margin-top: 1em;
   color: var(--font-blue);
 }
@@ -31,7 +29,31 @@
 .h2_text {
   font-size: 20px;
   text-align: center;
+  margin-top: 1em;
+  color: var(--font-blue);
+}
+
+.donate_button {
+  font-size: 20px;
+  border-radius: 46px;
+  padding: 0.5em 0.75em;
+  margin-bottom: 2em;
+  border: 1px solid #000;
+  background: var(--btn-gradient);
+  box-shadow: var(--drop-shadow-1);
+}
+
+.h3_text {
+  font-size: 22px;
+  text-align: center;
   margin-top: 2em;
+  color: var(--font-blue);
+}
+
+.h4_text {
+  font-size: 16px;
+  text-align: center;
+  margin-top: 1em;
   color: var(--font-blue);
 }
 
@@ -40,15 +62,42 @@
   color: var(--font-blue);
   font-size: 22px;
   margin-bottom: 2em;
+  text-align: center;
+}
+
+.food_card {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.inner_card {
+  width: 90%;
+  border-radius: 20px;
+  border: 3px solid #C1694F;
+  background: var(--background-color);
+  margin-top: 1.5em;
+  margin-bottom: 2em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .card {
   width: 80%;
   margin: 1em 0.5em;
+  padding: 1em 1em;
   border-radius: 10px;
   border: 3px solid #C1694F;
   background: #FFF;
-  box-shadow: 7px 4px 10px 5px rgba(255, 227, 106, 0.50);
+  box-shadow: 7px 4px 10px 5px rgba(255, 227, 106, 0.35);
+  display: flex;
+  flex-direction: column;
+  align-items: start;
 }
 
 .card_image {
@@ -57,19 +106,75 @@
   height: 250px;
   overflow: hidden;
   border-radius: 10px;
+  margin-bottom: 0.75em;
 }
 
-.r_10 {
-  border-radius: 10px;
+.post_h4 {
+  font-size: 18px;
+  color: var(--font-blue);
+  margin-bottom: 0.5em;
 }
 
-.r_20 {
-  border-radius: 20px;
+.card_text {
+  font-size: 16px;
+  margin-bottom: 0.5em;
+}
+
+.card_link {
+  font-size: 16px;
+  color: var(--font-blue);
+  text-decoration: underline;
+}
+
+.contact_button {
+  font-size: 20px;
+  border-radius: 46px;
+  padding: 0.5em 0.75em;
+  margin-bottom: 2em;
+  margin-top: 2em;
+  border: 1px solid #000;
+  background: var(--btn-gradient);
+  box-shadow: var(--drop-shadow-1);
 }
 
 @media (min-width: 768px) {
+  .image_div {
+    margin-top: 1em;
+  }
+
+  .inner_card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+  }
+
+  .inner_card>h3:first-of-type,
+  .inner_card>h4:first-of-type {
+    grid-column: span 2;
+  }
+
+  .card {
+    max-height: 425px;
+  }
+}
+
+@media (min-width: 1024px) {
   .posts_page {
     margin-top: 0;
   }
 
+  .h1_text {
+    margin-bottom: 1em;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .inner_card {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .inner_card>h3:first-of-type,
+  .inner_card>h4:first-of-type {
+    grid-column: span 3;
+  }
 }
