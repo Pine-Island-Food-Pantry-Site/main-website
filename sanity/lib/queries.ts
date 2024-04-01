@@ -53,7 +53,7 @@ export const settingsQuery = groq`
 
 // groq query to get the latest post
 export const latestPostQuery = groq`
-  *[_type == "post"] | order(publishedAt desc) [0] {
+  *[_type == "post"] | order(duration.publishedAt desc) [0] {
     _id,
     coverImage,
     description,
@@ -67,7 +67,7 @@ export const latestPostQuery = groq`
 
 // groq query to get all posts
 export const allPostsQuery = groq`
-  *[_type == "post"] | order(publishedAt desc) {
+  *[_type == "post"] | order(duration.publishedAt desc) {
     _id,
     coverImage,
     description,

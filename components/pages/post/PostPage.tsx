@@ -22,7 +22,7 @@ export function PostPage({ data, encodeDataAttribute }: PostPageProps) {
 
   return (
     <div>
-      <div className="mb-20 space-y-6">
+      <div className="mb-20 mt-5 space-y-6 px-16">
         {/* Header */}
         <Header title={title} description={overview} />
 
@@ -73,7 +73,9 @@ export function PostPage({ data, encodeDataAttribute }: PostPageProps) {
           />
         )}
       </div>
-      <Link href="/posts">Back To Posts</Link>
+      <Link className="px-16" href="/posts">
+        Back To Posts
+      </Link>
       <div className="absolute left-0 w-screen border-t" />
     </div>
   )
