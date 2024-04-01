@@ -77,8 +77,8 @@ export default async function PostsPage() {
             const imageUrl =
               post.coverImage &&
               urlForImage(post.coverImage)
-                ?.height(250)
-                .width(250)
+                ?.height(200)
+                .width(200)
                 .fit('crop')
                 .url()
 
