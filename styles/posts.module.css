@@ -90,20 +90,20 @@
 .card {
   width: 80%;
   margin: 1em 0.5em;
-  padding: 1em 1em;
+  padding: 1em 0.5em;
   border-radius: 10px;
   border: 3px solid #C1694F;
   background: #FFF;
   box-shadow: 7px 4px 10px 5px rgba(255, 227, 106, 0.35);
   display: flex;
   flex-direction: column;
-  align-items: start;
+  align-items: flex-start;
 }
 
 .card_image {
   position: relative;
-  width: 250px;
-  height: 250px;
+  width: 200px;
+  height: 200px;
   overflow: hidden;
   border-radius: 10px;
   margin-bottom: 0.75em;
