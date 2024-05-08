@@ -7,9 +7,12 @@ const ContactCard: React.FC = () => {
     <div className={styles.main}>
       <div className={styles.card}>
         <h4 className={styles.header_4}>Address</h4>
-        <p className={styles.p_text}>
+        <a
+          href="https://maps.app.goo.gl/DTgw8M5Lgby9eFvY6"
+          className={styles.link_text}
+        >
           12175 Stringfellow Road Bokeelia, FL 33922 USA
-        </p>
+        </a>
       </div>
       <div className={styles.card}>
         <h4 className={styles.header_4}>Business Hours</h4>

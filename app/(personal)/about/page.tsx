@@ -106,6 +106,30 @@ const About: React.FC = () => {
           Greater Pine Island Chamber of Commerce
         </a>
       </div>
+      {/* Board of directors with names and positions */}
+      <div className={styles.card}>
+        <h3 className={styles.header_3}>Board of Directors</h3>
+        <dl className={styles.board_of_directors_container}>
+          <dt>President</dt>
+          <dd className={styles.title}>Bonnie Potter</dd>
+          <dt>Vice President</dt>
+          <dd className={styles.title}>Nancy Ruedi</dd>
+          <dt>Secretary</dt>
+          <dd className={styles.title}>Darleen Wisniefski</dd>
+          <dt>Treasurer</dt>
+          <dd className={styles.title}>Diane Gleason</dd>
+          <dt>Board Member</dt>
+          <dd className={styles.title}>Barb Vadas</dd>
+          <dt>Board Member</dt>
+          <dd className={styles.title}>Howie Loyson</dd>
+          <dt>Board Member</dt>
+          <dd className={styles.title}>Rob Hobneier</dd>
+          <dt>Board Member</dt>
+          <dd className={styles.title}>Marcella Betterley</dd>
+          <dt>Executive Director</dt>
+          <dd className={styles.title}>Denise Selby</dd>
+        </dl>
+      </div>
       <ContactCard />
     </main>
   )
