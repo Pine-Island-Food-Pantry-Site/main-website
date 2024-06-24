@@ -60,7 +60,7 @@ async function IndexRoute() {
         </div>
         <a
           href="https://maps.app.goo.gl/DTgw8M5Lgby9eFvY6"
-          className={styles.top_link && styles.text}
+          className={styles.top_link}
         >
           12175 Stringfellow Road Bokeelia, FL 33922 USA
         </a>
