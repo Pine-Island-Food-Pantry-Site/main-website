@@ -24,6 +24,7 @@
   margin-bottom: 0.5em;
   margin-top: 1em;
   color: var(--font-blue);
+  font-family: "Poppins-Regular";
 }
 
 .h2_text {
@@ -31,16 +32,19 @@
   text-align: center;
   margin-top: 1em;
   color: var(--font-blue);
+  font-family: "Poppins-Regular";
 }
 
 .top_link {
-  color: var(--font-blue);
   text-align: center;
   font-size: 22px;
+  color: var(--font-blue);
+  font-family: "Poppins-Regular";
 }
 
 .donate_button {
   font-size: 20px;
+  font-family: "Poppins-Regular";
   border-radius: 46px;
   padding: 0.5em 0.75em;
   margin-bottom: 2em;
@@ -84,17 +88,21 @@
   text-align: center;
   margin: 1.5em 0em;
   color: var(--font-blue);
+  font-family: "Poppins-Regular";
 }
 
 .description {
+  padding: 0.5em auto;
   font-size: 18px;
   color: var(--font-blue);
+  font-family: "Open Sans";
 }
 
 .posts_page_link {
+  font-family: "Poppins-Regular";
+  font-size: 18px;
   padding: 0.5em 0.75em;
   margin-bottom: 2em;
-  border: 1px solid #000;
   border-radius: 46px;
   border: 1px solid #000;
   background: var(--btn-gradient);

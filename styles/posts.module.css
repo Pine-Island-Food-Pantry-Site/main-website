@@ -24,6 +24,7 @@
   margin-bottom: 0.5em;
   margin-top: 1em;
   color: var(--font-blue);
+  font-family: "Poppins-Regular";
 }
 
 .h2_text {
@@ -31,10 +32,12 @@
   text-align: center;
   margin-top: 1em;
   color: var(--font-blue);
+  font-family: "Poppins-Regular";
 }
 
 .donate_button {
   font-size: 20px;
+  font-family: "Poppins-Regular";
   border-radius: 46px;
   padding: 0.5em 0.75em;
   margin-bottom: 2em;
@@ -46,8 +49,10 @@
 .h3_text {
   font-size: 22px;
   text-align: center;
+  text-decoration: underline;
   margin-top: 2em;
   color: var(--font-blue);
+  font-family: "Poppins-Regular";
 }
 
 .h4_text {
@@ -55,12 +60,14 @@
   text-align: center;
   margin-top: 1em;
   color: var(--font-blue);
+  font-family: "Poppins-Regular";
 }
 
 .top_link {
   text-decoration: underline;
   color: var(--font-blue);
   font-size: 22px;
+  font-family: "Poppins-Regular";
   margin-bottom: 2em;
   text-align: center;
 }
@@ -111,23 +118,27 @@
 
 .post_h4 {
   font-size: 18px;
+  font-family: "Poppins-Regular";
   color: var(--font-blue);
   margin-bottom: 0.5em;
 }
 
 .card_text {
-  font-size: 16px;
+  font-size: 14px;
   margin-bottom: 0.5em;
+  font-family: "Poppins-Regular";
 }
 
 .card_link {
   font-size: 16px;
   color: var(--font-blue);
+  font-family: "Poppins-Regular";
   text-decoration: underline;
 }
 
 .contact_button {
   font-size: 20px;
+  font-family: "Poppins-Regular";
   border-radius: 46px;
   padding: 0.5em 0.75em;
   margin-bottom: 2em;
@@ -148,8 +159,8 @@
     justify-items: center;
   }
 
-  .inner_card>h3:first-of-type,
-  .inner_card>h4:first-of-type {
+  .inner_card > h3:first-of-type,
+  .inner_card > h4:first-of-type {
     grid-column: span 2;
   }
 
@@ -173,8 +184,8 @@
     grid-template-columns: 1fr 1fr 1fr;
   }
 
-  .inner_card>h3:first-of-type,
-  .inner_card>h4:first-of-type {
+  .inner_card > h3:first-of-type,
+  .inner_card > h4:first-of-type {
     grid-column: span 3;
   }
 }

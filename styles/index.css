@@ -7,6 +7,16 @@
   --drop-shadow-1: 0px 4px 4px 0px rgba(0, 0, 0, 0.30);
 }
 
+@font-face {
+  font-family: 'Open Sans';
+  src: url('../public/OpenSans-Regular.ttf') format('truetype');
+
+  font-family: 'Poppins-Regular';
+  src: url('../public/Poppins-Regular.ttf') format('truetype');
+
+  font-display: swap;
+}
+
 html {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

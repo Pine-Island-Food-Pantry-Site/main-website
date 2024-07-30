@@ -4,7 +4,7 @@ import styles from '../../styles/contact_card.module.css'
 
 const ContactCard: React.FC = () => {
   return (
-    <div className={styles.main}>
+    <div className={`ankor-bg ${styles.main}`}>
       <div className={styles.card}>
         <h4 className={styles.header_4}>Address</h4>
         <a

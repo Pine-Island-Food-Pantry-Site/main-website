@@ -23,11 +23,13 @@
 .nav_text {
   margin-left: 2em;
   color: var(--font-blue);
+  font-family: "Poppins-Regular";
 }
 
 .link_styles {
   text-decoration: underline;
   color: var(--font-blue);
+  font-family: "Poppins-Regular";
 }
 
 @media screen and (min-width: 768px) {

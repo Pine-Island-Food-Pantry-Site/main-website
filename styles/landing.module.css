@@ -1,3 +1,10 @@
+@font-face {
+  font-family: 'Open Sans';
+  src: url('../public/OpenSans-Regular.ttf') format('ttf');
+
+  font-display: swap;
+}
+
 .landing_container {
   margin-top: -10vh;
   padding: 1em;
@@ -18,12 +25,14 @@
 
 .text {
   color: var(--font-blue);
+  font-family: 'Open Sans';
 }
 
 .top_text {
   margin-top: 2em;
   margin-bottom: 1em;
   color: var(--font-blue);
+  font-family: 'Poppins-Regular', serif;
 }
 
 .h1_text {
@@ -52,14 +61,17 @@
 }
 
 .top_link {
+  font-family: 'Poppins-Regular';
   text-decoration: underline;
   color: var(--font-blue);
   font-size: 22px;
+  text-align: center;
 }
 
 .text {
-  font-size: 22px;
+  font-size: 18px;
   color: var(--font-blue);
+  font-family: "Poppins-Regular";
 }
 
 .home_card {
@@ -78,8 +90,10 @@
 }
 
 .mission {
+  margin-bottom: 1em;
   color: var(--font-blue);
   font-size: 28px;
+  font-family: 'Poppins-Regular';
 }
 
 .about_us {
@@ -91,6 +105,7 @@
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.30);
   font-size: 28px;
   margin-bottom: 1em;
+  font-family: 'Poppins-Regular';
 }
 
 .rounded_image {
@@ -99,6 +114,7 @@
 }
 
 .volunteer {
+  font-family: 'Poppins-Regular';
   font-size: 28px;
   color: var(--font-blue);
   text-align: center;
@@ -107,6 +123,7 @@
 }
 
 .volunteer_text {
+  font-family: 'Open Sans';
   font-size: 20px;
   color: var(--font-blue);
   text-align: left;
@@ -121,6 +138,7 @@
   margin-top: 3em;
   margin-bottom: 1em;
   padding: 0.5em;
+  font-family: 'Poppins-Regular';
 }
 
 .latest {
@@ -128,6 +146,7 @@
   color: var(--font-blue);
   text-decoration: underline;
   cursor: pointer;
+  font-family: 'Poppins-Regular';
 }
 
 .overview {
@@ -135,6 +154,7 @@
 }
 
 .about_header {
+  font-family: 'Poppins-Regular';
   font-size: 30px;
   color: var(--font-blue);
   text-align: center;
@@ -143,6 +163,7 @@
 }
 
 .about_text {
+  font-family: 'Open Sans';
   font-size: 18px;
   color: var(--font-blue);
   text-align: left;
@@ -164,6 +185,7 @@
   margin-bottom: 1em;
   font-size: 30px;
   color: var(--font-blue);
+  font-family: 'Poppins-Regular';
 }
 
 .location_image {
