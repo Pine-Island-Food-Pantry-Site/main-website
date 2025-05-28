@@ -5,7 +5,7 @@ export default defineType({
   name: 'post',
   title: 'Post',
   type: 'document',
-  icon: DocumentIcon,
+  icon: DocumentIcon as any,
   // Uncomment below to have edits publish automatically as you type
   // liveEdit: true,
   fields: [
@@ -113,7 +113,7 @@ export default defineType({
         }),
         defineField({
           type: 'image',
-          icon: ImageIcon,
+          icon: ImageIcon as any,
           name: 'image',
           title: 'Image',
           options: {

@@ -39,9 +39,9 @@ queryStore.setServerClient(serverClient)
 
 const usingCdn = serverClient.config().useCdn
 // Automatically handle draft mode
-export const loadQuery = ((query, params = {}, options = {}) => {
+export const loadQuery = (async (query, params = {}, options = {}) => {
   const {
-    perspective = draftMode().isEnabled ? 'previewDrafts' : 'published',
+    perspective = (await draftMode()).isEnabled ? 'previewDrafts' : 'published',
   } = options
   // Don't cache by default
   let revalidate: NextFetchRequestConfig['revalidate'] = 0

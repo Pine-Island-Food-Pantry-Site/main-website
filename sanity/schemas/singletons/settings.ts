@@ -5,7 +5,7 @@ export default defineType({
   name: 'settings',
   title: 'Settings',
   type: 'document',
-  icon: CogIcon,
+  icon: CogIcon as any,
   // Uncomment below to have edits publish automatically as you type
   // liveEdit: true,
   fields: [

@@ -19,9 +19,10 @@ export const locate: DocumentLocationResolver = (params, context) => {
     params.type === 'page' ||
     params.type === 'post'
   ) {
+    const queryParams = { id: params.id };
     const doc$ = context.documentStore.listenQuery(
       `*[_id==$id || references($id)]{_type,slug,title}`,
-      params,
+      queryParams,
       { perspective: 'previewDrafts' },
     ) as Observable<
       | {

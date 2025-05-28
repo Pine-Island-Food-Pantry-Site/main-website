@@ -37,7 +37,7 @@ async function IndexRoute() {
     coverImage &&
     urlForImage(coverImage)?.height(250).width(250).fit('crop').url()
 
-  if (draftMode().isEnabled) {
+  if ((await draftMode()).isEnabled) {
     return <HomePagePreview initial={initial} />
   }
 

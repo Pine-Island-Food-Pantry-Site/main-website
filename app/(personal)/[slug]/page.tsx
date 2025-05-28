@@ -10,13 +10,16 @@ import { loadPage } from '@/sanity/loader/loadQuery'
 const PagePreview = dynamic(() => import('@/components/pages/page/PagePreview'))
 
 type Props = {
-  params: { slug: string }
+  params: Promise<{ slug: string }>;
+  searchParams: Promise<{ [key: string]: string | string[] | undefined }>;
 }
 
 export async function generateMetadata(
-  { params }: Props,
+  { params: paramsPromise, searchParams: searchParamsPromise }: Props,
   parent: ResolvingMetadata,
 ): Promise<Metadata> {
+  const params = await paramsPromise;
+  // const searchParams = await searchParamsPromise; // Await if used
   const { data: page } = await loadPage(params.slug)
 
   return {
@@ -31,11 +34,19 @@ export function generateStaticParams() {
   return generateStaticSlugs('page')
 }
 
-export default async function PageSlugRoute({ params }: Props) {
+export default async function PageSlugRoute({
+  params: paramsPromise,
+  searchParams: searchParamsPromise,
+}: {
+  params: Promise<{ slug: string }>;
+  searchParams: Promise<{ [key: string]: string | string[] | undefined }>;
+}) {
+  const params = await paramsPromise;
+  // const searchParams = await searchParamsPromise; // Await if used
   const initial = await loadPage(params.slug)
 
-  if (draftMode().isEnabled) {
-    return <PagePreview params={params} initial={initial} />
+  if ((await draftMode()).isEnabled) {
+    return <PagePreview params={params} initial={initial} /> // Ensure PagePreview expects params as { slug: string }, not Promise
   }
 
   if (!initial.data) {

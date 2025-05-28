@@ -1,11 +1,12 @@
-import { DocumentIcon, ImageIcon } from '@sanity/icons'
-import { defineArrayMember, defineField, defineType } from 'sanity'
+import { DocumentIcon, ImageIcon } from '@sanity/icons';
+import type { ComponentType } from 'react';
+import { defineArrayMember, defineField, defineType } from 'sanity';
 
 export default defineType({
   type: 'document',
   name: 'page',
   title: 'Page',
-  icon: DocumentIcon,
+  icon: DocumentIcon as any,
   fields: [
     defineField({
       type: 'string',
@@ -86,7 +87,7 @@ export default defineType({
         }),
         defineField({
           type: 'image',
-          icon: ImageIcon,
+          icon: ImageIcon as any,
           name: 'image',
           title: 'Image',
           options: {
