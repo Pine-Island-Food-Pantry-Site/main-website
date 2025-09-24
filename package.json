@@ -4,15 +4,11 @@
   "scripts": {
     "build": "next build",
     "dev": "next",
-    "format": "npx prettier --write . --ignore-path .gitignore",
-    "lint": "next lint -- --ignore-path .gitignore",
-    "lint:fix": "npm run format && npm run lint -- --fix",
+    "format": "npx biome format --write .",
+    "lint": "npx biome check",
+    "lint:fix": "npx biome check --apply",
     "start": "next start",
     "type-check": "tsc --noEmit"
-  },
-  "prettier": {
-    "semi": false,
-    "singleQuote": true
   },
   "dependencies": {
     "@portabletext/react": "3.1.0",
@@ -36,15 +32,10 @@
     "styled-components": "6.1.13"
   },
   "devDependencies": {
+    "@biomejs/biome": "^2.2.4",
     "@types/react": "18.2.55",
     "autoprefixer": "10.4.17",
-    "eslint": "8.56.0",
-    "eslint-config-next": "14.1.0",
-    "eslint-plugin-simple-import-sort": "10.0.0",
     "postcss": "8.4.34",
-    "prettier": "3.2.5",
-    "prettier-plugin-packagejson": "2.4.10",
-    "prettier-plugin-tailwindcss": "0.5.11",
     "tailwindcss": "3.4.1",
     "typescript": "5.3.3"
   }
