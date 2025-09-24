@@ -9,15 +9,15 @@ import { PagePayload } from '@/types'
 import Page from './Page'
 
 type Props = {
-  params: { slug: string }
-  initial: QueryResponseInitial<PagePayload | null>
+	params: { slug: string }
+	initial: QueryResponseInitial<PagePayload | null>
 }
 
 export default function PagePreview(props: Props) {
-  const { params, initial } = props
-  const { data } = useQuery<PagePayload | null>(pagesBySlugQuery, params, {
-    initial,
-  })
+	const { params, initial } = props
+	const { data } = useQuery<PagePayload | null>(pagesBySlugQuery, params, {
+		initial,
+	})
 
-  return <Page data={data!} />
+	return <Page data={data!} />
 }

@@ -1,51 +1,44 @@
 {
-  "name": "sanity-template-template-nextjs-personal-website",
-  "private": true,
-  "scripts": {
-    "build": "next build",
-    "dev": "next",
-    "format": "npx prettier --write . --ignore-path .gitignore",
-    "lint": "next lint -- --ignore-path .gitignore",
-    "lint:fix": "npm run format && npm run lint -- --fix",
-    "start": "next start",
-    "type-check": "tsc --noEmit"
-  },
-  "prettier": {
-    "semi": false,
-    "singleQuote": true
-  },
-  "dependencies": {
-    "@portabletext/react": "3.1.0",
-    "@sanity/demo": "2.0.0",
-    "@sanity/image-url": "1.1.0",
-    "@sanity/preview-url-secret": "2.0.2",
-    "@sanity/react-loader": "1.10.16",
-    "@sanity/vision": "3.63.0",
-    "@tailwindcss/typography": "0.5.15",
-    "@web3forms/react": "^1.1.3",
-    "classnames": "2.5.1",
-    "date-fns": "4.1.0",
-    "next": "15.3.2",
-    "next-sanity": "7.1.4",
-    "react": "19.1.0",
-    "react-dom": "19.1.0",
-    "react-hook-form": "^7.56.4",
-    "sanity": "3.63.0",
-    "sanity-plugin-asset-source-unsplash": "3.0.1",
-    "server-only": "0.0.1",
-    "styled-components": "6.1.13"
-  },
-  "devDependencies": {
-    "@types/react": "18.2.55",
-    "autoprefixer": "10.4.17",
-    "eslint": "8.56.0",
-    "eslint-config-next": "14.1.0",
-    "eslint-plugin-simple-import-sort": "10.0.0",
-    "postcss": "8.4.34",
-    "prettier": "3.2.5",
-    "prettier-plugin-packagejson": "2.4.10",
-    "prettier-plugin-tailwindcss": "0.5.11",
-    "tailwindcss": "3.4.1",
-    "typescript": "5.3.3"
-  }
+	"name": "sanity-template-template-nextjs-personal-website",
+	"private": true,
+	"scripts": {
+		"build": "next build",
+		"dev": "next",
+		"format": "npx biome format --write .",
+		"lint": "npx biome check",
+		"lint:fix": "npx biome check --apply",
+		"start": "next start",
+		"type-check": "tsc --noEmit"
+	},
+	"dependencies": {
+		"@portabletext/react": "4.0.3",
+		"@sanity/demo": "2.0.0",
+		"@sanity/image-url": "1.2.0",
+		"@sanity/preview-url-secret": "2.1.15",
+		"@sanity/react-loader": "1.11.19",
+		"@sanity/vision": "4.10.0",
+		"@sanity/visual-editing": "^3.0.5",
+		"@tailwindcss/typography": "0.5.18",
+		"@web3forms/react": "^1.1.3",
+		"classnames": "2.5.1",
+		"date-fns": "4.1.0",
+		"next": "15.5.4",
+		"next-sanity": "11.1.3",
+		"react": "19.1.1",
+		"react-dom": "19.1.1",
+		"react-hook-form": "^7.63.0",
+		"sanity": "4.10.0",
+		"sanity-plugin-asset-source-unsplash": "4.0.1",
+		"server-only": "0.0.1",
+		"styled-components": "6.1.19"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "^2.2.4",
+		"@tailwindcss/postcss": "^4.1.13",
+		"@types/react": "19.1.13",
+		"autoprefixer": "10.4.21",
+		"postcss": "8.5.6",
+		"tailwindcss": "4.1.13",
+		"typescript": "5.9.2"
+	}
 }

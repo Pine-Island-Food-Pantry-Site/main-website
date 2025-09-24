@@ -11,54 +11,54 @@ import { loadPost } from '@/sanity/loader/loadQuery'
 const PostPreview = dynamic(() => import('@/components/pages/post/PostPreview'))
 
 type Props = {
-  params: Promise<{ slug: string }>;
-  searchParams: Promise<{ [key: string]: string | string[] | undefined }>;
+	params: Promise<{ slug: string }>
+	searchParams: Promise<{ [key: string]: string | string[] | undefined }>
 }
 
 export async function generateMetadata(
-  { params: paramsPromise, searchParams: searchParamsPromise }: Props,
-  parent: ResolvingMetadata,
+	{ params: paramsPromise, searchParams: searchParamsPromise }: Props,
+	parent: ResolvingMetadata,
 ): Promise<Metadata> {
-  const params = await paramsPromise;
-  // const searchParams = await searchParamsPromise; // Await if used
-  const { data: post } = await loadPost(params.slug)
-  const ogImage = urlForOpenGraphImage(post?.coverImage)
+	const params = await paramsPromise
+	// const searchParams = await searchParamsPromise; // Await if used
+	const { data: post } = await loadPost(params.slug)
+	const ogImage = urlForOpenGraphImage(post?.coverImage)
 
-  return {
-    title: post?.title,
-    description: post?.overview
-      ? toPlainText(post.overview)
-      : (await parent).description,
-    openGraph: ogImage
-      ? {
-          images: [ogImage, ...((await parent).openGraph?.images || [])],
-        }
-      : {},
-  }
+	return {
+		title: post?.title,
+		description: post?.overview
+			? toPlainText(post.overview)
+			: (await parent).description,
+		openGraph: ogImage
+			? {
+					images: [ogImage, ...((await parent).openGraph?.images || [])],
+				}
+			: {},
+	}
 }
 
 export function generateStaticParams() {
-  return generateStaticSlugs('post')
+	return generateStaticSlugs('post')
 }
 
 export default async function ProjectSlugRoute({
-  params: paramsPromise,
-  searchParams: searchParamsPromise,
+	params: paramsPromise,
+	searchParams: searchParamsPromise,
 }: {
-  params: Promise<{ slug: string }>;
-  searchParams: Promise<{ [key: string]: string | string[] | undefined }>;
+	params: Promise<{ slug: string }>
+	searchParams: Promise<{ [key: string]: string | string[] | undefined }>
 }) {
-  const params = await paramsPromise;
-  // const searchParams = await searchParamsPromise; // Await if used
-  const initial = await loadPost(params.slug)
+	const params = await paramsPromise
+	// const searchParams = await searchParamsPromise; // Await if used
+	const initial = await loadPost(params.slug)
 
-  if ((await draftMode()).isEnabled) {
-    return <PostPreview params={params} initial={initial} /> // Ensure PostPreview expects params as { slug: string }, not Promise
-  }
+	if ((await draftMode()).isEnabled) {
+		return <PostPreview params={params} initial={initial} /> // Ensure PostPreview expects params as { slug: string }, not Promise
+	}
 
-  if (!initial.data) {
-    notFound()
-  }
+	if (!initial.data) {
+		notFound()
+	}
 
-  return <PostPage data={initial.data} />
+	return <PostPage data={initial.data} />
 }

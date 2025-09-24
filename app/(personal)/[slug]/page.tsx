@@ -10,48 +10,48 @@ import { loadPage } from '@/sanity/loader/loadQuery'
 const PagePreview = dynamic(() => import('@/components/pages/page/PagePreview'))
 
 type Props = {
-  params: Promise<{ slug: string }>;
-  searchParams: Promise<{ [key: string]: string | string[] | undefined }>;
+	params: Promise<{ slug: string }>
+	searchParams: Promise<{ [key: string]: string | string[] | undefined }>
 }
 
 export async function generateMetadata(
-  { params: paramsPromise, searchParams: searchParamsPromise }: Props,
-  parent: ResolvingMetadata,
+	{ params: paramsPromise, searchParams: searchParamsPromise }: Props,
+	parent: ResolvingMetadata,
 ): Promise<Metadata> {
-  const params = await paramsPromise;
-  // const searchParams = await searchParamsPromise; // Await if used
-  const { data: page } = await loadPage(params.slug)
+	const params = await paramsPromise
+	// const searchParams = await searchParamsPromise; // Await if used
+	const { data: page } = await loadPage(params.slug)
 
-  return {
-    title: page?.title,
-    description: page?.overview
-      ? toPlainText(page.overview)
-      : (await parent).description,
-  }
+	return {
+		title: page?.title,
+		description: page?.overview
+			? toPlainText(page.overview)
+			: (await parent).description,
+	}
 }
 
 export function generateStaticParams() {
-  return generateStaticSlugs('page')
+	return generateStaticSlugs('page')
 }
 
 export default async function PageSlugRoute({
-  params: paramsPromise,
-  searchParams: searchParamsPromise,
+	params: paramsPromise,
+	searchParams: searchParamsPromise,
 }: {
-  params: Promise<{ slug: string }>;
-  searchParams: Promise<{ [key: string]: string | string[] | undefined }>;
+	params: Promise<{ slug: string }>
+	searchParams: Promise<{ [key: string]: string | string[] | undefined }>
 }) {
-  const params = await paramsPromise;
-  // const searchParams = await searchParamsPromise; // Await if used
-  const initial = await loadPage(params.slug)
+	const params = await paramsPromise
+	// const searchParams = await searchParamsPromise; // Await if used
+	const initial = await loadPage(params.slug)
 
-  if ((await draftMode()).isEnabled) {
-    return <PagePreview params={params} initial={initial} /> // Ensure PagePreview expects params as { slug: string }, not Promise
-  }
+	if ((await draftMode()).isEnabled) {
+		return <PagePreview params={params} initial={initial} /> // Ensure PagePreview expects params as { slug: string }, not Promise
+	}
 
-  if (!initial.data) {
-    notFound()
-  }
+	if (!initial.data) {
+		notFound()
+	}
 
-  return <Page data={initial.data} />
+	return <Page data={initial.data} />
 }
