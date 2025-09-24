@@ -7,11 +7,11 @@ import NavbarLayout from './NavbarLayout'
 const NavbarPreview = dynamic(() => import('./NavbarPreview'))
 
 export async function Navbar() {
-  const initial = await loadSettings()
+	const initial = await loadSettings()
 
-  if ((await draftMode()).isEnabled) {
-    return <NavbarPreview initial={initial} />
-  }
+	if ((await draftMode()).isEnabled) {
+		return <NavbarPreview initial={initial} />
+	}
 
-  return <NavbarLayout />
+	return <NavbarLayout />
 }

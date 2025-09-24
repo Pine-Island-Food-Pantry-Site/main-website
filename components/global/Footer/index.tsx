@@ -7,11 +7,11 @@ import FooterLayout from './FooterLayout'
 const FooterPreview = dynamic(() => import('./FooterPreview'))
 
 export async function Footer() {
-  const initial = await loadSettings()
+	const initial = await loadSettings()
 
-  if ((await draftMode()).isEnabled) {
-    return <FooterPreview initial={initial} />
-  }
+	if ((await draftMode()).isEnabled) {
+		return <FooterPreview initial={initial} />
+	}
 
-  return <FooterLayout data={initial.data} />
+	return <FooterLayout data={initial.data} />
 }

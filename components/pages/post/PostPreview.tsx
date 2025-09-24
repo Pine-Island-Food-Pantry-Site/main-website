@@ -9,17 +9,17 @@ import { PostPayload } from '@/types'
 import ProjectPage from './PostPage'
 
 type Props = {
-  params: { slug: string }
-  initial: QueryResponseInitial<PostPayload | null>
+	params: { slug: string }
+	initial: QueryResponseInitial<PostPayload | null>
 }
 
 export default function ProjectPreview(props: Props) {
-  const { params, initial } = props
-  const { data, encodeDataAttribute } = useQuery<PostPayload | null>(
-    postBySlugQuery,
-    params,
-    { initial },
-  )
+	const { params, initial } = props
+	const { data, encodeDataAttribute } = useQuery<PostPayload | null>(
+		postBySlugQuery,
+		params,
+		{ initial },
+	)
 
-  return <ProjectPage data={data!} encodeDataAttribute={encodeDataAttribute} />
+	return <ProjectPage data={data!} encodeDataAttribute={encodeDataAttribute} />
 }
