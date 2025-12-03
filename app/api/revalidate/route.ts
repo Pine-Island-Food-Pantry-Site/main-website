@@ -43,9 +43,9 @@ export async function POST(req: NextRequest) {
 			return new Response('Bad Request', { status: 400 })
 		}
 
-		revalidateTag(body._type)
+		revalidateTag(body._type, 'default')
 		if (body.slug) {
-			revalidateTag(`${body._type}:${body.slug}`)
+			revalidateTag(`${body._type}:${body.slug}`, 'default')
 		}
 		return NextResponse.json({
 			status: 200,
@@ -53,8 +53,9 @@ export async function POST(req: NextRequest) {
 			now: Date.now(),
 			body,
 		})
-	} catch (err: any) {
+	} catch (err: unknown) {
 		console.error(err)
-		return new Response(err.message, { status: 500 })
+		const errorMessage = err instanceof Error ? err.message : 'Unknown error occurred'
+		return new Response(errorMessage, { status: 500 })
 	}
 }
