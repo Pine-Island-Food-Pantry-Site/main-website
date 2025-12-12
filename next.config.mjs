@@ -1,5 +1,12 @@
 /** @type {import('next').NextConfig} */
+
+import { dirname } from 'node:path'
+import { fileURLToPath } from 'node:url'
+
 const config = {
+	turbopack: {
+		root: dirname(fileURLToPath(import.meta.url)),
+	},
 	images: {
 		remotePatterns: [
 			{ hostname: 'cdn.sanity.io' },
