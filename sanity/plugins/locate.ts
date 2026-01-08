@@ -4,7 +4,7 @@ import type {
 	DocumentLocationsState,
 } from 'sanity/presentation'
 
-import { resolveHref } from '../lib/utils'
+import { resolveHref } from '@/sanity/lib/utils'
 
 export const locate: DocumentLocationResolver = (params, context) => {
 	if (params.type === 'settings') {

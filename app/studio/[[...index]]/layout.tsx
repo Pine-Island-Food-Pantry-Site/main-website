@@ -1,4 +1,6 @@
-import { preloadModule } from 'react-dom'
+'use client'
+
+import Script from 'next/script'
 
 const bridgeScript = 'https://core.sanity-cdn.com/bridge.js'
 
@@ -7,10 +9,9 @@ export default function StudioLayout({
 }: {
 	children: React.ReactNode
 }) {
-	preloadModule(bridgeScript, { as: 'script' })
 	return (
 		<>
-			<script src={bridgeScript} async type="module" />
+			<Script src={bridgeScript} strategy="afterInteractive" />
 			{children}
 		</>
 	)
