@@ -22,7 +22,10 @@ function buildPageHref(searchTerm: string, pageNumber: number) {
 	return queryString ? `/posts?${queryString}` : '/posts'
 }
 
-export default function Pagination({ totalPages, currentPage }: PaginationProps) {
+export default function Pagination({
+	totalPages,
+	currentPage,
+}: PaginationProps) {
 	const searchParams = useSearchParams()
 	const searchTerm = searchParams.get('search') || ''
 
@@ -63,14 +66,9 @@ export default function Pagination({ totalPages, currentPage }: PaginationProps)
 			</ul>
 			<Link
 				className={`${styles.pagination_button} ${
-					currentPage === totalPages
-						? styles.pagination_button_disabled
-						: ''
+					currentPage === totalPages ? styles.pagination_button_disabled : ''
 				}`}
-				href={buildPageHref(
-					searchTerm,
-					Math.min(totalPages, currentPage + 1),
-				)}
+				href={buildPageHref(searchTerm, Math.min(totalPages, currentPage + 1))}
 				aria-disabled={currentPage === totalPages}
 				aria-label="Next page"
 			>

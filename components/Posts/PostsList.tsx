@@ -53,7 +53,7 @@ export default function PostsList({ posts }: PostsListProps) {
 							{post.description
 								? `${post.description.slice(0, 100)}${
 										post.description.length > 100 ? '…' : ''
-								  }`
+									}`
 								: 'Read more to learn about this update.'}
 						</p>
 						<Link className={styles.card_link} href={`/posts/${post.slug}`}>
