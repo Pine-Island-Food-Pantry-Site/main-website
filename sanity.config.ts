@@ -47,7 +47,9 @@ export default defineConfig({
 			structure: pageStructure([home, settings]),
 		}),
 		presentationTool({
-			locate,
+			resolve: {
+				locations: locate,
+			},
 			previewUrl: {
 				draftMode: {
 					enable: '/api/draft',
@@ -57,7 +59,10 @@ export default defineConfig({
 		// Configures the global "new document" button, and document actions, to suit the Settings document singleton
 		singletonPlugin([home.name, settings.name]),
 		// Add an image asset source for Unsplash
-		unsplashImageAsset(),
+		// unsplashImageAsset({
+		// 	// If you don't have an Unsplash API key, you can disable the plugin
+		// 	// or add your API key here
+		// }),
 		// Vision lets you query your content with GROQ in the studio
 		// https://www.sanity.io/docs/the-vision-plugin
 		visionTool({ defaultApiVersion: apiVersion }),
