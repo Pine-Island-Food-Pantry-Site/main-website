@@ -55,7 +55,8 @@ export async function POST(req: NextRequest) {
 		})
 	} catch (err: unknown) {
 		console.error(err)
-		const errorMessage = err instanceof Error ? err.message : 'Unknown error occurred'
+		const errorMessage =
+			err instanceof Error ? err.message : 'Unknown error occurred'
 		return new Response(errorMessage, { status: 500 })
 	}
 }

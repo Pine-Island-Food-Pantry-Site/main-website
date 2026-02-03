@@ -7,6 +7,8 @@ const config = {
 	turbopack: {
 		root: dirname(fileURLToPath(import.meta.url)),
 	},
+	// Fix for jsdom/isomorphic-dompurify in serverless environment
+	serverExternalPackages: ['jsdom', 'isomorphic-dompurify'],
 	images: {
 		remotePatterns: [
 			{ hostname: 'cdn.sanity.io' },

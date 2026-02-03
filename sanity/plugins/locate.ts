@@ -1,5 +1,5 @@
 import { map, Observable } from 'rxjs'
-import {
+import type {
 	DocumentLocationResolver,
 	DocumentLocationsState,
 } from 'sanity/presentation'
@@ -46,7 +46,7 @@ export const locate: DocumentLocationResolver = (params, context) => {
 											title:
 												docs?.find((doc) => doc._type === 'home')?.title ||
 												'Home',
-											href: resolveHref(params.type)!,
+											href: resolveHref(params.type) ?? '/',
 										},
 									],
 									tone: 'positive',
@@ -61,12 +61,14 @@ export const locate: DocumentLocationResolver = (params, context) => {
 							locations: docs
 								?.map((doc) => {
 									const href = resolveHref(doc._type, doc?.slug?.current)
-									return {
-										title: doc?.title || 'Untitled',
-										href: href!,
-									}
+									return href
+										? {
+												title: doc?.title || 'Untitled',
+												href,
+											}
+										: null
 								})
-								.filter((doc) => doc.href !== undefined),
+								.filter((loc): loc is NonNullable<typeof loc> => loc !== null),
 							tone: isReferencedBySettings ? 'positive' : 'critical',
 							message: isReferencedBySettings
 								? 'The top menu is linking to this page'
@@ -77,12 +79,14 @@ export const locate: DocumentLocationResolver = (params, context) => {
 							locations: docs
 								?.map((doc) => {
 									const href = resolveHref(doc._type, doc?.slug?.current)
-									return {
-										title: doc?.title || 'Untitled',
-										href: href!,
-									}
+									return href
+										? {
+												title: doc?.title || 'Untitled',
+												href,
+											}
+										: null
 								})
-								.filter((doc) => doc.href !== undefined),
+								.filter((loc): loc is NonNullable<typeof loc> => loc !== null),
 							tone: isReferencedBySettings ? 'caution' : undefined,
 							message: isReferencedBySettings
 								? 'This document is used on all pages as it is in the top menu'
