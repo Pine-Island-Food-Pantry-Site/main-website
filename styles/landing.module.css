@@ -196,6 +196,28 @@
 }
 
 /* media queries */
+@media screen and (max-width: 767px) {
+	.image_div {
+		height: 40vh;
+	}
+
+	.home_card {
+		min-height: unset;
+	}
+
+	.h1_text {
+		font-size: 22px;
+	}
+
+	.h2_text {
+		font-size: 16px;
+	}
+
+	.top_link {
+		font-size: 16px;
+	}
+}
+
 @media screen and (min-width: 768px) {
 	.landing_container {
 		margin-top: -0vh;
