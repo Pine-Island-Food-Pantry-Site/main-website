@@ -71,6 +71,7 @@
 	color: var(--font-blue);
 	text-decoration: underline;
 	font-family: "Poppins-Regular", sans-serif;
+	overflow-wrap: break-word;
 }
 
 .outer_card {
