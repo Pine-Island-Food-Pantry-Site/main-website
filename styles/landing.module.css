@@ -197,6 +197,10 @@
 
 /* media queries */
 @media screen and (max-width: 767px) {
+	.landing_container {
+		padding-bottom: 10vh;
+	}
+
 	.image_div {
 		height: 40vh;
 	}

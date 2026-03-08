@@ -287,6 +287,10 @@
 
 /* Mobile spacing improvements */
 @media screen and (max-width: 768px) {
+	.posts_page {
+		padding-bottom: 10vh;
+	}
+
 	.pagination {
 		gap: 1.5em;
 		margin: 2em 1em;
