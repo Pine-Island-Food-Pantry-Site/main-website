@@ -127,6 +127,12 @@
 	margin-bottom: 0.75em;
 }
 
+@media screen and (max-width: 767px) {
+	.about_container {
+		padding-bottom: 10vh;
+	}
+}
+
 @media screen and (min-width: 550px) {
 	.board_of_directors_container {
 		grid-template-columns: 1fr 1fr;

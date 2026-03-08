@@ -108,6 +108,12 @@
 	box-shadow: var(--drop-shadow-1);
 }
 
+@media screen and (max-width: 767px) {
+	.page {
+		padding-bottom: 10vh;
+	}
+}
+
 @media screen and (min-width: 768px) {
 	.page {
 		margin-top: 0;

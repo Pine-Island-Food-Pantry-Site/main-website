@@ -6,8 +6,8 @@
 	height: 10vh;
 	align-items: center;
 	justify-content: space-around;
-	position: sticky;
-	top: 90vh;
+	position: fixed;
+	bottom: 0;
 	border: var(--nav-border);
 	z-index: 1000;
 }
