@@ -29,8 +29,7 @@
 		"react-hook-form": "^7.71.1",
 		"sanity": "^5.7.0",
 		"sanity-plugin-asset-source-unsplash": "^7.0.3",
-		"server-only": "0.0.1",
-		"styled-components": "^6.3.11"
+		"server-only": "0.0.1"
 	},
 	"devDependencies": {
 		"@biomejs/biome": "^2.3.8",
