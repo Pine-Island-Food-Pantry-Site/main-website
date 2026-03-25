@@ -18,7 +18,7 @@ interface SanityPostDoc {
 	title?: string
 	coverImage?: SanityImage
 	overview?: PortableTextBlock[]
-	slug: { current: string }
+	slug?: string
 }
 
 interface Post {
@@ -60,7 +60,7 @@ async function getPosts(): Promise<Post[]> {
 				coverImage: post?.coverImage,
 				description:
 					overviewBlocks.length > 0 ? toPlainText(overviewBlocks) : '',
-				slug: post?.slug?.current || '',
+				slug: post?.slug || '',
 			}
 		})
 	} catch (error) {
