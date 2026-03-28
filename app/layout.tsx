@@ -1,4 +1,3 @@
-import Head from "next/head";
 import "../styles/index.css";
 
 import { IBM_Plex_Mono, Inter, PT_Serif } from "next/font/google";
@@ -31,9 +30,6 @@ export default async function RootLayout({
       lang="en"
       className={`${mono.variable} ${sans.variable} ${serif.variable}`}
     >
-      <Head>
-        <link rel="icon" href="/favicon.svg" />
-      </Head>
       <body>{children}</body>
     </html>
   );
