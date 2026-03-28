@@ -9,7 +9,7 @@ import styles from '@/styles/posts.module.css'
 export default function SearchForm() {
 	const searchParams = useSearchParams()
 	const searchId = useId()
-	const searchTerm = searchParams.get('search') || ''
+	const searchTerm = searchParams?.get('search') || ''
 
 	return (
 		<form className={styles.search_form} action="/posts" method="get">
