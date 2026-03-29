@@ -1,1 +1,5 @@
 today we're going to work on touching up the ui and making it look more consitant overall. you can view the site at "localhost:3000". also let's make sure the text and logo land above the fold on mobile
+
+---
+
+great now let's make a new branch, and commit the changes to it
