@@ -27,7 +27,7 @@ export default function Pagination({
 	currentPage,
 }: PaginationProps) {
 	const searchParams = useSearchParams()
-	const searchTerm = searchParams.get('search') || ''
+	const searchTerm = searchParams?.get('search') || ''
 
 	if (totalPages <= 1) {
 		return null
