@@ -154,8 +154,8 @@ async function IndexRoute() {
           <Image
             src={"/location-image.png"}
             alt="Map of Pine Island Food Pantry"
-            layout="fill"
-            objectFit="contain"
+            fill={true}
+            sizes="(max-width: 768px) 100vw, (max-width: 1024px) 35vw, 25vw"
           />
         </div>
       </div>
