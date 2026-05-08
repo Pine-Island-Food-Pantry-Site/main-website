@@ -1,0 +1,5 @@
+we need to update next, react, react-dom in this project
+
+---
+
+ok liny should work now

@@ -1,0 +1,26 @@
+{
+  "cli_version": "0.6.0",
+  "checkpoint_id": "378daf44ac92",
+  "strategy": "manual-commit",
+  "branch": "npm-updates",
+  "checkpoints_count": 1,
+  "files_touched": [
+    "package-lock.json",
+    "package.json"
+  ],
+  "sessions": [
+    {
+      "metadata": "/37/8daf44ac92/0/metadata.json",
+      "transcript": "/37/8daf44ac92/0/full.jsonl",
+      "content_hash": "/37/8daf44ac92/0/content_hash.txt",
+      "prompt": "/37/8daf44ac92/0/prompt.txt"
+    }
+  ],
+  "token_usage": {
+    "input_tokens": 32,
+    "cache_creation_tokens": 47208,
+    "cache_read_tokens": 613773,
+    "output_tokens": 2587,
+    "api_call_count": 18
+  }
+}
