@@ -1,5 +1,6 @@
 {
-  "name": "sanity-template-template-nextjs-personal-website",
+  "name": "pine-island-food-pantry",
+  "version": "1.1",
   "private": true,
   "scripts": {
     "build": "next build",
