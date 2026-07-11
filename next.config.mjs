@@ -16,8 +16,9 @@ const config = {
 		],
 	},
 	typescript: {
-		// Set this to false if you want production builds to abort if there's type errors
-		ignoreBuildErrors: process.env.VERCEL_ENV === 'production',
+		// TypeScript 7 no longer exposes the legacy compiler API used by Next's
+		// integrated checker. The build script runs `tsc --noEmit` before Next.
+		ignoreBuildErrors: true,
 	},
 	logging: {
 		fetches: {
