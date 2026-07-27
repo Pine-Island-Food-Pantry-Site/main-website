@@ -16,9 +16,10 @@ const About: React.FC = () => {
 			</h2>
 			<div className={styles.image_div}>
 				<Image
-					src={'logo.svg'}
+					src={'/logo.svg'}
 					alt="Pine Island Food Pantry Logo"
 					fill={true}
+					loading="eager"
 					sizes="(max-width: 768px) 75vw, (max-width: 1200px) 50vw"
 				/>
 			</div>

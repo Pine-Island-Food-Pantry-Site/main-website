@@ -1,4 +1,4 @@
-import { map, Observable } from 'rxjs'
+import { map, type Observable } from 'rxjs'
 import type {
 	DocumentLocationResolver,
 	DocumentLocationsState,

@@ -1,11 +1,11 @@
-import {
-	type QueryParams,
-	type QueryResponseInitial,
-	type UseQueryOptionsDefinedInitial,
+import type {
+	QueryParams,
+	QueryResponseInitial,
+	UseQueryOptionsDefinedInitial,
 } from '@sanity/react-loader'
 import * as queryStore from '@sanity/react-loader'
 
-import { SettingsPayload } from '@/types'
+import type { SettingsPayload } from '@/types'
 
 import { settingsQuery } from '../lib/queries'
 

@@ -2,10 +2,10 @@ import { ArrowRightIcon } from '@sanity/icons/ArrowRight'
 import { Box, Flex, Text } from '@sanity/ui'
 import { useCallback, useMemo } from 'react'
 import {
-	FieldMember,
+	type FieldMember,
 	MemberField,
-	ObjectInputProps,
-	RenderFieldCallback,
+	type ObjectInputProps,
+	type RenderFieldCallback,
 } from 'sanity'
 
 export function DurationInput(props: ObjectInputProps) {

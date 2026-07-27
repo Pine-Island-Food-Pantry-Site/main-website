@@ -1,10 +1,10 @@
 'use client'
 
-import { type QueryResponseInitial } from '@sanity/react-loader'
+import type { QueryResponseInitial } from '@sanity/react-loader'
 
 import { postBySlugQuery } from '@/sanity/lib/queries'
 import { useQuery } from '@/sanity/loader/useQuery'
-import { PostPayload } from '@/types'
+import type { PostPayload } from '@/types'
 
 import ProjectPage from './PostPage'
 

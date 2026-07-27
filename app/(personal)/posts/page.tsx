@@ -1,16 +1,15 @@
+import { toPlainText } from '@portabletext/react'
+import type { PortableTextBlock } from '@portabletext/types'
 import Image from 'next/image'
 import Link from 'next/link'
 import { Suspense } from 'react'
-
+import type { Image as SanityImage } from 'sanity'
+import Pagination from '@/components/Posts/Pagination'
 import PostsList from '@/components/Posts/PostsList'
 import SearchForm from '@/components/Posts/SearchForm'
-import Pagination from '@/components/Posts/Pagination'
-import { allPostsQuery } from '@/sanity/lib/queries'
 import { client } from '@/sanity/lib/client'
+import { allPostsQuery } from '@/sanity/lib/queries'
 import styles from '@/styles/posts.module.css'
-import type { PortableTextBlock } from '@portabletext/types'
-import type { Image as SanityImage } from 'sanity'
-import { toPlainText } from '@portabletext/react'
 
 // Shape returned by Sanity for the list query (only fields we read)
 interface SanityPostDoc {
@@ -106,6 +105,7 @@ export default async function PostsPage({
 					src={'/logo.svg'}
 					alt="Pine Island Food Pantry Logo"
 					fill={true}
+					loading="eager"
 					sizes="(max-width: 768px) 75vw, (max-width: 1200px) 50vw"
 				/>
 			</div>
