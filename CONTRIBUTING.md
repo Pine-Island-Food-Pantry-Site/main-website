@@ -50,4 +50,5 @@ repository requires approval for workflow runs from all external contributors,
 so only organization members and owners run PR workflows automatically.
 Repository variables named `NEXT_PUBLIC_SANITY_PROJECT_ID` and
 `NEXT_PUBLIC_SANITY_DATASET` provide the public Sanity connection settings in
-CI.
+CI. The read-only `SANITY_API_READ_TOKEN` repository secret allows the test
+server to query Sanity content.
