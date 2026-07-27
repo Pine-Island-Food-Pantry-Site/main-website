@@ -9,6 +9,8 @@
 		"lint": "npx biome check",
 		"lint:fix": "npx biome check --apply",
 		"start": "next start",
+		"test:e2e": "playwright test",
+		"test:e2e:ui": "playwright test --ui",
 		"type-check": "tsc --noEmit"
 	},
 	"dependencies": {
@@ -35,6 +37,7 @@
 	},
 	"devDependencies": {
 		"@biomejs/biome": "^2.5.5",
+		"@playwright/test": "^1.62.0",
 		"@tailwindcss/postcss": "^4.3.3",
 		"@types/node": "^26.1.1",
 		"@types/react": "^19.2.17",

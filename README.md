@@ -5,6 +5,7 @@ This starter is a statically generated personal website that uses [Next.js][next
 The Studio connects to Sanity Content Lake, which gives you hosted content APIs with a flexible query language, on-demand image transformations, powerful patching, and more. You can use this starter to kick-start a personal website or learn these technologies.
 
 [![Deploy with Vercel](https://vercel.com/button)][vercel-deploy]
+[![UI Tests](https://github.com/Pine-Island-Food-Pantry-Site/main-website/actions/workflows/ui-tests.yml/badge.svg)](https://github.com/Pine-Island-Food-Pantry-Site/main-website/actions/workflows/ui-tests.yml)
 
 ## Features
 
