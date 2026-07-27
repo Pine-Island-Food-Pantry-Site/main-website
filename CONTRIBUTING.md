@@ -45,8 +45,9 @@ report is written to `playwright-report/` and can be opened with:
 npx playwright show-report
 ```
 
-GitHub Actions runs the suite for pushes to `main`. For pull requests, the job
-runs only when GitHub identifies the author as an organization member or owner;
-other pull-request runs are skipped. Repository variables named
-`NEXT_PUBLIC_SANITY_PROJECT_ID` and `NEXT_PUBLIC_SANITY_DATASET` provide the
-public Sanity connection settings in CI.
+GitHub Actions runs the suite for pushes to `main` and pull requests. The
+repository requires approval for workflow runs from all external contributors,
+so only organization members and owners run PR workflows automatically.
+Repository variables named `NEXT_PUBLIC_SANITY_PROJECT_ID` and
+`NEXT_PUBLIC_SANITY_DATASET` provide the public Sanity connection settings in
+CI.
