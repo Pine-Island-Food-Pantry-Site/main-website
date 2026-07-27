@@ -13,7 +13,7 @@ import {
 	settingsQuery,
 } from '@/sanity/lib/queries'
 import { token } from '@/sanity/lib/token'
-import {
+import type {
 	HomePagePayload,
 	LandingPagePayload,
 	PagePayload,

@@ -1,7 +1,7 @@
 import '@/styles/index.css'
 
 import { toPlainText } from '@portabletext/react'
-import { Metadata, Viewport } from 'next'
+import type { Metadata, Viewport } from 'next'
 import dynamic from 'next/dynamic'
 import { draftMode } from 'next/headers'
 import { Suspense } from 'react'

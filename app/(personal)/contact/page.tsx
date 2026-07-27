@@ -55,9 +55,10 @@ export default function Contact() {
 			</h2>
 			<div className={styles.image_div}>
 				<Image
-					src={'logo.svg'}
+					src={'/logo.svg'}
 					alt="Pine Island Food Pantry Logo"
 					fill={true}
+					loading="eager"
 					sizes="(max-width: 768px) 75vw, (max-width: 1200px) 50vw"
 				/>
 			</div>
@@ -99,7 +100,7 @@ export default function Contact() {
 							id="full_name"
 							type="text"
 							placeholder="Full Name"
-							autoComplete="false"
+							autoComplete="name"
 							className={`${styles.input}  ${
 								errors.name
 									? 'border-red-600 focus:border-red-600 ring-red-100 dark:ring-0'
@@ -201,6 +202,7 @@ export default function Contact() {
 								fill="none"
 								viewBox="0 0 24 24"
 							>
+								<title>Sending message</title>
 								<circle
 									className="opacity-25"
 									cx="12"

@@ -31,6 +31,7 @@ export function PostPage({ data, encodeDataAttribute }: PostPageProps) {
 						src={'/logo.svg'}
 						alt="Pine Island Food Pantry Logo"
 						fill={true}
+						loading="eager"
 						sizes="(max-width: 768px) 75vw, (max-width: 1200px) 50vw"
 					/>
 				</div>

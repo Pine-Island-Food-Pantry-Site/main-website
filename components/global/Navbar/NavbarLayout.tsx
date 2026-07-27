@@ -11,8 +11,10 @@ export default function Navbar() {
 					<Image
 						src={'/logo.svg'}
 						alt={'Pine Island Logo'}
-						width={80}
-						height={50}
+						width={183}
+						height={116}
+						loading="eager"
+						style={{ width: '80px', height: 'auto' }}
 					/>
 				</Link>
 				<p className={styles.nav_text}>Pine Island Food Pantry</p>

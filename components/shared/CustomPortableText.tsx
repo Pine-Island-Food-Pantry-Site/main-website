@@ -1,6 +1,6 @@
-import { PortableText, PortableTextComponents } from '@portabletext/react'
+import { PortableText, type PortableTextComponents } from '@portabletext/react'
 import type { PortableTextBlock } from '@portabletext/types'
-import { Image } from 'sanity'
+import type { Image } from 'sanity'
 
 import ImageBox from '@/components/shared/ImageBox'
 import { TimelineSection } from '@/components/shared/TimelineSection'

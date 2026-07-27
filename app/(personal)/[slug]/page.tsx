@@ -1,5 +1,5 @@
 import { toPlainText } from '@portabletext/react'
-import { Metadata, ResolvingMetadata } from 'next'
+import type { Metadata, ResolvingMetadata } from 'next'
 import dynamic from 'next/dynamic'
 import { draftMode } from 'next/headers'
 import { notFound } from 'next/navigation'
@@ -7,6 +7,7 @@ import { notFound } from 'next/navigation'
 import { Page } from '@/components/pages/page/Page'
 import { generateStaticSlugs } from '@/sanity/loader/generateStaticSlugs'
 import { loadPage } from '@/sanity/loader/loadQuery'
+
 const PagePreview = dynamic(() => import('@/components/pages/page/PagePreview'))
 
 type Props = {

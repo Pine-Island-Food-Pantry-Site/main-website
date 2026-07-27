@@ -2,8 +2,8 @@
  * This plugin contains all the logic for setting up the singletons
  */
 
-import { type DocumentDefinition } from 'sanity'
-import { type StructureResolver } from 'sanity/desk'
+import type { DocumentDefinition } from 'sanity'
+import type { StructureResolver } from 'sanity/desk'
 
 export const singletonPlugin = (types: string[]) => {
 	return {
