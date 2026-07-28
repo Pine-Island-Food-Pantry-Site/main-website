@@ -39,7 +39,10 @@ export async function generateMetadata(): Promise<Metadata> {
 }
 
 export const viewport: Viewport = {
-	themeColor: '#000',
+	themeColor: [
+		{ media: '(prefers-color-scheme: light)', color: '#fffdf5' },
+		{ media: '(prefers-color-scheme: dark)', color: '#0d1524' },
+	],
 }
 
 export default async function IndexRoute({

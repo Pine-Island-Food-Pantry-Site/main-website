@@ -3,13 +3,16 @@
 	display: flex;
 	flex-direction: row;
 	width: 100%;
-	height: 10vh;
+	height: var(--nav-height);
 	align-items: center;
-	justify-content: space-around;
+	justify-content: space-between;
 	position: fixed;
 	bottom: 0;
-	border: var(--nav-border);
+	border-top: var(--nav-border);
 	z-index: 1000;
+	padding: 0 0.75rem env(safe-area-inset-bottom, 0px);
+	gap: 0.25rem;
+	box-shadow: var(--drop-shadow-1);
 }
 
 .navbar_logo {
@@ -30,13 +33,33 @@
 	text-decoration: underline;
 	color: var(--font-blue);
 	font-family: "Poppins-Regular", sans-serif;
+	/* Shrinks a little on the narrowest phones so all three links plus the
+	   theme control stay on one row down to 320px without wrapping. */
+	font-size: clamp(0.75rem, 3.2vw, 0.9rem);
+	text-underline-offset: 0.2em;
+	/* Pad out to a comfortable tap target inside the bar. */
+	display: inline-flex;
+	align-items: center;
+	min-height: 2.75rem;
+	padding: 0 0.25rem;
+	white-space: nowrap;
+}
+
+.link_styles:focus-visible {
+	border-radius: 0.25rem;
+	outline: 3px solid var(--focus-color);
+	outline-offset: 3px;
 }
 
 @media screen and (min-width: 768px) {
 	.navbar_main {
 		position: relative;
 		top: 0vh;
-		border: none;
+		justify-content: space-around;
+		border-top: none;
+		box-shadow: none;
+		padding: 0 2rem;
+		gap: 1rem;
 	}
 
 	.navbar_logo {
@@ -50,5 +73,9 @@
 	.image {
 		display: block;
 		padding-top: 10px;
+	}
+
+	.link_styles {
+		font-size: 1rem;
 	}
 }

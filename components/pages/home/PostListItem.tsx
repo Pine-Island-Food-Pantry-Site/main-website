@@ -14,7 +14,7 @@ export function PostListItem(props: PostProps) {
 
 	return (
 		<div
-			className={`flex flex-col gap-x-5 p-2 transition hover:bg-gray-50/50 xl:flex-row ${
+			className={`themed-list-item flex flex-col gap-x-5 p-2 transition xl:flex-row ${
 				odd && 'border-b border-t xl:flex-row-reverse'
 			}`}
 		>
@@ -41,7 +41,7 @@ function TextBox({ post }: { post: Posts }) {
 					{post.title}
 				</div>
 				{/* Overview  */}
-				<div className="font-serif text-gray-500">
+				<div className="themed-muted-text font-serif">
 					<CustomPortableText value={post.overview as PortableTextBlock[]} />
 				</div>
 			</div>

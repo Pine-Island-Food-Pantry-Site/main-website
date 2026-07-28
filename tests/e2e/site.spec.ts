@@ -74,4 +74,67 @@ test.describe('Pine Island Food Pantry', () => {
 			page.getByRole('link', { name: 'Contact', exact: true }),
 		).toBeVisible()
 	})
+
+	test('theme preference can be changed and persists across pages', async ({
+		page,
+	}) => {
+		const consoleErrors: string[] = []
+		page.on('console', (message) => {
+			if (message.type() === 'error') {
+				consoleErrors.push(message.text())
+			}
+		})
+		page.on('pageerror', (error) => consoleErrors.push(error.message))
+
+		await page.goto('/')
+
+		const themeSwitcher = page.getByRole('combobox', { name: 'Color theme' })
+		await expect(themeSwitcher).toHaveValue('auto')
+
+		await themeSwitcher.selectOption('dark')
+		await expect(page.locator('html')).toHaveAttribute('data-theme', 'dark')
+		await expect
+			.poll(() => page.evaluate(() => localStorage.getItem('theme-preference')))
+			.toBe('dark')
+
+		await page.goto('/about')
+		await expect(
+			page.getByRole('combobox', { name: 'Color theme' }),
+		).toHaveValue('dark')
+		await expect(page.locator('html')).toHaveAttribute('data-theme', 'dark')
+
+		for (const route of ['/contact', '/posts']) {
+			await page.goto(route)
+			await expect(
+				page.getByRole('combobox', { name: 'Color theme' }),
+			).toHaveValue('dark')
+			await expect(page.locator('html')).toHaveAttribute('data-theme', 'dark')
+		}
+
+		await themeSwitcher.selectOption('light')
+		await page.reload()
+		await expect(page.locator('html')).toHaveAttribute('data-theme', 'light')
+		expect(consoleErrors).toEqual([])
+	})
+
+	test('automatic theme follows the system color preference', async ({
+		page,
+	}) => {
+		await page.emulateMedia({ colorScheme: 'dark' })
+		await page.goto('/')
+
+		await expect(
+			page.getByRole('combobox', { name: 'Color theme' }),
+		).toHaveValue('auto')
+		await expect(page.locator('html')).toHaveCSS(
+			'background-color',
+			'rgb(0, 2, 10)',
+		)
+
+		await page.emulateMedia({ colorScheme: 'light' })
+		await expect(page.locator('html')).toHaveCSS(
+			'background-color',
+			'rgb(255, 253, 245)',
+		)
+	})
 })

@@ -9,29 +9,42 @@
 }
 
 .header_1 {
+	max-width: var(--hero-text-max-width);
+	margin-inline: auto;
 	color: var(--font-blue);
 	text-align: center;
-	font-size: 30px;
+	font-size: var(--fs-hero-title);
 	font-family: "Poppins-Regular", sans-serif;
 	margin-top: 1em;
+	margin-bottom: 0.5em;
 }
+
 .header_2 {
-	margin-top: 2em;
+	max-width: var(--hero-text-max-width);
+	margin-inline: auto;
+	margin-top: 1em;
 	color: var(--font-blue);
 	text-align: center;
 	font-family: "Poppins-Regular", sans-serif;
-	font-size: 20px;
+	font-size: var(--fs-hero-subtitle);
 }
 
 .image_div {
 	display: flex;
 	justify-content: center;
 	align-content: center;
-	margin: 1em;
+	margin: 1em auto;
 	width: 100%;
-	height: 75vh;
-	object-fit: "contain";
+	max-width: var(--hero-logo-max-width);
+	height: var(--hero-logo-height);
 	position: relative;
+}
+
+/* Next's fill layout stretches the image to the box unless told otherwise. This
+   used to be `object-fit: "contain"` on the box itself — quoted, so invalid, and
+   on the wrong element — which left the logo distorted differently per page. */
+.image_div img {
+	object-fit: contain;
 }
 
 .reach_outer_card {
@@ -50,8 +63,8 @@
 .reach_inner_card {
 	background: var(--background-color);
 	border-radius: 20px;
-	border: 2px solid #ff6b00;
-	box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+	border: 2px solid var(--accent-border);
+	box-shadow: var(--card-shadow);
 	width: 90%;
 	max-width: 600px;
 	padding: 1em 2em;
@@ -60,7 +73,7 @@
 
 .header_3 {
 	color: var(--font-blue);
-	font-size: 30px;
+	font-size: var(--fs-section-title);
 	font-family: "Poppins-Regular", sans-serif;
 	text-align: center;
 	margin-top: 0.5em;
@@ -98,16 +111,19 @@
 	padding: 2em 1.5em;
 	margin: 1em 0;
 	border-radius: 20px;
-	border: 2px solid #ff6b00;
-	background: #fff;
-	box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+	border: 2px solid var(--accent-border);
+	background: var(--surface-color);
+	box-shadow: var(--card-shadow);
+	color: var(--text-color);
 	font-family: "Poppins-Regular", sans-serif;
 }
 
 .input {
 	width: 100%;
 	border-radius: 10px;
-	border: 1px solid #c1694f;
+	border: 1px solid var(--control-border);
+	background: var(--surface-color);
+	color: var(--text-color);
 	padding: 1em;
 	font-size: 18px;
 }
@@ -119,9 +135,35 @@
 	padding: 0.75em 2em;
 	margin-top: 1em;
 	border-radius: 46px;
-	border: 1px solid #000;
+	border: 1px solid var(--button-border);
 	background: var(--btn-gradient);
-	box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.3);
+	box-shadow: var(--drop-shadow-1);
+	color: var(--button-text-color);
+}
+
+.input_error {
+	border-color: var(--danger-color);
+	outline-color: var(--danger-color);
+}
+
+.input_valid:focus {
+	border-color: var(--focus-color);
+	outline-color: var(--focus-color);
+}
+
+.form_error,
+.submit_error {
+	color: var(--danger-color);
+}
+
+.submit_success {
+	color: var(--success-color);
+}
+
+.form_status {
+	margin-top: 0.75rem;
+	text-align: center;
+	font-size: 0.875rem;
 }
 
 @media screen and (min-width: 768px) {

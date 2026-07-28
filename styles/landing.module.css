@@ -6,7 +6,7 @@
 }
 
 .landing_container {
-	margin-top: -10vh;
+	margin-top: var(--nav-offset);
 	padding: 1em;
 	display: flex;
 	flex-direction: column;
@@ -16,7 +16,11 @@
 }
 
 .top_section {
-	margin: 2em 2em;
+	/* Full width and no horizontal margin. As a shrink-to-fit flex item this was
+	   narrower than every other page's hero column, so the same headline wrapped at
+	   a different word and the logo rendered smaller here than everywhere else. */
+	width: 100%;
+	margin: 2em 0;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -36,16 +40,23 @@
 }
 
 .h1_text {
-	font-size: 30px;
+	max-width: var(--hero-text-max-width);
+	margin-inline: auto;
+	font-size: var(--fs-hero-title);
+	font-family: "Poppins-Regular", sans-serif;
 	text-align: center;
-	margin-bottom: 1em;
+	margin-top: 1em;
+	margin-bottom: 0.5em;
 	color: var(--font-blue);
 }
 
 .h2_text {
-	font-size: 20px;
+	max-width: var(--hero-text-max-width);
+	margin-inline: auto;
+	font-size: var(--fs-hero-subtitle);
+	font-family: "Poppins-Regular", sans-serif;
 	text-align: center;
-	margin-top: 2em;
+	margin-top: 1em;
 	color: var(--font-blue);
 }
 
@@ -53,11 +64,18 @@
 	display: flex;
 	justify-content: center;
 	align-content: center;
-	margin: 1em;
+	margin: 1em auto;
 	width: 100%;
-	height: 75vh;
-	object-fit: "contain";
+	max-width: var(--hero-logo-max-width);
+	height: var(--hero-logo-height);
 	position: relative;
+}
+
+/* Next's fill layout stretches the image to the box unless told otherwise. This
+   used to be `object-fit: "contain"` on the box itself — quoted, so invalid, and
+   on the wrong element — which left the logo distorted differently per page. */
+.image_div img {
+	object-fit: contain;
 }
 
 .top_link {
@@ -92,7 +110,7 @@
 .mission {
 	margin-bottom: 1em;
 	color: var(--font-blue);
-	font-size: 28px;
+	font-size: var(--fs-section-title);
 	font-family: "Poppins-Regular", sans-serif;
 }
 
@@ -100,9 +118,10 @@
 	margin-top: 3em;
 	padding: 0.5em;
 	border-radius: 46px;
-	border: 1px solid #000;
+	border: 1px solid var(--button-border);
 	background: var(--btn-gradient);
-	box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.3);
+	box-shadow: var(--drop-shadow-1);
+	color: var(--button-text-color);
 	font-size: 28px;
 	margin-bottom: 1em;
 	font-family: "Poppins-Regular", sans-serif;
@@ -115,7 +134,7 @@
 
 .volunteer {
 	font-family: "Poppins-Regular", sans-serif;
-	font-size: 28px;
+	font-size: var(--fs-section-title);
 	color: var(--font-blue);
 	text-align: center;
 	margin-top: 1em;
@@ -131,9 +150,10 @@
 
 .btn_styles {
 	border-radius: 46px;
-	border: 1px solid #000;
+	border: 1px solid var(--button-border);
 	background: var(--btn-gradient);
-	box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.3);
+	box-shadow: var(--drop-shadow-1);
+	color: var(--button-text-color);
 	font-size: 22px;
 	margin-top: 3em;
 	margin-bottom: 1em;
@@ -155,7 +175,7 @@
 
 .about_header {
 	font-family: "Poppins-Regular", sans-serif;
-	font-size: 30px;
+	font-size: var(--fs-section-title);
 	color: var(--font-blue);
 	text-align: center;
 	margin-bottom: 1em;
@@ -182,7 +202,7 @@
 	text-align: center;
 	margin-top: 4em;
 	margin-bottom: 1em;
-	font-size: 30px;
+	font-size: var(--fs-section-title);
 	color: var(--font-blue);
 	font-family: "Poppins-Regular", sans-serif;
 }
@@ -209,43 +229,11 @@
 }
 
 /* media queries */
+/* The hero heading and logo sizes are shared tokens now, so this block no longer
+   re-declares them — the home page used to be the only page that resized them. */
 @media screen and (max-width: 767px) {
-	.landing_container {
-		padding-bottom: 10vh;
-	}
-
-	.image_div {
-		height: 40vh;
-	}
-
 	.home_card {
 		min-height: unset;
-	}
-
-	.h1_text {
-		font-size: 22px;
-	}
-
-	.h2_text {
-		font-size: 16px;
-	}
-
-	.top_link {
-		font-size: 16px;
-	}
-}
-
-@media screen and (min-width: 768px) {
-	.landing_container {
-		margin-top: -0vh;
-	}
-
-	.h1_text {
-		font-size: 36px;
-	}
-
-	.h2_text {
-		font-size: 24px;
 	}
 }
 

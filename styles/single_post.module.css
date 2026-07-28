@@ -3,7 +3,7 @@
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	margin-top: -10vh;
+	margin-top: var(--nav-offset);
 	background: var(--bg-gradient);
 }
 
@@ -11,15 +11,24 @@
 	display: flex;
 	justify-content: center;
 	align-content: center;
-	margin-top: -2em;
+	margin: 1em auto;
 	width: 100%;
-	height: 75vh;
-	object-fit: "contain";
+	max-width: var(--hero-logo-max-width);
+	height: var(--hero-logo-height);
 	position: relative;
 }
 
+/* Next's fill layout stretches the image to the box unless told otherwise. This
+   used to be `object-fit: "contain"` on the box itself — quoted, so invalid, and
+   on the wrong element — which left the logo distorted differently per page. */
+.image_div img {
+	object-fit: contain;
+}
+
 .h1_text {
-	font-size: 30px;
+	max-width: var(--hero-text-max-width);
+	margin-inline: auto;
+	font-size: var(--fs-hero-title);
 	text-align: center;
 	margin-bottom: 0.5em;
 	margin-top: 1em;
@@ -28,7 +37,9 @@
 }
 
 .h2_text {
-	font-size: 20px;
+	max-width: var(--hero-text-max-width);
+	margin-inline: auto;
+	font-size: var(--fs-hero-subtitle);
 	text-align: center;
 	margin-top: 1em;
 	color: var(--font-blue);
@@ -49,9 +60,10 @@
 	padding: 0.5em 0.75em;
 	margin-bottom: 2em;
 	margin-top: 2em;
-	border: 1px solid #000;
+	border: 1px solid var(--button-border);
 	background: var(--btn-gradient);
 	box-shadow: var(--drop-shadow-1);
+	color: var(--button-text-color);
 }
 
 .outer_card {
@@ -69,7 +81,7 @@
 .inner_card {
 	width: 90%;
 	background: var(--background-color);
-	border: 3px solid #c1694f;
+	border: 3px solid var(--accent-border);
 	border-radius: 20px;
 	padding: 1.5em 0.5em;
 }
@@ -103,15 +115,10 @@
 	padding: 0.5em 0.75em;
 	margin-bottom: 2em;
 	border-radius: 46px;
-	border: 1px solid #000;
+	border: 1px solid var(--button-border);
 	background: var(--btn-gradient);
 	box-shadow: var(--drop-shadow-1);
-}
-
-@media screen and (max-width: 767px) {
-	.page {
-		padding-bottom: 10vh;
-	}
+	color: var(--button-text-color);
 }
 
 @media screen and (min-width: 768px) {

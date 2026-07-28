@@ -36,12 +36,12 @@ export default function Contact() {
 			from_name: 'Food Pantry Contact Form',
 			subject: 'New Contact Message from your Website',
 		},
-		onSuccess: (msg, data) => {
+		onSuccess: (msg) => {
 			setIsSuccess(true)
 			setMessage(msg)
 			reset()
 		},
-		onError: (msg, data) => {
+		onError: (msg) => {
 			setIsSuccess(false)
 			setMessage(msg)
 		},
@@ -102,9 +102,7 @@ export default function Contact() {
 							placeholder="Full Name"
 							autoComplete="name"
 							className={`${styles.input}  ${
-								errors.name
-									? 'border-red-600 focus:border-red-600 ring-red-100 dark:ring-0'
-									: 'border-gray-300 focus:border-gray-600 ring-gray-100 dark:border-gray-600 dark:focus:border-white dark:ring-0'
+								errors.name ? styles.input_error : styles.input_valid
 							}`}
 							{...register('name', {
 								required: 'Full name is required',
@@ -112,7 +110,7 @@ export default function Contact() {
 							})}
 						/>
 						{errors.name && (
-							<div className="mt-1 text-red-600">
+							<div className={styles.form_error}>
 								<small>{errors.name?.message || 'Error'}</small>
 							</div>
 						)}
@@ -127,9 +125,7 @@ export default function Contact() {
 							type="email"
 							placeholder="Email Address"
 							className={`${styles.input}  ${
-								errors.email
-									? 'border-red-600 focus:border-red-600 ring-red-100 dark:ring-0'
-									: 'border-gray-300 focus:border-gray-600 ring-gray-100 dark:border-gray-600 dark:focus:border-white dark:ring-0'
+								errors.email ? styles.input_error : styles.input_valid
 							}`}
 							{...register('email', {
 								required: 'Enter your email',
@@ -140,7 +136,7 @@ export default function Contact() {
 							})}
 						/>
 						{errors.email && (
-							<div className="mt-1 text-red-600">
+							<div className={styles.form_error}>
 								<small>{errors.email.message || 'Error'}</small>
 							</div>
 						)}
@@ -154,9 +150,7 @@ export default function Contact() {
 							type="tel"
 							placeholder="Phone Number"
 							className={`${styles.input} ${
-								errors.phone
-									? 'border-red-600 focus:border-red-600 ring-red-100 dark:ring-0'
-									: 'border-gray-300 focus:border-gray-600 ring-gray-100 dark:border-gray-600 dark:focus:border-white dark:ring-0'
+								errors.phone ? styles.input_error : styles.input_valid
 							}`}
 							{...register('phone', {
 								required: 'Enter your phone number',
@@ -165,7 +159,7 @@ export default function Contact() {
 							})}
 						/>
 						{errors.phone && (
-							<div className="mt-1 text-red-600">
+							<div className={styles.form_error}>
 								<small>
 									{errors.phone?.message ||
 										'You must put in a valid phone number.'}
@@ -178,16 +172,14 @@ export default function Contact() {
 						<input
 							placeholder="Your Message"
 							className={`${styles.input} ${
-								errors.message
-									? 'border-red-600 focus:border-red-600 ring-red-100 dark:ring-0'
-									: 'border-gray-300 focus:border-gray-600 ring-gray-100 dark:border-gray-600 dark:focus:border-white dark:ring-0'
+								errors.message ? styles.input_error : styles.input_valid
 							}`}
 							{...register('message', {
 								required: 'Enter your Message',
 							})}
 						/>
 						{errors.message && (
-							<div className="mt-1 text-red-600">
+							<div className={styles.form_error}>
 								{' '}
 								<small>{errors.message.message || 'Error'}</small>
 							</div>
@@ -197,7 +189,7 @@ export default function Contact() {
 					<button type="submit" className={styles.submit_button}>
 						{isSubmitting ? (
 							<svg
-								className="w-5 h-5 mx-auto text-white dark:text-black animate-spin"
+								className="mx-auto h-5 w-5 animate-spin"
 								xmlns="http://www.w3.org/2000/svg"
 								fill="none"
 								viewBox="0 0 24 24"
@@ -224,12 +216,12 @@ export default function Contact() {
 				</form>
 
 				{isSubmitSuccessful && isSuccess && (
-					<div className="mt-3 text-sm text-center text-green-500">
+					<div className={`${styles.form_status} ${styles.submit_success}`}>
 						{message || 'Success. Message sent successfully'}
 					</div>
 				)}
 				{isSubmitSuccessful && !isSuccess && (
-					<div className="mt-3 text-sm text-center text-red-500">
+					<div className={`${styles.form_status} ${styles.submit_error}`}>
 						{message || 'Something went wrong. Please try again later.'}
 					</div>
 				)}

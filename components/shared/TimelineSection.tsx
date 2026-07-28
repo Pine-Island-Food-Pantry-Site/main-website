@@ -8,7 +8,7 @@ interface TimelineEntry {
 
 export function TimelineSection({ timelines }: { timelines: TimelineEntry[] }) {
 	return (
-		<div className="flex flex-col gap-4 pt-16 text-black md:flex-row">
+		<div className="flex flex-col gap-4 pt-16 md:flex-row">
 			{timelines?.map((timeline) => {
 				const { title, milestones } = timeline
 				const timelineKey = `${title ?? 'timeline'}-${milestones?.length ?? 0}`
