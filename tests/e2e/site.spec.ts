@@ -128,7 +128,7 @@ test.describe('Pine Island Food Pantry', () => {
 		).toHaveValue('auto')
 		await expect(page.locator('html')).toHaveCSS(
 			'background-color',
-			'rgb(0, 2, 10)',
+			'rgb(13, 21, 36)',
 		)
 
 		await page.emulateMedia({ colorScheme: 'light' })
