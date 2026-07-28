@@ -2,10 +2,11 @@ import Image from 'next/image'
 import Link from 'next/link'
 
 import styles from '../../../styles/navbar.module.css'
+import ThemeSwitcher from '../ThemeSwitcher/ThemeSwitcher'
 
 export default function Navbar() {
 	return (
-		<div className={styles.navbar_main}>
+		<nav aria-label="Primary navigation" className={styles.navbar_main}>
 			<div className={styles.navbar_logo}>
 				<Link href="/" className={styles.image}>
 					<Image
@@ -33,6 +34,7 @@ export default function Navbar() {
 			<Link href="/contact" className={styles.link_styles}>
 				Contact
 			</Link>
-		</div>
+			<ThemeSwitcher />
+		</nav>
 	)
 }

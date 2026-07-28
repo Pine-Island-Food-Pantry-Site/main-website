@@ -12,7 +12,7 @@
 	min-height: 125px;
 	margin-top: 2em;
 	border-radius: 20px;
-	border: 2px solid #c1694f;
+	border: 2px solid var(--accent-border);
 	background: var(--background-color);
 	box-shadow: var(--drop-shadow-1);
 }
@@ -23,10 +23,10 @@
 	text-align: center;
 	font-size: 22px;
 	font-family: "Poppins-Regular", sans-serif;
-	color: var(--font-blue);
+	color: var(--button-text-color);
 	padding: 0.5em 0.5em;
 	border-radius: 46px;
-	border: 1px solid #000;
+	border: 1px solid var(--button-border);
 	background: var(--btn-gradient);
 	box-shadow: var(--drop-shadow-1);
 }
