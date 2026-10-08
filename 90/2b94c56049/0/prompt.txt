@@ -1,0 +1,1 @@
+lets update that and pin vercel to node 24
