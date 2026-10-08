@@ -15,7 +15,7 @@ This is the main website for **The Pine Island Food Pantry**, a non-profit organ
 | Layer | Technology |
 |---|---|
 | Framework | Next.js 16 (App Router, Turbopack) |
-| Runtime | Node.js 22.12+ |
+| Runtime | Node.js 24 (pinned via `engines` in `package.json`) |
 | Language | TypeScript 7 (`tsc` CLI) |
 | CMS | Sanity v6 (`sanity` 6.18) |
 | Styling | Tailwind CSS v4 + CSS Modules |
@@ -222,7 +222,7 @@ const { data } = await loadQuery<PostPayload>(postBySlugQuery, { slug })
 
 ## Deployment
 
-- **Vercel** (primary): Connect repo, set env vars, deploy automatically on push to `main`. Set the project's Node.js version to 22.12 or newer; the repo does not pin one, and `sanity` 6.18, `@portabletext/react` 8, and `@sanity/visual-editing` 6 require it.
+- **Vercel** (primary): Connect repo, set env vars, deploy automatically on push to `main`. Node.js is pinned to `24.x` by `engines.node` in `package.json`, which overrides the Project Settings value. The pinned Node must stay at 22.12 or newer, which `sanity` 6.18, `@portabletext/react` 8, and `@sanity/visual-editing` 6 require.
 - **Netlify** (alternative): `netlify.toml` declares the Sanity incoming-hook template.
 - TypeScript type errors fail production builds. `typescript.ignoreBuildErrors` is not set in `next.config.mjs`, so this applies on every host. Fix them locally with `npm run type-check` before pushing.
 
