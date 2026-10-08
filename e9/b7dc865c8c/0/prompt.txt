@@ -1,0 +1,23 @@
+ok we need to update this app to the latest version of next js and react, see what else is due for updates too
+
+---
+
+<task-notification>
+<task-id>b7b03limm</task-id>
+<tool-use-id>REDACTED</tool-use-id>
+<output-file>/tmp/claude-1000/-home-peterc-main-website/d2e296bc-388c-430c-84a0-5ae08e0e0e69/tasks/b7b03limm.output</output-file>
+<status>completed</status>
+<summary>Background command "Start baseline production build in background" completed (exit code 0)</summary>
+</task-notification>
+
+---
+
+just kill the charoo server then try again on 3000
+
+---
+
+update next config and claude.md file
+
+---
+
+drop type-check too
