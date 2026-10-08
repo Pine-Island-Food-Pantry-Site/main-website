@@ -15,11 +15,6 @@ const config = {
 			{ hostname: 'source.unsplash.com' },
 		],
 	},
-	typescript: {
-		// TypeScript 7 no longer exposes the legacy compiler API used by Next's
-		// integrated checker. The build script runs `tsc --noEmit` before Next.
-		ignoreBuildErrors: true,
-	},
 	logging: {
 		fetches: {
 			fullUrl: true,
