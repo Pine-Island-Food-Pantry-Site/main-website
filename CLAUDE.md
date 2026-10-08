@@ -14,12 +14,14 @@ This is the main website for **The Pine Island Food Pantry**, a non-profit organ
 
 | Layer | Technology |
 |---|---|
-| Framework | Next.js (App Router) |
-| Language | TypeScript 5 |
-| CMS | Sanity v5 |
+| Framework | Next.js 16 (App Router, Turbopack) |
+| Runtime | Node.js 22.12+ |
+| Language | TypeScript 7 (`tsc` CLI) |
+| CMS | Sanity v6 (`sanity` 6.18) |
 | Styling | Tailwind CSS v4 + CSS Modules |
-| Linter/Formatter | Biome |
-| Type checker | TypeScript (`tsc --noEmit`) |
+| Linter/Formatter | Biome 2.5 |
+| Type checker | TypeScript (`tsc --noEmit`), also run by `next build` |
+| E2E tests | Playwright (`tests/e2e`) |
 | Contact form | Web3Forms + react-hook-form |
 | Deployment | Vercel (primary), Netlify (secondary) |
 
@@ -28,16 +30,17 @@ This is the main website for **The Pine Island Food Pantry**, a non-profit organ
 ## Development Commands
 
 ```bash
-npm run dev          # Start dev server (Turbopack enabled)
-npm run build        # Production build
+npm run dev          # Start dev server (Turbopack is the default bundler)
+npm run build        # Production build (includes the tsc type check)
 npm run start        # Start production server
 npm run lint         # Biome linter check
-npm run lint:fix     # Biome linter with auto-fix
+npm run lint:fix     # Biome check with safe auto-fixes (--write); review the diff
 npm run format       # Biome formatter
 npm run type-check   # TypeScript type check (no emit)
+npm run test:e2e     # Playwright end-to-end tests (tests/e2e)
 ```
 
-> There is no test runner configured. Validate changes with `type-check` and `lint`.
+> Validate changes with `type-check` and `lint`. Run `npm run test:e2e` after changes to pages, navigation, the contact form, or theme handling. Playwright starts `npm run dev` on `127.0.0.1:3000` unless CI is set; outside CI it reuses any server already on port 3000, so stop unrelated dev servers first.
 
 ---
 
@@ -88,7 +91,10 @@ npm run type-check   # TypeScript type check (no emit)
 ├── styles/
 │   ├── index.css                 # Tailwind imports + CSS custom properties
 │   └── *.module.css              # Page-scoped CSS modules
+├── tests/e2e/                    # Playwright specs (site.spec.ts)
 ├── types/index.ts                # Shared TypeScript interfaces / payload types
+├── next.config.mjs               # Next config (images, serverExternalPackages, taint)
+├── playwright.config.ts          # E2E config (desktop + Pixel 5 projects)
 └── public/                       # Static assets
 ```
 
@@ -186,9 +192,9 @@ NEXT_PUBLIC_SANITY_PROJECT_TITLE=    # Override Sanity Studio title
 
 ### TypeScript
 
-- Strict null checks are enabled; avoid `as any`.
+- `strictNullChecks` is enabled (full `strict` mode is off); avoid `as any`.
 - All Sanity payload shapes are typed in `types/index.ts`.
-- Run `npm run type-check` to validate before committing.
+- Run `npm run type-check` to validate before committing. `next build` runs the same `tsc` check, so type errors fail the build.
 
 ### Linting & Formatting
 
@@ -216,9 +222,9 @@ const { data } = await loadQuery<PostPayload>(postBySlugQuery, { slug })
 
 ## Deployment
 
-- **Vercel** (primary): Connect repo, set env vars, deploy automatically on push to `main`.
-- **Netlify** (alternative): `netlify.toml` configures the Sanity webhook trigger.
-- TypeScript build errors are intentionally ignored in Vercel production builds (configured in `next.config.mjs`). Fix them locally with `npm run type-check`.
+- **Vercel** (primary): Connect repo, set env vars, deploy automatically on push to `main`. Set the project's Node.js version to 22.12 or newer; the repo does not pin one, and `sanity` 6.18, `@portabletext/react` 8, and `@sanity/visual-editing` 6 require it.
+- **Netlify** (alternative): `netlify.toml` declares the Sanity incoming-hook template.
+- TypeScript type errors fail production builds. `typescript.ignoreBuildErrors` is not set in `next.config.mjs`, so this applies on every host. Fix them locally with `npm run type-check` before pushing.
 
 ---
 
