@@ -1,5 +1,7 @@
 import { defineField, defineType } from 'sanity'
 
+import { helpField } from '@/sanity/plugins/help/HelpField'
+
 export default defineType({
 	name: 'timeline',
 	title: 'Timeline',
@@ -8,8 +10,10 @@ export default defineType({
 		{
 			name: 'items',
 			title: 'Items',
-			description:
-				"Allows for creating a number of timelines (max 2) for displaying in the page's body",
+			...helpField(
+				'Add up to two groups of milestones. Groups appear side by side on wide screens and stack on small screens.',
+				'timelines',
+			),
 			type: 'array',
 			validation: (Rule) => Rule.max(2),
 			of: [

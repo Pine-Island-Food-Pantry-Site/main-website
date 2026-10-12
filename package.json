@@ -6,6 +6,11 @@
 		"node": "24.x"
 	},
 	"scripts": {
+		"docs:generate": "node scripts/generate-cms-help.mjs",
+		"docs:check": "node scripts/generate-cms-help.mjs --check",
+		"test:docs": "node --test tests/cms-help.test.mjs",
+		"prebuild": "npm run docs:generate",
+		"predev": "npm run docs:generate",
 		"build": "next build",
 		"dev": "next",
 		"format": "npx biome format --write .",
@@ -19,9 +24,11 @@
 	"dependencies": {
 		"@portabletext/react": "^8.0.1",
 		"@sanity/demo": "2.0.0",
+		"@sanity/icons": "^5.2.3",
 		"@sanity/image-url": "2.1.1",
 		"@sanity/preview-url-secret": "^4.1.5",
 		"@sanity/react-loader": "^2.2.2",
+		"@sanity/ui": "^4.3.3",
 		"@sanity/vision": "^6.18.0",
 		"@sanity/visual-editing": "^6.1.2",
 		"@tailwindcss/typography": "0.5.20",
@@ -33,6 +40,7 @@
 		"react": "^19.3.0",
 		"react-dom": "^19.3.0",
 		"react-hook-form": "^7.89.0",
+		"react-markdown": "^10.1.0",
 		"sanity": "^6.18.0",
 		"sanity-plugin-asset-source-unsplash": "^7.0.26",
 		"server-only": "0.0.1",

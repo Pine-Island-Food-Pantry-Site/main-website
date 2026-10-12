@@ -1,0 +1,211 @@
+[
+	{
+		"id": "start",
+		"title": "Start here",
+		"category": "Getting started",
+		"summary": "Find your way around Studio and make your first website update.",
+		"keywords": ["login", "sign in", "beginner", "navigation", "help"],
+		"updatedAt": "2026-10-12"
+	},
+	{
+		"id": "content-map",
+		"title": "What can I change?",
+		"category": "Getting started",
+		"summary": "See which website sections you can edit and which need a developer.",
+		"keywords": [
+			"home",
+			"about",
+			"contact",
+			"donate",
+			"hours",
+			"address",
+			"logo",
+			"glossary"
+		],
+		"updatedAt": "2026-10-12"
+	},
+	{
+		"id": "posts",
+		"title": "Create a post",
+		"category": "Everyday updates",
+		"summary": "Publish a pantry announcement with a photo, a short overview, and the full story.",
+		"keywords": [
+			"announcement",
+			"news",
+			"food drive",
+			"article",
+			"new",
+			"publish date"
+		],
+		"updatedAt": "2026-10-12",
+		"action": {
+			"label": "Create a post",
+			"intent": "create",
+			"params": { "type": "post" }
+		}
+	},
+	{
+		"id": "manage-posts",
+		"title": "Edit and manage posts",
+		"category": "Everyday updates",
+		"summary": "Update existing posts, understand their order, and remove outdated content.",
+		"keywords": [
+			"edit",
+			"duplicate",
+			"delete",
+			"unpublish",
+			"latest",
+			"search",
+			"tags",
+			"reference"
+		],
+		"updatedAt": "2026-10-12"
+	},
+	{
+		"id": "pages",
+		"title": "Create and edit pages",
+		"category": "Everyday updates",
+		"summary": "Make a page with its own website address and link readers to it.",
+		"keywords": ["page", "slug", "URL", "link", "route", "body"],
+		"updatedAt": "2026-10-12",
+		"action": {
+			"label": "Create a page",
+			"intent": "create",
+			"params": { "type": "page" }
+		}
+	},
+	{
+		"id": "settings",
+		"title": "Home and site settings",
+		"category": "Everyday updates",
+		"summary": "Update the site title, search description, footer, and sharing image.",
+		"keywords": [
+			"home",
+			"settings",
+			"SEO",
+			"menu",
+			"footer",
+			"social",
+			"open graph"
+		],
+		"updatedAt": "2026-10-12",
+		"action": {
+			"label": "Open Settings",
+			"intent": "edit",
+			"params": { "id": "settings", "type": "settings" }
+		}
+	},
+	{
+		"id": "formatting",
+		"title": "Write and format content",
+		"category": "Photos and content",
+		"summary": "Use the available text formatting, links, lists, and content blocks.",
+		"keywords": [
+			"rich text",
+			"bold",
+			"italic",
+			"paste",
+			"paragraph",
+			"list",
+			"link",
+			"body",
+			"description"
+		],
+		"updatedAt": "2026-10-12"
+	},
+	{
+		"id": "images",
+		"title": "Work with photos",
+		"category": "Photos and content",
+		"summary": "Upload or reuse images, choose a focal point, and add accessible descriptions.",
+		"keywords": [
+			"photo",
+			"image",
+			"picture",
+			"asset",
+			"upload",
+			"crop",
+			"hotspot",
+			"alt",
+			"caption",
+			"cover"
+		],
+		"updatedAt": "2026-10-12"
+	},
+	{
+		"id": "timelines",
+		"title": "Build a timeline",
+		"category": "Photos and content",
+		"summary": "Group milestones into a visual timeline in a page or post.",
+		"keywords": [
+			"timeline",
+			"milestone",
+			"duration",
+			"date",
+			"history",
+			"two groups"
+		],
+		"updatedAt": "2026-10-12"
+	},
+	{
+		"id": "publishing",
+		"title": "Drafts, preview, and publishing",
+		"category": "Publishing and support",
+		"summary": "Understand saved drafts, preview changes, and check the published website.",
+		"keywords": [
+			"autosave",
+			"publish",
+			"presentation",
+			"preview",
+			"validation",
+			"discard",
+			"schedule"
+		],
+		"updatedAt": "2026-10-12"
+	},
+	{
+		"id": "collaboration",
+		"title": "Collaboration, access, and recovery",
+		"category": "Publishing and support",
+		"summary": "Work with other editors and use the history and account features available to you.",
+		"keywords": [
+			"user",
+			"invite",
+			"role",
+			"permission",
+			"history",
+			"restore",
+			"revision",
+			"comments",
+			"tasks",
+			"releases",
+			"scheduled drafts"
+		],
+		"updatedAt": "2026-10-12"
+	},
+	{
+		"id": "troubleshooting",
+		"title": "Troubleshooting and support",
+		"category": "Publishing and support",
+		"summary": "Find help with sign-in, missing changes, validation errors, images, and broken links.",
+		"keywords": [
+			"error",
+			"support",
+			"problem",
+			"not showing",
+			"404",
+			"disabled",
+			"help",
+			"broken"
+		],
+		"updatedAt": "2026-10-12"
+	},
+	{
+		"id": "checklist",
+		"title": "Before you publish",
+		"category": "Publishing and support",
+		"summary": "A short checklist for clear, accurate, and complete website updates.",
+		"keywords": ["checklist", "review", "publish", "proofread", "verify"],
+		"updatedAt": "2026-10-12"
+	}
+]

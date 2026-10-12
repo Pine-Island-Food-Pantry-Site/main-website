@@ -1,7 +1,8 @@
 import { DocumentIcon } from '@sanity/icons/Document'
 import { ImageIcon } from '@sanity/icons/Image'
-import type { ComponentType } from 'react'
 import { defineArrayMember, defineField, defineType } from 'sanity'
+
+import { helpField } from '@/sanity/plugins/help/HelpField'
 
 export default defineType({
 	type: 'document',
@@ -19,6 +20,10 @@ export default defineType({
 			type: 'slug',
 			name: 'slug',
 			title: 'Slug',
+			...helpField(
+				'Page address on the website. Avoid existing routes such as about, contact, posts, studio, and api. Publishing does not add a menu link.',
+				'pages',
+			),
 			options: {
 				source: 'title',
 			},
@@ -26,8 +31,10 @@ export default defineType({
 		}),
 		defineField({
 			name: 'overview',
-			description:
-				'Used both for the <meta> description tag for SEO, and the website subheader.',
+			...helpField(
+				'Short summary shown below the page title and used for its search description.',
+				'pages',
+			),
 			title: 'Overview',
 			type: 'array',
 			of: [
@@ -57,8 +64,10 @@ export default defineType({
 			type: 'array',
 			name: 'body',
 			title: 'Body',
-			description:
-				"This is where you can write the page's content. Including custom blocks like timelines for more a more visual display of information.",
+			...helpField(
+				'Main page content. Add text, links, photos, and timeline blocks using the available controls.',
+				'formatting',
+			),
 			of: [
 				// Paragraphs
 				defineArrayMember({
@@ -110,8 +119,10 @@ export default defineType({
 							name: 'alt',
 							type: 'string',
 							title: 'Alt text',
-							description:
-								'Alternative text for screenreaders. Falls back on caption if not set',
+							...helpField(
+								'Describe meaningful images for screen readers. The caption is not used automatically as alt text.',
+								'images',
+							),
 						}),
 					],
 				}),
