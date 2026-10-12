@@ -83,14 +83,21 @@ export function PostPage({ data, encodeDataAttribute }: PostPageProps) {
 						</div>
 
 						{/* Title */}
-						<h1 className={styles.title}>{title}</h1>
+						<h1
+							className={styles.title}
+							data-sanity={encodeDataAttribute?.('title')}
+						>
+							{title}
+						</h1>
 
 						{/* Description */}
 						{description && (
-							<CustomPortableText
-								paragraphClasses={styles.description}
-								value={description}
-							/>
+							<div data-sanity={encodeDataAttribute?.('description')}>
+								<CustomPortableText
+									paragraphClasses={styles.description}
+									value={description}
+								/>
+							</div>
 						)}
 					</div>
 				</div>

@@ -22,7 +22,7 @@ Use this checklist before publishing a new item or updating an existing one.
 - The draft has finished saving.
 - **Publish Date** is correct for post ordering; a future date is not being used as a substitute for scheduling.
 - Referenced documents are published where needed.
-- Preview has been checked where available. The current homepage preview does not match the public layout.
+- Preview has been checked in the **Drafts** perspective, including the homepage's latest-update section when affected.
 
 ## Check the public result
 

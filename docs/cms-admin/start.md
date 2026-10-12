@@ -28,7 +28,7 @@ For example, you can add a confirmed food-drive drop-off time to an existing ann
 
 ## Other Studio tools
 
-- **Presentation** shows a website preview with editing controls. Read the [preview guidance](publishing.md#preview-your-changes), especially the current homepage limitation.
+- **Presentation** shows the website layout with draft/published perspectives and editing controls for CMS content. Read the [preview guidance](publishing.md#preview-your-changes).
 - **Vision** is a query tool for developers. Everyday content updates use the content editor.
 - Extra collaboration or scheduling controls may appear depending on your account and subscription. See [collaboration and access](collaboration.md).
 

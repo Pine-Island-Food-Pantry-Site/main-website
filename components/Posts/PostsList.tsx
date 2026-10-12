@@ -1,3 +1,4 @@
+import type { EncodeDataAttributeCallback } from '@sanity/react-loader'
 import Image from 'next/image'
 import Link from 'next/link'
 import type { Image as SanityImage } from 'sanity'
@@ -6,6 +7,7 @@ import { urlForImage } from '@/sanity/lib/utils'
 import styles from '@/styles/posts.module.css'
 
 interface Post {
+	sourceIndex: number
 	title: string
 	_id: string
 	coverImage?: SanityImage
@@ -15,9 +17,13 @@ interface Post {
 
 interface PostsListProps {
 	posts: Post[]
+	encodeDataAttribute?: EncodeDataAttributeCallback
 }
 
-export default function PostsList({ posts }: PostsListProps) {
+export default function PostsList({
+	posts,
+	encodeDataAttribute,
+}: PostsListProps) {
 	if (posts.length === 0) {
 		return (
 			<p className={styles.empty_state}>
@@ -39,7 +45,13 @@ export default function PostsList({ posts }: PostsListProps) {
 
 				return (
 					<div key={post._id} className={styles.card}>
-						<div className={styles.card_image}>
+						<div
+							className={styles.card_image}
+							data-sanity={encodeDataAttribute?.([
+								post.sourceIndex,
+								'coverImage',
+							])}
+						>
 							{imageUrl ? (
 								<Image
 									src={imageUrl}
@@ -48,8 +60,19 @@ export default function PostsList({ posts }: PostsListProps) {
 								/>
 							) : null}
 						</div>
-						<h4 className={styles.post_h4}>{post.title}</h4>
-						<p className={styles.card_text}>
+						<h4
+							className={styles.post_h4}
+							data-sanity={encodeDataAttribute?.([post.sourceIndex, 'title'])}
+						>
+							{post.title}
+						</h4>
+						<p
+							className={styles.card_text}
+							data-sanity={encodeDataAttribute?.([
+								post.sourceIndex,
+								'overview',
+							])}
+						>
 							{post.description
 								? `${post.description.slice(0, 100)}${
 										post.description.length > 100 ? '…' : ''

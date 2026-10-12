@@ -42,16 +42,13 @@ export const postBySlugQuery = groq`
 export const settingsQuery = groq`
   *[_type == "settings"][0]{
     footer,
-    menuItems[]->{
-      _type,
-      "slug": slug.current,
-      title
-    },
     ogImage,
   }
 `
 
 // groq query to get the latest post
+export const latestPostIdQuery = groq`*[_type == "post"] | order(duration.publishedAt desc) [0]._id`
+
 export const latestPostQuery = groq`
   *[_type == "post"] | order(duration.publishedAt desc) [0] {
     _id,

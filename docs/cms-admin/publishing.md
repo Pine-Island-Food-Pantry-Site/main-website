@@ -10,10 +10,13 @@ Studio saves edits as drafts. **Saving** keeps your work; **publishing** makes i
 
 1. Open **Presentation** from Studio's tool navigation, or use a document's available preview/location link.
 2. Navigate the preview to the page or post you are editing. A new page or post needs a slug before its address can be resolved.
-3. Check text, images, links, and the layout. Where visual-editing controls appear, select content to open the corresponding field.
-4. Return to the document and make corrections. Previewing does not publish the draft.
+3. Select the **Drafts** perspective to review saved changes, or **Published** to compare with published content. Check text, images, links, and the layout.
+4. Enable **Edit** and select an editable area to open its corresponding field. Return to the document and make corrections; saved changes appear in the connected preview.
+5. Previewing does not publish the draft. Check the public website again after publishing.
 
-**Current homepage limitation:** the homepage's draft preview uses a different layout from the public homepage. It should not be used to confirm the final homepage layout or latest-post card. After publishing a relevant update, check the public homepage outside draft mode. Pages and posts also need a public check after publishing.
+The homepage preview uses the same layout as the public website. Its latest-update photo and summary come from the latest post in the selected perspective, ordered by **Publish Date**. Select these areas to edit that post's **Cover Image** or **Overview**. Most homepage headings and other fixed copy are maintained by the developer and have no editing controls. Posts also have preview locations for their individual page and the posts listing; the latest post has a homepage location too.
+
+A preview opened from Presentation can stay connected in a separate window. Ordinary standalone browsing leaves draft mode automatically. To check the public result independently, use a fresh private window.
 
 If preview does not load, check [troubleshooting](troubleshooting.md). Preview availability depends on the deployed site's configuration and your access.
 

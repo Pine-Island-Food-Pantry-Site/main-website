@@ -1,7 +1,11 @@
 import 'server-only'
 
 import * as queryStore from '@sanity/react-loader'
-import { draftMode } from 'next/headers'
+import { cookies, draftMode } from 'next/headers'
+import {
+	resolvePerspectiveFromCookies,
+	resolveVariantFromCookies,
+} from 'next-sanity/live'
 
 import { client } from '@/sanity/lib/client'
 import {
@@ -40,15 +44,20 @@ queryStore.setServerClient(serverClient)
 const usingCdn = serverClient.config().useCdn
 // Automatically handle draft mode
 export const loadQuery = (async (query, params = {}, options = {}) => {
-	const {
-		perspective = (await draftMode()).isEnabled ? 'previewDrafts' : 'published',
-	} = options
+	const preview = (await draftMode()).isEnabled
+	const jar = preview ? await cookies() : undefined
+	const perspective =
+		options.perspective ??
+		(jar ? await resolvePerspectiveFromCookies({ cookies: jar }) : 'published')
+	const variant =
+		options.variant ??
+		(jar ? await resolveVariantFromCookies({ cookies: jar }) : undefined)
 	// Don't cache by default
 	let revalidate: NextFetchRequestConfig['revalidate'] = 0
 	// If `next.tags` is set, and we're not using the CDN, then it's safe to cache
-	if (!usingCdn && Array.isArray(options.next?.tags)) {
+	if (!preview && !usingCdn && Array.isArray(options.next?.tags)) {
 		revalidate = false
-	} else if (usingCdn) {
+	} else if (!preview && usingCdn) {
 		revalidate = 60
 	}
 	return queryStore.loadQuery(query, params, {
@@ -58,8 +67,8 @@ export const loadQuery = (async (query, params = {}, options = {}) => {
 			...(options.next || {}),
 		},
 		perspective,
-		// @TODO add support in `@sanity/client/stega` for the below
-		// stega: {enabled: draftMode().isEnabled}
+		variant,
+		stega: preview,
 	})
 }) satisfies typeof queryStore.loadQuery
 
@@ -87,7 +96,7 @@ export function loadLandingPage() {
 	return loadQuery<LandingPagePayload | null>(
 		latestPostQuery,
 		{},
-		{ next: { tags: ['home'] } },
+		{ next: { tags: ['post'] } },
 	)
 }
 
