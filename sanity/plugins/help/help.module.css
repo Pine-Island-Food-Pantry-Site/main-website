@@ -1,0 +1,397 @@
+.shell {
+	display: grid;
+	grid-template-columns: 300px minmax(0, 1fr);
+	height: 100%;
+	min-height: 0;
+	color: inherit;
+	font-family: inherit;
+}
+
+.sidebar {
+	padding: 28px 20px;
+	overflow-y: auto;
+}
+
+.sidebarHeading {
+	margin-bottom: 26px;
+}
+
+.eyebrow {
+	display: block;
+	font-size: 11px;
+	font-weight: 650;
+	letter-spacing: 0.1em;
+	line-height: 1.5;
+	text-transform: uppercase;
+	opacity: 0.7;
+}
+
+.sidebarHeading h2 {
+	font-size: 25px;
+	font-weight: 650;
+	letter-spacing: -0.04em;
+	margin: 10px 0;
+}
+
+.sidebarHeading p {
+	font-size: 13px;
+	line-height: 1.6;
+	margin: 0;
+	opacity: 0.75;
+}
+
+.searchLabel {
+	display: block;
+	font-size: 12px;
+	font-weight: 600;
+	margin-bottom: 10px;
+}
+
+.navigation {
+	margin-top: 30px;
+}
+
+.navToggle {
+	display: none;
+	color: inherit;
+	font: inherit;
+	font-size: 13px;
+	background: transparent;
+	border: 1px solid color-mix(in srgb, currentColor 25%, transparent);
+	border-radius: 5px;
+	padding: 10px 14px;
+	margin-top: 16px;
+	cursor: pointer;
+}
+
+.navToggle:focus-visible {
+	outline: 2px solid currentColor;
+	outline-offset: 3px;
+}
+
+.navGroup {
+	margin-bottom: 24px;
+}
+
+.navGroup h3,
+.contents h2 {
+	font-size: 11px;
+	font-weight: 650;
+	letter-spacing: 0.07em;
+	text-transform: uppercase;
+	opacity: 0.65;
+	margin: 0 0 10px;
+}
+
+.shell a {
+	color: inherit;
+	text-underline-offset: 4px;
+}
+
+.navLink {
+	display: block;
+	padding: 9px 12px;
+	margin: 2px -12px;
+	border-radius: 5px;
+	font-size: 13px;
+	line-height: 1.5;
+	text-decoration: none;
+}
+
+.navLink:hover,
+.resultLink:hover,
+.quickLink:hover {
+	background: color-mix(in srgb, currentColor 6%, transparent);
+}
+
+.navLink[aria-current="page"],
+.resultLink[aria-current="page"] {
+	background: color-mix(in srgb, currentColor 9%, transparent);
+	font-weight: 650;
+	box-shadow: inset 3px 0 currentColor;
+}
+
+.main {
+	min-width: 0;
+	overflow-y: auto;
+	scroll-behavior: smooth;
+}
+
+.article {
+	max-width: 850px;
+	margin: 0 auto;
+	padding: 54px 64px 64px;
+	font-size: 15px;
+	line-height: 1.8;
+}
+
+.articleHeader h1 {
+	font-size: clamp(30px, 3vw, 42px);
+	font-weight: 650;
+	letter-spacing: -0.045em;
+	line-height: 1.15;
+	margin: 16px 0;
+	text-wrap: balance;
+}
+
+.article h1:focus {
+	outline: none;
+}
+
+.summary {
+	font-size: 18px;
+	line-height: 1.6;
+	opacity: 0.8;
+	margin: 0 0 12px;
+}
+
+.updated {
+	font-size: 12px;
+	opacity: 0.65;
+	margin: 0;
+}
+
+.editorAction {
+	margin-top: 20px;
+}
+
+.actionLink {
+	display: inline-block;
+	padding: 9px 16px;
+	border: 1px solid currentColor;
+	border-radius: 6px;
+	font-size: 14px;
+	font-weight: 600;
+	text-decoration: none;
+}
+
+.actionLink:hover {
+	background: color-mix(in srgb, currentColor 8%, transparent);
+}
+
+.quickStart {
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	gap: 12px;
+	margin-top: 32px;
+}
+
+.quickLink {
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+	padding: 18px;
+	border: 1px solid color-mix(in srgb, currentColor 18%, transparent);
+	border-radius: 6px;
+	text-decoration: none;
+	font-size: 13px;
+	line-height: 1.6;
+}
+
+.quickLink strong {
+	font-size: 15px;
+	font-weight: 650;
+}
+
+.quickArrow {
+	float: right;
+}
+
+.quickLink > span {
+	opacity: 0.75;
+}
+
+.contents {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 6px 20px;
+	margin: 34px 0;
+	padding: 22px 0;
+	border-block: 1px solid color-mix(in srgb, currentColor 16%, transparent);
+}
+
+.contents h2 {
+	width: 100%;
+	margin: 0 0 5px;
+}
+
+.contents a {
+	font-size: 12px;
+}
+
+.prose h2,
+.support h2 {
+	font-size: 23px;
+	font-weight: 600;
+	letter-spacing: -0.025em;
+	line-height: 1.4;
+	margin: 34px 0 14px;
+	scroll-margin-top: 24px;
+}
+
+.prose p {
+	margin: 0 0 18px;
+}
+
+.prose li {
+	margin-bottom: 10px;
+	padding-left: 4px;
+}
+
+.prose ul,
+.prose ol {
+	padding-left: 24px;
+	margin: 0 0 24px;
+}
+
+.prose ol {
+	list-style-type: decimal;
+}
+
+.prose ul {
+	list-style-type: disc;
+}
+
+.prose a,
+.contents a,
+.support a {
+	text-decoration: underline;
+}
+
+.prose strong {
+	font-weight: 650;
+}
+
+.prose img {
+	display: block;
+	max-width: 100%;
+	height: auto;
+	border: 1px solid color-mix(in srgb, currentColor 18%, transparent);
+	border-radius: 6px;
+}
+
+.prose code {
+	font-size: 0.9em;
+	padding: 2px 5px;
+	border-radius: 3px;
+	background: color-mix(in srgb, currentColor 7%, transparent);
+	overflow-wrap: anywhere;
+}
+
+.support {
+	margin-top: 46px;
+	padding-top: 22px;
+	border-top: 1px solid color-mix(in srgb, currentColor 16%, transparent);
+	font-size: 13px;
+}
+
+.support h2 {
+	font-size: 19px;
+	margin-top: 0;
+}
+
+.searchResults {
+	font-size: 13px;
+	line-height: 1.7;
+}
+
+.resultCount {
+	font-size: 12px;
+	opacity: 0.7;
+}
+
+.resultLink {
+	display: flex;
+	flex-direction: column;
+	gap: 6px;
+	padding: 12px;
+	margin: 0 -12px 8px;
+	border-radius: 5px;
+	text-decoration: none;
+}
+
+.resultLink span {
+	font-size: 12px;
+	opacity: 0.75;
+}
+
+.shell a:focus-visible,
+.main:focus-visible {
+	outline: 2px solid currentColor;
+	outline-offset: 4px;
+}
+
+.skipLink {
+	position: absolute;
+	top: -100px;
+	left: 16px;
+	z-index: 2;
+}
+
+.skipLink:focus {
+	top: 12px;
+	padding: 12px;
+	background: inherit;
+}
+
+.srOnly {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	overflow: hidden;
+	clip-path: inset(50%);
+	white-space: nowrap;
+}
+
+@media (max-width: 900px) {
+	.shell {
+		grid-template-columns: 250px minmax(0, 1fr);
+	}
+	.article {
+		padding: 36px 28px;
+	}
+}
+
+@media (max-width: 640px) {
+	.shell {
+		display: block;
+		overflow-y: auto;
+	}
+	.sidebar {
+		padding: 20px;
+		border-right: 0;
+		border-bottom: 1px solid color-mix(in srgb, currentColor 16%, transparent);
+		overflow: visible;
+	}
+	.sidebarHeading {
+		margin-bottom: 18px;
+	}
+	.navigation {
+		display: none;
+		margin-top: 22px;
+	}
+	.navigation[data-open="true"] {
+		display: block;
+	}
+	.navToggle {
+		display: inline-block;
+	}
+	.navGroup {
+		margin-bottom: 20px;
+	}
+	.main {
+		overflow: visible;
+	}
+	.article {
+		padding: 32px 22px;
+	}
+	.quickStart {
+		grid-template-columns: 1fr;
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.main {
+		scroll-behavior: auto;
+	}
+}

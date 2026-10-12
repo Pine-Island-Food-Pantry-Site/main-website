@@ -2,6 +2,8 @@ import { DocumentIcon } from '@sanity/icons/Document'
 import { ImageIcon } from '@sanity/icons/Image'
 import { defineArrayMember, defineField, defineType } from 'sanity'
 
+import { helpField } from '@/sanity/plugins/help/HelpField'
+
 export default defineType({
 	name: 'post',
 	title: 'Post',
@@ -12,7 +14,10 @@ export default defineType({
 	fields: [
 		defineField({
 			name: 'title',
-			description: 'This field is the title of your post.',
+			...helpField(
+				'Title shown on the post and its listing. Use a clear name for your announcement.',
+				'posts',
+			),
 			title: 'Title',
 			type: 'string',
 			validation: (rule) => rule.required(),
@@ -20,6 +25,10 @@ export default defineType({
 		defineField({
 			name: 'slug',
 			title: 'Slug',
+			...helpField(
+				'Website address under /posts/. Generate it from the title; changing a published slug can break old links.',
+				'posts',
+			),
 			type: 'slug',
 			options: {
 				source: 'title',
@@ -30,8 +39,10 @@ export default defineType({
 		}),
 		defineField({
 			name: 'overview',
-			description:
-				'Used both for the <meta> description tag for SEO, and post subheader.',
+			...helpField(
+				'Short summary used in the post listing, website search, and search metadata. The latest post also supplies the homepage summary.',
+				'posts',
+			),
 			title: 'Overview',
 			type: 'array',
 			of: [
@@ -60,8 +71,10 @@ export default defineType({
 		defineField({
 			name: 'coverImage',
 			title: 'Cover Image',
-			description:
-				'This image will be used as the cover image for the post. It will also be used as the preview image for social media sharing.',
+			...helpField(
+				'Required cover photo for the post, listing, and social-sharing preview. Check the crop and hotspot before publishing.',
+				'images',
+			),
 			type: 'image',
 			options: {
 				hotspot: true,
@@ -71,11 +84,19 @@ export default defineType({
 		defineField({
 			name: 'duration',
 			title: 'Publish Date',
+			...helpField(
+				'Controls post order and the latest homepage update. A future date does not delay publication.',
+				'publishing',
+			),
 			type: 'duration',
 		}),
 		defineField({
 			name: 'tags',
 			title: 'Tags',
+			...helpField(
+				'Optional labels displayed on the post. The current website search matches titles and overviews, not tags.',
+				'manage-posts',
+			),
 			type: 'array',
 			of: [{ type: 'string' }],
 			options: {
@@ -85,6 +106,10 @@ export default defineType({
 		defineField({
 			name: 'description',
 			title: 'Post Description',
+			...helpField(
+				'Full story shown on the individual post page. Add text, links, photos, and timelines using the available controls.',
+				'formatting',
+			),
 			type: 'array',
 			of: [
 				defineArrayMember({

@@ -1,6 +1,8 @@
 import { CogIcon } from '@sanity/icons/Cog'
 import { defineArrayMember, defineField, defineType } from 'sanity'
 
+import { helpField } from '@/sanity/plugins/help/HelpField'
+
 export default defineType({
 	name: 'settings',
 	title: 'Settings',
@@ -12,7 +14,10 @@ export default defineType({
 		defineField({
 			name: 'menuItems',
 			title: 'Menu Item list',
-			description: 'Links displayed on the header of your site.',
+			...helpField(
+				'Currently unused by the website navigation. Contact the maintainer to change the main menu.',
+				'settings',
+			),
 			type: 'array',
 			of: [
 				{
@@ -34,8 +39,10 @@ export default defineType({
 		}),
 		defineField({
 			name: 'footer',
-			description:
-				'This is a block of text that will be displayed at the bottom of the page.',
+			...helpField(
+				'Text displayed at the bottom of website pages. Publish this document to update the shared footer.',
+				'settings',
+			),
 			title: 'Footer Info',
 			type: 'array',
 			of: [
@@ -64,7 +71,10 @@ export default defineType({
 			name: 'ogImage',
 			title: 'Open Graph Image',
 			type: 'image',
-			description: 'Displayed on social cards and search engine results.',
+			...helpField(
+				'Default preview image for sharing website links. Individual posts use their cover image. This does not change the logo.',
+				'images',
+			),
 			options: {
 				hotspot: true,
 			},

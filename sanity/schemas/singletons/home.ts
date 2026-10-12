@@ -1,6 +1,8 @@
 import { HomeIcon } from '@sanity/icons/Home'
 import { defineArrayMember, defineField, defineType } from 'sanity'
 
+import { helpField } from '@/sanity/plugins/help/HelpField'
+
 export default defineType({
 	name: 'home',
 	title: 'Home',
@@ -11,15 +13,20 @@ export default defineType({
 	fields: [
 		defineField({
 			name: 'title',
-			description: 'This field is the title of your personal website.',
+			...helpField(
+				'Default website title for browser tabs and search results. This does not replace the fixed homepage heading.',
+				'settings',
+			),
 			title: 'Title',
 			type: 'string',
 			validation: (rule) => rule.required(),
 		}),
 		defineField({
 			name: 'overview',
-			description:
-				'Used both for the <meta> description tag for SEO, and the personal website subheader.',
+			...helpField(
+				'Default search description for the website. Keep it concise; this does not replace the homepage paragraphs.',
+				'settings',
+			),
 			title: 'Description',
 			type: 'array',
 			of: [
@@ -61,7 +68,10 @@ export default defineType({
 		defineField({
 			name: 'Posts',
 			title: 'Posts for the website',
-			description: 'These are the posts that will be shown on the /posts page.',
+			...helpField(
+				'Currently unused by the website. The posts page lists published posts by Publish Date; the homepage uses the latest post.',
+				'content-map',
+			),
 			type: 'array',
 			of: [
 				defineArrayMember({

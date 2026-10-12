@@ -1,5 +1,7 @@
 import { defineField, defineType } from 'sanity'
 
+import { helpField } from '@/sanity/plugins/help/HelpField'
+
 export default defineType({
 	name: 'milestone',
 	title: 'Milestone',
@@ -20,7 +22,10 @@ export default defineType({
 			name: 'image',
 			title: 'Image',
 			type: 'image',
-			description: "This image will be used as the posts's cover image.",
+			...helpField(
+				'Small thumbnail beside this milestone. Preview its square crop.',
+				'images',
+			),
 			options: {
 				hotspot: true,
 			},
@@ -29,8 +34,7 @@ export default defineType({
 			name: 'tags',
 			title: 'Tags',
 			type: 'array',
-			description:
-				'Tags to help categorize the post. This can help with search later on.',
+			description: 'Optional labels displayed beside this milestone.',
 			of: [{ type: 'string' }],
 			options: {
 				layout: 'tags',
@@ -40,6 +44,10 @@ export default defineType({
 			type: 'duration',
 			name: 'duration',
 			title: 'Duration',
+			...helpField(
+				'The website currently does not display this date correctly in timeline year labels. Include essential dates in Description and check preview.',
+				'timelines',
+			),
 			validation: (rule) => rule.required(),
 		}),
 	],

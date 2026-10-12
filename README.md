@@ -18,6 +18,10 @@ The Studio connects to Sanity Content Lake, which gives you hosted content APIs 
 - Free Sanity project with unlimited admin users, free content updates, and pay-as-you-go for API overages
 - A project with starter-friendly and not too heavy-handed TypeScript and Tailwind.css
 
+## CMS admin guide
+
+Studio includes a searchable **Help & Guide** tool at `/studio/help`, covering the pantry's editing, photos, pages, settings, publishing, and support workflows. Articles are maintained in [docs/cms-admin](docs/cms-admin/README.md). Run `npm run docs:generate` after editing article sources; generation also runs before development and production builds. See the maintenance guide for contextual field links and the optional `NEXT_PUBLIC_CMS_SUPPORT_EMAIL` contact.
+
 ## Table of Contents
 
 - [Features](#features)

@@ -1,0 +1,529 @@
+[
+	{
+		"id": "start",
+		"title": "Start here",
+		"category": "Getting started",
+		"summary": "Find your way around Studio and make your first website update.",
+		"keywords": [
+			"login",
+			"sign in",
+			"beginner",
+			"navigation",
+			"help"
+		],
+		"updatedAt": "2026-10-12",
+		"markdown": "The CMS is the place where you update website content. Its editing interface is called **Studio**. You can save work as a draft, review it, and publish when it is ready.\n\n## Sign in and find your way around\n\n1. Open your website and add `/studio` to its address.\n2. Sign in using the account invited to the pantry's Sanity project. If access is refused, contact the person who gave you access.\n3. Open the content tool in the top navigation. It may be labelled **Structure** or **Desk**. Its content list contains **Home**, **Settings**, **Page**, and **Post**.\n4. Select a content type, then select an existing document. Use Studio's search to find a document by title.\n5. Select **Help & Guide** whenever you need instructions. Search this guide for a task, such as “upload a photo” or “change the footer”.\n\nOn a small screen, select **Browse all 13 guides** to open the article list. Choosing an article closes the list so you can read the instructions.\n\n**Home** and **Settings** each open one shared document. **Page** and **Post** can contain many documents. A post is usually the right choice for a food drive, event announcement, or pantry update.\n\n![Studio's Content list with Home, Settings, Page, and Post entries.](/studio-help/content-list.webp)\n\n*Choose the matching item from the Content list. Home and Settings open shared documents; Page and Post open lists of content.*\n\n## Make your first update\n\n1. Find a post you have been asked to update.\n2. Change the relevant text in **Post Description**. Leave the **Slug** alone when the address should stay the same.\n3. Wait for Studio to finish saving. A saved draft is not yet the public version.\n4. Review the change and use the [publishing guide](publishing.md) to preview and publish it.\n5. Open `/posts` on the public website and check the post.\n\nFor example, you can add a confirmed food-drive drop-off time to an existing announcement, then check that the new time appears on its public page.\n\n## Other Studio tools\n\n- **Presentation** shows a website preview with editing controls. Read the [preview guidance](publishing.md#preview-your-changes), especially the current homepage limitation.\n- **Vision** is a query tool for developers. Everyday content updates use the content editor.\n- Extra collaboration or scheduling controls may appear depending on your account and subscription. See [collaboration and access](collaboration.md).\n\n## Where to go next\n\n- [See what you can change](content-map.md).\n- [Create a post](posts.md).\n- [Work with photos](images.md).\n- [Check your update before publishing](checklist.md).\n- [Get help with a problem](troubleshooting.md).",
+		"headings": [
+			{
+				"id": "sign-in-and-find-your-way-around",
+				"title": "Sign in and find your way around"
+			},
+			{
+				"id": "make-your-first-update",
+				"title": "Make your first update"
+			},
+			{
+				"id": "other-studio-tools",
+				"title": "Other Studio tools"
+			},
+			{
+				"id": "where-to-go-next",
+				"title": "Where to go next"
+			}
+		],
+		"searchText": "start here find your way around studio and make your first website update. login sign in beginner navigation help the cms is the place where you update website content. its editing interface is called **studio**. you can save work as a draft, review it, and publish when it is ready.\n\n## sign in and find your way around\n\n1. open your website and add `/studio` to its address.\n2. sign in using the account invited to the pantry's sanity project. if access is refused, contact the person who gave you access.\n3. open the content tool in the top navigation. it may be labelled **structure** or **desk**. its content list contains **home**, **settings**, **page**, and **post**.\n4. select a content type, then select an existing document. use studio's search to find a document by title.\n5. select **help & guide** whenever you need instructions. search this guide for a task, such as “upload a photo” or “change the footer”.\n\non a small screen, select **browse all 13 guides** to open the article list. choosing an article closes the list so you can read the instructions.\n\n**home** and **settings** each open one shared document. **page** and **post** can contain many documents. a post is usually the right choice for a food drive, event announcement, or pantry update.\n\n![studio's content list with home, settings, page, and post entries.](/studio-help/content-list.webp)\n\n*choose the matching item from the content list. home and settings open shared documents; page and post open lists of content.*\n\n## make your first update\n\n1. find a post you have been asked to update.\n2. change the relevant text in **post description**. leave the **slug** alone when the address should stay the same.\n3. wait for studio to finish saving. a saved draft is not yet the public version.\n4. review the change and use the [publishing guide](publishing.md) to preview and publish it.\n5. open `/posts` on the public website and check the post.\n\nfor example, you can add a confirmed food-drive drop-off time to an existing announcement, then check that the new time appears on its public page.\n\n## other studio tools\n\n- **presentation** shows a website preview with editing controls. read the [preview guidance](publishing.md#preview-your-changes), especially the current homepage limitation.\n- **vision** is a query tool for developers. everyday content updates use the content editor.\n- extra collaboration or scheduling controls may appear depending on your account and subscription. see [collaboration and access](collaboration.md).\n\n## where to go next\n\n- [see what you can change](content-map.md).\n- [create a post](posts.md).\n- [work with photos](images.md).\n- [check your update before publishing](checklist.md).\n- [get help with a problem](troubleshooting.md)."
+	},
+	{
+		"id": "content-map",
+		"title": "What can I change?",
+		"category": "Getting started",
+		"summary": "See which website sections you can edit and which need a developer.",
+		"keywords": [
+			"home",
+			"about",
+			"contact",
+			"donate",
+			"hours",
+			"address",
+			"logo",
+			"glossary"
+		],
+		"updatedAt": "2026-10-12",
+		"markdown": "Use this map to choose the right place for an update. Some website sections are maintained by the developer rather than through Studio.\n\n## Content you can update\n\n- **Announcements and news:** create or edit a **Post**. Posts appear at `/posts` and each post has its own address under `/posts/`.\n- **Latest update on the homepage:** the website uses the cover photo and overview of the published post with the latest **Publish Date**. Editing that post changes this section.\n- **Custom pages:** create or edit a **Page**. A page has an address such as `/food-drive-details`. You must also provide a link so visitors can find it.\n- **Default site title and search description:** edit **Home → Title** and **Home → Description**. These affect browser/search metadata, rather than replacing the fixed homepage heading and paragraphs.\n- **Footer text across the website:** edit **Settings → Footer Info**.\n- **Default social-sharing image:** edit **Settings → Open Graph Image**. Individual posts use their cover image for sharing.\n\n## Changes that need a developer\n\nContact your website maintainer for changes to the fixed homepage copy, About page, board-member list, Contact details or form, pantry hours and address, logo, map, donation destination, main navigation, and page design.\n\nThe **Home → Posts for the website** list currently does not select which posts appear on the website. The **Settings → Menu Item list** currently does not change the navigation. Those fields are labelled accordingly in Studio. Publishing them does not connect these features.\n\nCreating a Page with the slug `about` or `contact` does not replace those existing website pages. Read [page addresses](pages.md#choose-a-page-address) before creating a page.\n\n## Useful words\n\n- **Document:** one saved item in Studio, such as a post, a page, or the shared Settings document.\n- **Field:** one part of a document, such as its title or cover image.\n- **Draft:** saved work that has not been published. Changes to a published item become a new draft until you publish again.\n- **Publish:** make the document's current content available to the public website.\n- **Slug:** the readable part of an address, such as `holiday-food-drive` in `/posts/holiday-food-drive`.\n- **Reference:** a connection to another saved document. Removing a reference removes the connection, not the original document.\n- **Asset:** an uploaded image that can be reused in more than one document.\n- **Overview:** a short summary used in listings or search descriptions. It is separate from the full story.\n\n## Confirm you chose the right place\n\nFor example, a new food-drive announcement belongs in **Post**. A change to the pantry's phone number requires the website maintainer. A new message at the bottom of every page belongs in **Settings → Footer Info**.\n\nIf you cannot find a field matching your requested change, check [troubleshooting](troubleshooting.md) before changing unrelated content.",
+		"headings": [
+			{
+				"id": "content-you-can-update",
+				"title": "Content you can update"
+			},
+			{
+				"id": "changes-that-need-a-developer",
+				"title": "Changes that need a developer"
+			},
+			{
+				"id": "useful-words",
+				"title": "Useful words"
+			},
+			{
+				"id": "confirm-you-chose-the-right-place",
+				"title": "Confirm you chose the right place"
+			}
+		],
+		"searchText": "what can i change? see which website sections you can edit and which need a developer. home about contact donate hours address logo glossary use this map to choose the right place for an update. some website sections are maintained by the developer rather than through studio.\n\n## content you can update\n\n- **announcements and news:** create or edit a **post**. posts appear at `/posts` and each post has its own address under `/posts/`.\n- **latest update on the homepage:** the website uses the cover photo and overview of the published post with the latest **publish date**. editing that post changes this section.\n- **custom pages:** create or edit a **page**. a page has an address such as `/food-drive-details`. you must also provide a link so visitors can find it.\n- **default site title and search description:** edit **home → title** and **home → description**. these affect browser/search metadata, rather than replacing the fixed homepage heading and paragraphs.\n- **footer text across the website:** edit **settings → footer info**.\n- **default social-sharing image:** edit **settings → open graph image**. individual posts use their cover image for sharing.\n\n## changes that need a developer\n\ncontact your website maintainer for changes to the fixed homepage copy, about page, board-member list, contact details or form, pantry hours and address, logo, map, donation destination, main navigation, and page design.\n\nthe **home → posts for the website** list currently does not select which posts appear on the website. the **settings → menu item list** currently does not change the navigation. those fields are labelled accordingly in studio. publishing them does not connect these features.\n\ncreating a page with the slug `about` or `contact` does not replace those existing website pages. read [page addresses](pages.md#choose-a-page-address) before creating a page.\n\n## useful words\n\n- **document:** one saved item in studio, such as a post, a page, or the shared settings document.\n- **field:** one part of a document, such as its title or cover image.\n- **draft:** saved work that has not been published. changes to a published item become a new draft until you publish again.\n- **publish:** make the document's current content available to the public website.\n- **slug:** the readable part of an address, such as `holiday-food-drive` in `/posts/holiday-food-drive`.\n- **reference:** a connection to another saved document. removing a reference removes the connection, not the original document.\n- **asset:** an uploaded image that can be reused in more than one document.\n- **overview:** a short summary used in listings or search descriptions. it is separate from the full story.\n\n## confirm you chose the right place\n\nfor example, a new food-drive announcement belongs in **post**. a change to the pantry's phone number requires the website maintainer. a new message at the bottom of every page belongs in **settings → footer info**.\n\nif you cannot find a field matching your requested change, check [troubleshooting](troubleshooting.md) before changing unrelated content."
+	},
+	{
+		"id": "posts",
+		"title": "Create a post",
+		"category": "Everyday updates",
+		"summary": "Publish a pantry announcement with a photo, a short overview, and the full story.",
+		"keywords": [
+			"announcement",
+			"news",
+			"food drive",
+			"article",
+			"new",
+			"publish date"
+		],
+		"updatedAt": "2026-10-12",
+		"action": {
+			"label": "Create a post",
+			"intent": "create",
+			"params": {
+				"type": "post"
+			}
+		},
+		"markdown": "A post is an announcement or story. Published posts appear on `/posts`, with newer dates first. The newest dated post also supplies the photo and summary in the homepage's latest-update section.\n\n## Create the announcement\n\n1. Open **Post** in the content tool and use its create-document control, or select **Create a post** above this guide.\n2. Enter a **Title**, such as “Holiday Food Drive”. This field is required.\n3. In **Slug**, select **Generate** to create the website address from the title. Check it before publishing. `holiday-food-drive` gives `/posts/holiday-food-drive`. The slug is required and must be unique among posts.\n4. Write an **Overview**: a short, useful summary, such as “Bring shelf-stable food to our holiday drive on Saturday. See drop-off details and the items we need.” This field is required.\n5. Add a **Cover Image**. This field is required. Choose a photo that works in a cropped preview and read [photo guidance](images.md).\n6. Set **Publish Date** to the date/time you want used for post ordering. Use the date control's displayed timezone when entering it.\n7. Add optional **Tags**, such as `food-drive` or `volunteer`. Use the tags input to enter and confirm each tag. Tags appear on the post; they do not control the current website search.\n8. Write the full announcement in **Post Description**. Include confirmed dates, times, location, who the event is for, and how readers can help. Add links, body images, or a timeline using the available controls.\n\n## Understand the summary and date\n\nThe **Overview** appears in the public post listing, provides the post's search-engine description, and is searched by the website's post search. For the latest post, it also appears on the homepage. The full **Post Description** supplies the story on the individual post page.\n\nAim for a concise overview, roughly one or two short sentences. Studio does not currently enforce a 155-character text limit.\n\n**Publish Date** sorts posts; entering a future date does not delay publication. If you press **Publish**, a future-dated post can become the latest post immediately. The field is optional in Studio, but setting it makes ordering predictable. See [publishing](publishing.md) for any scheduling controls available to your account.\n\n## Review, publish, and verify\n\n1. Wait until the draft has saved and resolve any validation errors.\n2. Review the [before-publishing checklist](checklist.md).\n3. Preview the post using **Presentation** if available, then select **Publish** when you intend to make it public.\n4. Open `/posts` outside draft preview. Check the title, summary, image, and link to the full post.\n5. If it is the newest dated post, also check the latest-update section on the public homepage.\n\nIf Publish is disabled or the update does not appear, see [troubleshooting](troubleshooting.md). Learn to maintain published posts in [Edit and manage posts](manage-posts.md).",
+		"headings": [
+			{
+				"id": "create-the-announcement",
+				"title": "Create the announcement"
+			},
+			{
+				"id": "understand-the-summary-and-date",
+				"title": "Understand the summary and date"
+			},
+			{
+				"id": "review-publish-and-verify",
+				"title": "Review, publish, and verify"
+			}
+		],
+		"searchText": "create a post publish a pantry announcement with a photo, a short overview, and the full story. announcement news food drive article new publish date a post is an announcement or story. published posts appear on `/posts`, with newer dates first. the newest dated post also supplies the photo and summary in the homepage's latest-update section.\n\n## create the announcement\n\n1. open **post** in the content tool and use its create-document control, or select **create a post** above this guide.\n2. enter a **title**, such as “holiday food drive”. this field is required.\n3. in **slug**, select **generate** to create the website address from the title. check it before publishing. `holiday-food-drive` gives `/posts/holiday-food-drive`. the slug is required and must be unique among posts.\n4. write an **overview**: a short, useful summary, such as “bring shelf-stable food to our holiday drive on saturday. see drop-off details and the items we need.” this field is required.\n5. add a **cover image**. this field is required. choose a photo that works in a cropped preview and read [photo guidance](images.md).\n6. set **publish date** to the date/time you want used for post ordering. use the date control's displayed timezone when entering it.\n7. add optional **tags**, such as `food-drive` or `volunteer`. use the tags input to enter and confirm each tag. tags appear on the post; they do not control the current website search.\n8. write the full announcement in **post description**. include confirmed dates, times, location, who the event is for, and how readers can help. add links, body images, or a timeline using the available controls.\n\n## understand the summary and date\n\nthe **overview** appears in the public post listing, provides the post's search-engine description, and is searched by the website's post search. for the latest post, it also appears on the homepage. the full **post description** supplies the story on the individual post page.\n\naim for a concise overview, roughly one or two short sentences. studio does not currently enforce a 155-character text limit.\n\n**publish date** sorts posts; entering a future date does not delay publication. if you press **publish**, a future-dated post can become the latest post immediately. the field is optional in studio, but setting it makes ordering predictable. see [publishing](publishing.md) for any scheduling controls available to your account.\n\n## review, publish, and verify\n\n1. wait until the draft has saved and resolve any validation errors.\n2. review the [before-publishing checklist](checklist.md).\n3. preview the post using **presentation** if available, then select **publish** when you intend to make it public.\n4. open `/posts` outside draft preview. check the title, summary, image, and link to the full post.\n5. if it is the newest dated post, also check the latest-update section on the public homepage.\n\nif publish is disabled or the update does not appear, see [troubleshooting](troubleshooting.md). learn to maintain published posts in [edit and manage posts](manage-posts.md)."
+	},
+	{
+		"id": "manage-posts",
+		"title": "Edit and manage posts",
+		"category": "Everyday updates",
+		"summary": "Update existing posts, understand their order, and remove outdated content.",
+		"keywords": [
+			"edit",
+			"duplicate",
+			"delete",
+			"unpublish",
+			"latest",
+			"search",
+			"tags",
+			"reference"
+		],
+		"updatedAt": "2026-10-12",
+		"markdown": "Editing an existing post creates draft changes. Readers continue seeing the previous published version until you publish the update.\n\n## Find and update a post\n\n1. Open **Post** in the content tool. Use Studio search or the document list to find the title.\n2. Open the document and edit the relevant fields. For a corrected drop-off time, edit **Post Description** and also **Overview** if the old time appears there.\n3. Keep the **Slug** unchanged unless you intend to change the address. Old bookmarks and links can stop working after a slug change; ask the developer to arrange a redirect if needed.\n4. Check **Publish Date**. Changing it can move this post in the listing and change the homepage's latest update.\n5. Wait for saving, review, and publish. Check the listing, individual page, and homepage when applicable.\n\n## Ordering and website search\n\nThe website lists published posts by **Publish Date**, newest first, with six posts per listing page. If dates are identical or missing, do not rely on a particular order. Use distinct, intentional dates for important updates.\n\nThe website's search matches **Title** and **Overview**, without regard to capitalisation. It does not currently search tags or the full story. Studio's own document search is a separate tool for finding content to edit.\n\n## Reuse an existing post\n\nIf **Duplicate** is available in a post's document actions, use it as a starting point. Change the title, generate a unique slug, check the photo, update the date, and remove old event details before publishing. **Home** and **Settings** are shared documents and cannot be duplicated through the normal document action.\n\n## Unpublish or delete\n\n- **Unpublish** removes the public version while keeping content available as a draft. Links to that post can return a page-not-found result.\n- **Delete** removes the document. Confirm that it is no longer needed and that other documents do not depend on it. Do not assume that deleted content can be recovered from the normal history panel.\n- **Discard changes** removes draft changes. On a previously published document, the published version remains. On a new document with no published version, discarding its draft can remove the new item entirely.\n\nFind these actions in the document action menu if your role permits them. Read the confirmation dialog before continuing. If Studio reports incoming references, review the documents that link to this item and update their references first.\n\nRemoving the latest post can change what appears on the homepage. Keep at least one suitable published post available: the current homepage expects latest-post content.\n\n## Check the result\n\nAfter unpublishing, check `/posts` and any known links. After editing, verify both the short overview and the full story. If a removed post remains visible, follow [changes not appearing](troubleshooting.md#my-changes-are-not-on-the-website).",
+		"headings": [
+			{
+				"id": "find-and-update-a-post",
+				"title": "Find and update a post"
+			},
+			{
+				"id": "ordering-and-website-search",
+				"title": "Ordering and website search"
+			},
+			{
+				"id": "reuse-an-existing-post",
+				"title": "Reuse an existing post"
+			},
+			{
+				"id": "unpublish-or-delete",
+				"title": "Unpublish or delete"
+			},
+			{
+				"id": "check-the-result",
+				"title": "Check the result"
+			}
+		],
+		"searchText": "edit and manage posts update existing posts, understand their order, and remove outdated content. edit duplicate delete unpublish latest search tags reference editing an existing post creates draft changes. readers continue seeing the previous published version until you publish the update.\n\n## find and update a post\n\n1. open **post** in the content tool. use studio search or the document list to find the title.\n2. open the document and edit the relevant fields. for a corrected drop-off time, edit **post description** and also **overview** if the old time appears there.\n3. keep the **slug** unchanged unless you intend to change the address. old bookmarks and links can stop working after a slug change; ask the developer to arrange a redirect if needed.\n4. check **publish date**. changing it can move this post in the listing and change the homepage's latest update.\n5. wait for saving, review, and publish. check the listing, individual page, and homepage when applicable.\n\n## ordering and website search\n\nthe website lists published posts by **publish date**, newest first, with six posts per listing page. if dates are identical or missing, do not rely on a particular order. use distinct, intentional dates for important updates.\n\nthe website's search matches **title** and **overview**, without regard to capitalisation. it does not currently search tags or the full story. studio's own document search is a separate tool for finding content to edit.\n\n## reuse an existing post\n\nif **duplicate** is available in a post's document actions, use it as a starting point. change the title, generate a unique slug, check the photo, update the date, and remove old event details before publishing. **home** and **settings** are shared documents and cannot be duplicated through the normal document action.\n\n## unpublish or delete\n\n- **unpublish** removes the public version while keeping content available as a draft. links to that post can return a page-not-found result.\n- **delete** removes the document. confirm that it is no longer needed and that other documents do not depend on it. do not assume that deleted content can be recovered from the normal history panel.\n- **discard changes** removes draft changes. on a previously published document, the published version remains. on a new document with no published version, discarding its draft can remove the new item entirely.\n\nfind these actions in the document action menu if your role permits them. read the confirmation dialog before continuing. if studio reports incoming references, review the documents that link to this item and update their references first.\n\nremoving the latest post can change what appears on the homepage. keep at least one suitable published post available: the current homepage expects latest-post content.\n\n## check the result\n\nafter unpublishing, check `/posts` and any known links. after editing, verify both the short overview and the full story. if a removed post remains visible, follow [changes not appearing](troubleshooting.md#my-changes-are-not-on-the-website)."
+	},
+	{
+		"id": "pages",
+		"title": "Create and edit pages",
+		"category": "Everyday updates",
+		"summary": "Make a page with its own website address and link readers to it.",
+		"keywords": [
+			"page",
+			"slug",
+			"URL",
+			"link",
+			"route",
+			"body"
+		],
+		"updatedAt": "2026-10-12",
+		"action": {
+			"label": "Create a page",
+			"intent": "create",
+			"params": {
+				"type": "page"
+			}
+		},
+		"markdown": "A Page adds content at its own website address. It does not automatically add a navigation link or change the fixed About and Contact pages.\n\n## Create or edit a page\n\n1. Open **Page** in the content tool. Select an existing page to edit, or use its create-document control.\n2. Enter the required **Title**, such as “Food Drive Details”.\n3. Generate and check the required **Slug**. The slug `food-drive-details` gives the address `/food-drive-details`.\n4. Write the required **Overview**. This appears below the page title and supplies its search-engine description. Keep it short and helpful.\n5. Write the main content in **Body**. Use the available text controls, links, images, or timelines. See [formatting](formatting.md).\n6. Review and publish using the [publishing guide](publishing.md).\n\n## Choose a page address\n\nUse a short, descriptive slug with words separated by hyphens. Avoid changing it after publication unless you also update links and arrange redirects for old addresses.\n\nDo not use existing application routes: `about`, `contact`, `posts`, `studio`, or `api`. Do not reuse another page's slug. A Page with the slug `about` will not replace the website's fixed About page.\n\n## Help visitors find the page\n\nPublishing makes the page available at its address. It does not automatically put it in the main menu or on the post listing.\n\nFor example, link to `/food-drive-details` from a relevant post. In the editor's URL control, use the full website address if a relative address is rejected. To add a main-navigation link, contact the developer; **Settings → Menu Item list** currently does not change the navigation.\n\n## Verify the result\n\nOpen the page's address outside draft preview. Check its title, overview, body, images, and links. Then follow the link from the post or page where you added it.\n\nIf the address shows an unexpected existing page or a page-not-found message, check the slug and publication status and read [troubleshooting](troubleshooting.md).",
+		"headings": [
+			{
+				"id": "create-or-edit-a-page",
+				"title": "Create or edit a page"
+			},
+			{
+				"id": "choose-a-page-address",
+				"title": "Choose a page address"
+			},
+			{
+				"id": "help-visitors-find-the-page",
+				"title": "Help visitors find the page"
+			},
+			{
+				"id": "verify-the-result",
+				"title": "Verify the result"
+			}
+		],
+		"searchText": "create and edit pages make a page with its own website address and link readers to it. page slug url link route body a page adds content at its own website address. it does not automatically add a navigation link or change the fixed about and contact pages.\n\n## create or edit a page\n\n1. open **page** in the content tool. select an existing page to edit, or use its create-document control.\n2. enter the required **title**, such as “food drive details”.\n3. generate and check the required **slug**. the slug `food-drive-details` gives the address `/food-drive-details`.\n4. write the required **overview**. this appears below the page title and supplies its search-engine description. keep it short and helpful.\n5. write the main content in **body**. use the available text controls, links, images, or timelines. see [formatting](formatting.md).\n6. review and publish using the [publishing guide](publishing.md).\n\n## choose a page address\n\nuse a short, descriptive slug with words separated by hyphens. avoid changing it after publication unless you also update links and arrange redirects for old addresses.\n\ndo not use existing application routes: `about`, `contact`, `posts`, `studio`, or `api`. do not reuse another page's slug. a page with the slug `about` will not replace the website's fixed about page.\n\n## help visitors find the page\n\npublishing makes the page available at its address. it does not automatically put it in the main menu or on the post listing.\n\nfor example, link to `/food-drive-details` from a relevant post. in the editor's url control, use the full website address if a relative address is rejected. to add a main-navigation link, contact the developer; **settings → menu item list** currently does not change the navigation.\n\n## verify the result\n\nopen the page's address outside draft preview. check its title, overview, body, images, and links. then follow the link from the post or page where you added it.\n\nif the address shows an unexpected existing page or a page-not-found message, check the slug and publication status and read [troubleshooting](troubleshooting.md)."
+	},
+	{
+		"id": "settings",
+		"title": "Home and site settings",
+		"category": "Everyday updates",
+		"summary": "Update the site title, search description, footer, and sharing image.",
+		"keywords": [
+			"home",
+			"settings",
+			"SEO",
+			"menu",
+			"footer",
+			"social",
+			"open graph"
+		],
+		"updatedAt": "2026-10-12",
+		"action": {
+			"label": "Open Settings",
+			"intent": "edit",
+			"params": {
+				"id": "settings",
+				"type": "settings"
+			}
+		},
+		"markdown": "Home and Settings are shared documents. Their published changes can affect the entire website, so check more than one page after updating them.\n\n## Home: site title and description\n\n1. Open **Home** in the content tool.\n2. Edit **Title** to change the default website title used in browser/search metadata. Individual pages and posts add their own titles to the site name. Title is required.\n3. Edit **Description** to change the default search description. Description is required; write a concise explanation of the pantry and who it serves.\n4. Publish, then inspect the public website's browser title. Search engines may take time to revisit the site and may choose a different search snippet.\n\nThese fields do not replace the fixed heading, mission, or other paragraphs on the public homepage. The homepage's latest-update photo and summary come from the latest dated published post.\n\n**Posts for the website** is a reference list retained from an earlier setup. It currently does not select posts on the public homepage or `/posts`. Adding, removing, or reordering references there does not control either listing. Removing a reference does not delete the post.\n\n## Settings: footer text\n\n1. Open **Settings** in the content tool, or use **Open Settings** above this guide.\n2. Edit **Footer Info**. This text appears at the bottom of website pages.\n3. Use the available text formatting and link controls. For example, add a short confirmed pantry message and a link to more information.\n4. Publish and check the footer on the homepage and a post page. If Footer Info is empty, no footer message is shown.\n\n![Footer Info field in Studio, showing the formatting toolbar, footer text, and its guide link.](/studio-help/footer-field.webp)\n\n*Edit the text inside Footer Info. The toolbar becomes available when you place the cursor in the text editor. The guide link below the field returns here.*\n\n## Settings: social-sharing image\n\n**Open Graph Image** supplies the default preview image when the website is shared. Upload or choose an image, then check its crop and hotspot. A wide image works best; the website produces a sharing crop around 1200 × 627 pixels.\n\nIndividual posts supply their own **Cover Image** for sharing. A social network can retain an old preview after you change the image; its preview does not always refresh immediately. This field does not change the website logo and does not guarantee that a search engine will display an image.\n\n## Settings: menu references\n\n**Menu Item list** is currently unused by the website's main navigation. It can store references to Home, Pages, and Posts, but publishing or reordering that list does not alter the visible menu. Ask the developer for navigation changes.\n\n## Verify and get help\n\nReview shared changes carefully before publishing. Home and Settings cannot be duplicated through the normal document action; keep using the existing shared documents.\n\nIf you expected to change the logo, opening hours, contact details, About text, or donation link, consult [What can I change?](content-map.md). Those updates currently require the maintainer.",
+		"headings": [
+			{
+				"id": "home-site-title-and-description",
+				"title": "Home: site title and description"
+			},
+			{
+				"id": "settings-footer-text",
+				"title": "Settings: footer text"
+			},
+			{
+				"id": "settings-social-sharing-image",
+				"title": "Settings: social-sharing image"
+			},
+			{
+				"id": "settings-menu-references",
+				"title": "Settings: menu references"
+			},
+			{
+				"id": "verify-and-get-help",
+				"title": "Verify and get help"
+			}
+		],
+		"searchText": "home and site settings update the site title, search description, footer, and sharing image. home settings seo menu footer social open graph home and settings are shared documents. their published changes can affect the entire website, so check more than one page after updating them.\n\n## home: site title and description\n\n1. open **home** in the content tool.\n2. edit **title** to change the default website title used in browser/search metadata. individual pages and posts add their own titles to the site name. title is required.\n3. edit **description** to change the default search description. description is required; write a concise explanation of the pantry and who it serves.\n4. publish, then inspect the public website's browser title. search engines may take time to revisit the site and may choose a different search snippet.\n\nthese fields do not replace the fixed heading, mission, or other paragraphs on the public homepage. the homepage's latest-update photo and summary come from the latest dated published post.\n\n**posts for the website** is a reference list retained from an earlier setup. it currently does not select posts on the public homepage or `/posts`. adding, removing, or reordering references there does not control either listing. removing a reference does not delete the post.\n\n## settings: footer text\n\n1. open **settings** in the content tool, or use **open settings** above this guide.\n2. edit **footer info**. this text appears at the bottom of website pages.\n3. use the available text formatting and link controls. for example, add a short confirmed pantry message and a link to more information.\n4. publish and check the footer on the homepage and a post page. if footer info is empty, no footer message is shown.\n\n![footer info field in studio, showing the formatting toolbar, footer text, and its guide link.](/studio-help/footer-field.webp)\n\n*edit the text inside footer info. the toolbar becomes available when you place the cursor in the text editor. the guide link below the field returns here.*\n\n## settings: social-sharing image\n\n**open graph image** supplies the default preview image when the website is shared. upload or choose an image, then check its crop and hotspot. a wide image works best; the website produces a sharing crop around 1200 × 627 pixels.\n\nindividual posts supply their own **cover image** for sharing. a social network can retain an old preview after you change the image; its preview does not always refresh immediately. this field does not change the website logo and does not guarantee that a search engine will display an image.\n\n## settings: menu references\n\n**menu item list** is currently unused by the website's main navigation. it can store references to home, pages, and posts, but publishing or reordering that list does not alter the visible menu. ask the developer for navigation changes.\n\n## verify and get help\n\nreview shared changes carefully before publishing. home and settings cannot be duplicated through the normal document action; keep using the existing shared documents.\n\nif you expected to change the logo, opening hours, contact details, about text, or donation link, consult [what can i change?](content-map.md). those updates currently require the maintainer."
+	},
+	{
+		"id": "formatting",
+		"title": "Write and format content",
+		"category": "Photos and content",
+		"summary": "Use the available text formatting, links, lists, and content blocks.",
+		"keywords": [
+			"rich text",
+			"bold",
+			"italic",
+			"paste",
+			"paragraph",
+			"list",
+			"link",
+			"body",
+			"description"
+		],
+		"updatedAt": "2026-10-12",
+		"markdown": "Use the text toolbar shown in the field you are editing. Different fields support different controls.\n\n## Choose the right text field\n\n- **Home → Description:** short site summary with bold, italic, and links.\n- **Page/Post → Overview:** short summary with bold and italic. Links and lists are not enabled here.\n- **Page → Body** and **Post → Post Description:** main content with available formatting, lists, links, image blocks, and timeline blocks. These fields do not offer heading styles in the current setup.\n- **Settings → Footer Info:** text, links, lists, and available heading styles. Images and timelines are not enabled in this field.\n- **Milestone → Description:** plain text, rather than the rich-text editor.\n\n## Write clear text\n\n1. Click inside the text field and enter a paragraph.\n2. Start a new paragraph with Enter. Use short paragraphs for event details and instructions.\n3. Select text and use **Bold** or **Italic** when those controls are available.\n4. Use a bullet or numbered list when the field offers list controls. Preview to check the result.\n\nIf text pasted from a document brings unwanted formatting, undo and paste as plain text using your browser's paste-without-formatting command. Review spacing and punctuation after pasting.\n\n## Add or change a link\n\n1. Select meaningful text, such as “See drop-off details”.\n2. Use the link control and enter the destination in **Url**.\n3. Confirm the link, then test it in preview or on the published page.\n\nFor another website, enter its complete `https://` address. For a page on this website, use its complete address if Studio's URL validation rejects a relative address. Link availability depends on the field; an Overview cannot contain a link.\n\nTo change a link, select its text and reopen the link control. Use the control's remove action to unlink text. Prefer descriptive link labels to “click here”.\n\n## Insert and organise blocks\n\nIn **Body** or **Post Description**, use the insert/add control to choose **Image** or **Timeline** where available. Open a block to edit its fields. Use the block's drag handle or available movement controls to change its position. Removing a body image block removes it from this document; it does not necessarily delete the uploaded asset.\n\nSee [photos](images.md) for captions and alt text and [timelines](timelines.md) for milestone fields.\n\n## Check the result\n\nPreview paragraph breaks, emphasis, list order, links, and block positions. For a food-drive post, readers should easily find what to bring, when to arrive, and where to go. Use [Before you publish](checklist.md) for the final review.",
+		"headings": [
+			{
+				"id": "choose-the-right-text-field",
+				"title": "Choose the right text field"
+			},
+			{
+				"id": "write-clear-text",
+				"title": "Write clear text"
+			},
+			{
+				"id": "add-or-change-a-link",
+				"title": "Add or change a link"
+			},
+			{
+				"id": "insert-and-organise-blocks",
+				"title": "Insert and organise blocks"
+			},
+			{
+				"id": "check-the-result",
+				"title": "Check the result"
+			}
+		],
+		"searchText": "write and format content use the available text formatting, links, lists, and content blocks. rich text bold italic paste paragraph list link body description use the text toolbar shown in the field you are editing. different fields support different controls.\n\n## choose the right text field\n\n- **home → description:** short site summary with bold, italic, and links.\n- **page/post → overview:** short summary with bold and italic. links and lists are not enabled here.\n- **page → body** and **post → post description:** main content with available formatting, lists, links, image blocks, and timeline blocks. these fields do not offer heading styles in the current setup.\n- **settings → footer info:** text, links, lists, and available heading styles. images and timelines are not enabled in this field.\n- **milestone → description:** plain text, rather than the rich-text editor.\n\n## write clear text\n\n1. click inside the text field and enter a paragraph.\n2. start a new paragraph with enter. use short paragraphs for event details and instructions.\n3. select text and use **bold** or **italic** when those controls are available.\n4. use a bullet or numbered list when the field offers list controls. preview to check the result.\n\nif text pasted from a document brings unwanted formatting, undo and paste as plain text using your browser's paste-without-formatting command. review spacing and punctuation after pasting.\n\n## add or change a link\n\n1. select meaningful text, such as “see drop-off details”.\n2. use the link control and enter the destination in **url**.\n3. confirm the link, then test it in preview or on the published page.\n\nfor another website, enter its complete `https://` address. for a page on this website, use its complete address if studio's url validation rejects a relative address. link availability depends on the field; an overview cannot contain a link.\n\nto change a link, select its text and reopen the link control. use the control's remove action to unlink text. prefer descriptive link labels to “click here”.\n\n## insert and organise blocks\n\nin **body** or **post description**, use the insert/add control to choose **image** or **timeline** where available. open a block to edit its fields. use the block's drag handle or available movement controls to change its position. removing a body image block removes it from this document; it does not necessarily delete the uploaded asset.\n\nsee [photos](images.md) for captions and alt text and [timelines](timelines.md) for milestone fields.\n\n## check the result\n\npreview paragraph breaks, emphasis, list order, links, and block positions. for a food-drive post, readers should easily find what to bring, when to arrive, and where to go. use [before you publish](checklist.md) for the final review."
+	},
+	{
+		"id": "images",
+		"title": "Work with photos",
+		"category": "Photos and content",
+		"summary": "Upload or reuse images, choose a focal point, and add accessible descriptions.",
+		"keywords": [
+			"photo",
+			"image",
+			"picture",
+			"asset",
+			"upload",
+			"crop",
+			"hotspot",
+			"alt",
+			"caption",
+			"cover"
+		],
+		"updatedAt": "2026-10-12",
+		"markdown": "Images can appear as post covers, in page/post content, as timeline thumbnails, or in social-sharing previews. The website crops them differently in each location.\n\n## Upload, reuse, or replace a photo\n\n1. Open **Cover Image**, **Open Graph Image**, a body **Image** block, or a milestone's **Image** field.\n2. Use the upload control to choose a file, or the selection/browse control to reuse an available asset.\n3. Wait until the upload finishes and the image appears.\n4. To replace a photo, open the field's image actions and choose a new upload or existing asset.\n5. Preview all places where the image will appear, then publish the document.\n\nThe current Studio does not enable an Unsplash source. Upload your photo or reuse an asset offered by the image picker. Use images the pantry has permission to publish.\n\n## Crop and choose the focal point\n\nOpen the image editing control to adjust **Crop** and **Hotspot** where offered. Crop trims the image; hotspot marks the area that should stay visible when the website chooses a different crop.\n\nFor a volunteer-group photo, put the hotspot over the faces and leave enough space around them. Avoid placing important words near an image's edge. Preview the cover, post listing, and homepage if the photo belongs to the latest post. Body images display in a wide frame; timeline thumbnails are small squares.\n\n![Studio image editor with a crop rectangle around the photo and an oval hotspot marking its focal area.](/studio-help/image-crop.webp)\n\n*The rectangle handles change the crop. The hotspot's circle/oval marks the area to keep visible in different image shapes. Open this editor using the image's edit control.*\n\n## Captions and alt text\n\nBody image blocks include:\n\n- **Caption:** visible text below the photo. For example, “Volunteers preparing food-drive donations.”\n- **Alt text:** a description for people who use screen readers. For example, “Three pantry volunteers packing donated groceries into boxes.”\n\nAlt text and captions have different purposes. Fill in **Alt text** for meaningful body images; a caption is not used automatically as alt text by the current website. Do not start every description with “image of”. Describe what matters to the surrounding story.\n\nThe current **Cover Image**, **Open Graph Image**, and milestone **Image** fields do not expose separate caption or alt-text inputs. Milestone thumbnails use the milestone title as their description. Ask the developer if those fields need additional accessibility controls.\n\n## Removing images safely\n\nRemoving an image from a field or deleting a body image block changes that document. Deleting the uploaded asset itself can affect other documents that reuse it. Review any usage/reference information and avoid deleting shared assets just to replace one photo.\n\nA post's **Cover Image** is required. Choose a replacement before publishing a post that needs a new cover.\n\n## Check the result\n\nWait for saving, preview the crops, read captions, and publish when ready. Check the public post list and full post. If the image is missing or cropped poorly, see [troubleshooting](troubleshooting.md#an-image-is-missing-or-cropped-badly).",
+		"headings": [
+			{
+				"id": "upload-reuse-or-replace-a-photo",
+				"title": "Upload, reuse, or replace a photo"
+			},
+			{
+				"id": "crop-and-choose-the-focal-point",
+				"title": "Crop and choose the focal point"
+			},
+			{
+				"id": "captions-and-alt-text",
+				"title": "Captions and alt text"
+			},
+			{
+				"id": "removing-images-safely",
+				"title": "Removing images safely"
+			},
+			{
+				"id": "check-the-result",
+				"title": "Check the result"
+			}
+		],
+		"searchText": "work with photos upload or reuse images, choose a focal point, and add accessible descriptions. photo image picture asset upload crop hotspot alt caption cover images can appear as post covers, in page/post content, as timeline thumbnails, or in social-sharing previews. the website crops them differently in each location.\n\n## upload, reuse, or replace a photo\n\n1. open **cover image**, **open graph image**, a body **image** block, or a milestone's **image** field.\n2. use the upload control to choose a file, or the selection/browse control to reuse an available asset.\n3. wait until the upload finishes and the image appears.\n4. to replace a photo, open the field's image actions and choose a new upload or existing asset.\n5. preview all places where the image will appear, then publish the document.\n\nthe current studio does not enable an unsplash source. upload your photo or reuse an asset offered by the image picker. use images the pantry has permission to publish.\n\n## crop and choose the focal point\n\nopen the image editing control to adjust **crop** and **hotspot** where offered. crop trims the image; hotspot marks the area that should stay visible when the website chooses a different crop.\n\nfor a volunteer-group photo, put the hotspot over the faces and leave enough space around them. avoid placing important words near an image's edge. preview the cover, post listing, and homepage if the photo belongs to the latest post. body images display in a wide frame; timeline thumbnails are small squares.\n\n![studio image editor with a crop rectangle around the photo and an oval hotspot marking its focal area.](/studio-help/image-crop.webp)\n\n*the rectangle handles change the crop. the hotspot's circle/oval marks the area to keep visible in different image shapes. open this editor using the image's edit control.*\n\n## captions and alt text\n\nbody image blocks include:\n\n- **caption:** visible text below the photo. for example, “volunteers preparing food-drive donations.”\n- **alt text:** a description for people who use screen readers. for example, “three pantry volunteers packing donated groceries into boxes.”\n\nalt text and captions have different purposes. fill in **alt text** for meaningful body images; a caption is not used automatically as alt text by the current website. do not start every description with “image of”. describe what matters to the surrounding story.\n\nthe current **cover image**, **open graph image**, and milestone **image** fields do not expose separate caption or alt-text inputs. milestone thumbnails use the milestone title as their description. ask the developer if those fields need additional accessibility controls.\n\n## removing images safely\n\nremoving an image from a field or deleting a body image block changes that document. deleting the uploaded asset itself can affect other documents that reuse it. review any usage/reference information and avoid deleting shared assets just to replace one photo.\n\na post's **cover image** is required. choose a replacement before publishing a post that needs a new cover.\n\n## check the result\n\nwait for saving, preview the crops, read captions, and publish when ready. check the public post list and full post. if the image is missing or cropped poorly, see [troubleshooting](troubleshooting.md#an-image-is-missing-or-cropped-badly)."
+	},
+	{
+		"id": "timelines",
+		"title": "Build a timeline",
+		"category": "Photos and content",
+		"summary": "Group milestones into a visual timeline in a page or post.",
+		"keywords": [
+			"timeline",
+			"milestone",
+			"duration",
+			"date",
+			"history",
+			"two groups"
+		],
+		"updatedAt": "2026-10-12",
+		"markdown": "A timeline block displays groups of milestones inside a page or post. Each block allows at most two groups. On a wide screen, the groups appear next to one another; on a narrow screen, they stack.\n\n## Add groups and milestones\n\n1. Open a Page's **Body** or a Post's **Post Description**.\n2. Use the insert/add control and choose **Timeline**.\n3. Open the timeline's **Items** and add an **Item**. Give the group a **Title**, such as “Pantry milestones”.\n4. Inside the group, open **Milestones** and add a **Milestone**.\n5. Fill in the milestone's required **Title**. Add an optional plain-text **Description**, an **Image**, and **Tags**.\n6. Open the required **Duration** object and use its date input if you need to record a date. Read the date limitation below before relying on a visible year.\n7. Add more milestones and use their available movement controls to arrange them in the order readers should see them.\n8. Add a second group if needed. A third group is blocked by validation; use another timeline block if you need more groups.\n\nFor example, a group could contain “Food drive launched” and “First volunteer packing day”, each with a short explanation and a thumbnail.\n\n## Current date limitation\n\nThe current editor records one date inside **Duration**, but the website's timeline year display is not connected to that date correctly. Entering it does not reliably produce the intended visible year. A timeline can show incomplete date text such as “Now”.\n\nIf accurate timeline years are important, ask the website maintainer to correct the display before publishing. Include essential dates in the milestone's **Description** and check preview, rather than depending on the year label.\n\n## Review and publish\n\nCheck group titles, milestone order, descriptions, tags, and cropped thumbnails. Milestone titles and Duration are required; resolve any validation errors. Then publish the page or post and check the public result at different screen sizes.\n\nTo remove a milestone or group, use its item menu and check that you are removing the intended item. The change stays in the draft until you publish. See [recovery](collaboration.md#review-and-restore-a-revision) if you need to undo saved changes.",
+		"headings": [
+			{
+				"id": "add-groups-and-milestones",
+				"title": "Add groups and milestones"
+			},
+			{
+				"id": "current-date-limitation",
+				"title": "Current date limitation"
+			},
+			{
+				"id": "review-and-publish",
+				"title": "Review and publish"
+			}
+		],
+		"searchText": "build a timeline group milestones into a visual timeline in a page or post. timeline milestone duration date history two groups a timeline block displays groups of milestones inside a page or post. each block allows at most two groups. on a wide screen, the groups appear next to one another; on a narrow screen, they stack.\n\n## add groups and milestones\n\n1. open a page's **body** or a post's **post description**.\n2. use the insert/add control and choose **timeline**.\n3. open the timeline's **items** and add an **item**. give the group a **title**, such as “pantry milestones”.\n4. inside the group, open **milestones** and add a **milestone**.\n5. fill in the milestone's required **title**. add an optional plain-text **description**, an **image**, and **tags**.\n6. open the required **duration** object and use its date input if you need to record a date. read the date limitation below before relying on a visible year.\n7. add more milestones and use their available movement controls to arrange them in the order readers should see them.\n8. add a second group if needed. a third group is blocked by validation; use another timeline block if you need more groups.\n\nfor example, a group could contain “food drive launched” and “first volunteer packing day”, each with a short explanation and a thumbnail.\n\n## current date limitation\n\nthe current editor records one date inside **duration**, but the website's timeline year display is not connected to that date correctly. entering it does not reliably produce the intended visible year. a timeline can show incomplete date text such as “now”.\n\nif accurate timeline years are important, ask the website maintainer to correct the display before publishing. include essential dates in the milestone's **description** and check preview, rather than depending on the year label.\n\n## review and publish\n\ncheck group titles, milestone order, descriptions, tags, and cropped thumbnails. milestone titles and duration are required; resolve any validation errors. then publish the page or post and check the public result at different screen sizes.\n\nto remove a milestone or group, use its item menu and check that you are removing the intended item. the change stays in the draft until you publish. see [recovery](collaboration.md#review-and-restore-a-revision) if you need to undo saved changes."
+	},
+	{
+		"id": "publishing",
+		"title": "Drafts, preview, and publishing",
+		"category": "Publishing and support",
+		"summary": "Understand saved drafts, preview changes, and check the published website.",
+		"keywords": [
+			"autosave",
+			"publish",
+			"presentation",
+			"preview",
+			"validation",
+			"discard",
+			"schedule"
+		],
+		"updatedAt": "2026-10-12",
+		"markdown": "Studio saves edits as drafts. **Saving** keeps your work; **publishing** makes it available to website visitors. A saved draft does not update the public website by itself.\n\n## Understand document status\n\n- A new draft has no public version yet.\n- A published document can also have newer draft changes. Readers see the published version until you publish again.\n- Wait for the editor's saving/synchronisation indicator to settle before leaving the document. Connection problems can prevent changes from being saved.\n\n## Preview your changes\n\n1. Open **Presentation** from Studio's tool navigation, or use a document's available preview/location link.\n2. Navigate the preview to the page or post you are editing. A new page or post needs a slug before its address can be resolved.\n3. Check text, images, links, and the layout. Where visual-editing controls appear, select content to open the corresponding field.\n4. Return to the document and make corrections. Previewing does not publish the draft.\n\n**Current homepage limitation:** the homepage's draft preview uses a different layout from the public homepage. It should not be used to confirm the final homepage layout or latest-post card. After publishing a relevant update, check the public homepage outside draft mode. Pages and posts also need a public check after publishing.\n\nIf preview does not load, check [troubleshooting](troubleshooting.md). Preview availability depends on the deployed site's configuration and your access.\n\n## Publish the document\n\n1. Review [Before you publish](checklist.md).\n2. Resolve validation errors. **Post** requires Title, Slug, Overview, and Cover Image; **Page** requires Title, Slug, and Overview; **Home** requires Title and Description.\n3. Check that referenced documents are available. If you created or edited a linked document too, it may need to be published separately.\n4. Select **Publish**, or the update/publish action shown for the document. Read any confirmation prompt.\n5. Open the public website in a fresh tab or private window outside preview. Check the individual address and all affected shared areas.\n\nWebsite caches and sharing previews may take time to update. If refreshing still shows old content, follow [changes not appearing](troubleshooting.md#my-changes-are-not-on-the-website). There is no guaranteed refresh time documented for this deployment.\n\n## Discard, unpublish, and delete\n\n**Discard changes** removes the draft. For a previously published document, the public version remains. A never-published draft may be removed entirely.\n\n**Unpublish** removes the public version and retains content as a draft. **Delete** removes the document. Both can break links and affect referencing documents. Review the action menu and confirmation carefully; see [manage posts](manage-posts.md#unpublish-or-delete).\n\n## Dates and scheduling\n\n**Post → Publish Date** is used for ordering. A future date does not schedule the post or hide it until that date. Publishing a future-dated post can put it first in the list immediately.\n\nNative scheduled-draft or Content Releases controls may be offered by your Sanity account. Their availability and permissions depend on the project. Ask the project administrator to confirm that a scheduling workflow is enabled before relying on it. A scheduled operation should be checked separately from the post's ordering date; see [account features](collaboration.md#optional-account-features).",
+		"headings": [
+			{
+				"id": "understand-document-status",
+				"title": "Understand document status"
+			},
+			{
+				"id": "preview-your-changes",
+				"title": "Preview your changes"
+			},
+			{
+				"id": "publish-the-document",
+				"title": "Publish the document"
+			},
+			{
+				"id": "discard-unpublish-and-delete",
+				"title": "Discard, unpublish, and delete"
+			},
+			{
+				"id": "dates-and-scheduling",
+				"title": "Dates and scheduling"
+			}
+		],
+		"searchText": "drafts, preview, and publishing understand saved drafts, preview changes, and check the published website. autosave publish presentation preview validation discard schedule studio saves edits as drafts. **saving** keeps your work; **publishing** makes it available to website visitors. a saved draft does not update the public website by itself.\n\n## understand document status\n\n- a new draft has no public version yet.\n- a published document can also have newer draft changes. readers see the published version until you publish again.\n- wait for the editor's saving/synchronisation indicator to settle before leaving the document. connection problems can prevent changes from being saved.\n\n## preview your changes\n\n1. open **presentation** from studio's tool navigation, or use a document's available preview/location link.\n2. navigate the preview to the page or post you are editing. a new page or post needs a slug before its address can be resolved.\n3. check text, images, links, and the layout. where visual-editing controls appear, select content to open the corresponding field.\n4. return to the document and make corrections. previewing does not publish the draft.\n\n**current homepage limitation:** the homepage's draft preview uses a different layout from the public homepage. it should not be used to confirm the final homepage layout or latest-post card. after publishing a relevant update, check the public homepage outside draft mode. pages and posts also need a public check after publishing.\n\nif preview does not load, check [troubleshooting](troubleshooting.md). preview availability depends on the deployed site's configuration and your access.\n\n## publish the document\n\n1. review [before you publish](checklist.md).\n2. resolve validation errors. **post** requires title, slug, overview, and cover image; **page** requires title, slug, and overview; **home** requires title and description.\n3. check that referenced documents are available. if you created or edited a linked document too, it may need to be published separately.\n4. select **publish**, or the update/publish action shown for the document. read any confirmation prompt.\n5. open the public website in a fresh tab or private window outside preview. check the individual address and all affected shared areas.\n\nwebsite caches and sharing previews may take time to update. if refreshing still shows old content, follow [changes not appearing](troubleshooting.md#my-changes-are-not-on-the-website). there is no guaranteed refresh time documented for this deployment.\n\n## discard, unpublish, and delete\n\n**discard changes** removes the draft. for a previously published document, the public version remains. a never-published draft may be removed entirely.\n\n**unpublish** removes the public version and retains content as a draft. **delete** removes the document. both can break links and affect referencing documents. review the action menu and confirmation carefully; see [manage posts](manage-posts.md#unpublish-or-delete).\n\n## dates and scheduling\n\n**post → publish date** is used for ordering. a future date does not schedule the post or hide it until that date. publishing a future-dated post can put it first in the list immediately.\n\nnative scheduled-draft or content releases controls may be offered by your sanity account. their availability and permissions depend on the project. ask the project administrator to confirm that a scheduling workflow is enabled before relying on it. a scheduled operation should be checked separately from the post's ordering date; see [account features](collaboration.md#optional-account-features)."
+	},
+	{
+		"id": "collaboration",
+		"title": "Collaboration, access, and recovery",
+		"category": "Publishing and support",
+		"summary": "Work with other editors and use the history and account features available to you.",
+		"keywords": [
+			"user",
+			"invite",
+			"role",
+			"permission",
+			"history",
+			"restore",
+			"revision",
+			"comments",
+			"tasks",
+			"releases",
+			"scheduled drafts"
+		],
+		"updatedAt": "2026-10-12",
+		"markdown": "Other editors can work in the same Studio. Coordinate changes to shared content such as Home and Settings, and agree on who will publish an update.\n\n## Work with another editor\n\nCheck any presence indicators before editing. If a colleague is already updating the same announcement, coordinate the work so you do not overwrite one another's wording. Shared edits can appear in real time; they do not become public until the relevant document is published.\n\nIf **Comments** are available, use the field's comment control to leave feedback or mention a colleague, then resolve the comment when the change is complete. If **Tasks** are available, use the task controls to assign work and track completion. A comment or completed task does not itself publish the document.\n\n## Review and restore a revision\n\n1. Open the document you want to review.\n2. Open the document history or changes view using the status/history controls offered by your Studio.\n3. Choose an available earlier revision and review the changes, their author, and time where shown.\n4. If the history view offers a restore action and your role permits it, restore the intended revision. Confirm what the dialog says will change.\n5. Review the restored content as a draft and publish it if you intend to replace the public version.\n\nHistory availability and retention depend on the project's subscription. Do not assume that all earlier revisions will remain available indefinitely or that a deleted document can be recovered through this view. If the revision or restore control is missing, ask the project administrator for help.\n\n## Account access and permissions\n\nSigning in and editing content are separate from managing the Sanity project. User invitations, roles, and subscription settings are managed by an authorised project administrator through Sanity's project-management tools, rather than the website's Settings document.\n\nIf you can read content but cannot edit, publish, or delete it, confirm you are using the invited account and ask the project administrator to check your role. Do not share a colleague's login to bypass an access problem.\n\n## Optional account features\n\n- **Scheduled drafts:** if enabled, use the scheduling action for the intended document, confirm its timezone and scheduled time, and verify its status. Changing **Publish Date** is a separate action and does not create a schedule.\n- **Content Releases:** if offered, these can group changes to multiple documents for a coordinated publish. Creating a release or adding a version does not publish it. Have the administrator show you the project's workflow before using it for a live update.\n- **Comments and Tasks:** availability and controls vary with project configuration and permissions. Use them for coordination when they are present.\n\nThese features are not guaranteed for every account in this Studio. For detailed instructions on controls you have access to, see Sanity's [user guides](https://www.sanity.io/docs/user-guides), including [history](https://www.sanity.io/docs/user-guides/history-experience). Your project administrator can confirm what is enabled.\n\n## Verify and get help\n\nFor a restored announcement, compare its public title, overview, body, and image after publishing. For missing access or history, include the document title and the action you need when requesting help. See [support](troubleshooting.md#ask-for-help).",
+		"headings": [
+			{
+				"id": "work-with-another-editor",
+				"title": "Work with another editor"
+			},
+			{
+				"id": "review-and-restore-a-revision",
+				"title": "Review and restore a revision"
+			},
+			{
+				"id": "account-access-and-permissions",
+				"title": "Account access and permissions"
+			},
+			{
+				"id": "optional-account-features",
+				"title": "Optional account features"
+			},
+			{
+				"id": "verify-and-get-help",
+				"title": "Verify and get help"
+			}
+		],
+		"searchText": "collaboration, access, and recovery work with other editors and use the history and account features available to you. user invite role permission history restore revision comments tasks releases scheduled drafts other editors can work in the same studio. coordinate changes to shared content such as home and settings, and agree on who will publish an update.\n\n## work with another editor\n\ncheck any presence indicators before editing. if a colleague is already updating the same announcement, coordinate the work so you do not overwrite one another's wording. shared edits can appear in real time; they do not become public until the relevant document is published.\n\nif **comments** are available, use the field's comment control to leave feedback or mention a colleague, then resolve the comment when the change is complete. if **tasks** are available, use the task controls to assign work and track completion. a comment or completed task does not itself publish the document.\n\n## review and restore a revision\n\n1. open the document you want to review.\n2. open the document history or changes view using the status/history controls offered by your studio.\n3. choose an available earlier revision and review the changes, their author, and time where shown.\n4. if the history view offers a restore action and your role permits it, restore the intended revision. confirm what the dialog says will change.\n5. review the restored content as a draft and publish it if you intend to replace the public version.\n\nhistory availability and retention depend on the project's subscription. do not assume that all earlier revisions will remain available indefinitely or that a deleted document can be recovered through this view. if the revision or restore control is missing, ask the project administrator for help.\n\n## account access and permissions\n\nsigning in and editing content are separate from managing the sanity project. user invitations, roles, and subscription settings are managed by an authorised project administrator through sanity's project-management tools, rather than the website's settings document.\n\nif you can read content but cannot edit, publish, or delete it, confirm you are using the invited account and ask the project administrator to check your role. do not share a colleague's login to bypass an access problem.\n\n## optional account features\n\n- **scheduled drafts:** if enabled, use the scheduling action for the intended document, confirm its timezone and scheduled time, and verify its status. changing **publish date** is a separate action and does not create a schedule.\n- **content releases:** if offered, these can group changes to multiple documents for a coordinated publish. creating a release or adding a version does not publish it. have the administrator show you the project's workflow before using it for a live update.\n- **comments and tasks:** availability and controls vary with project configuration and permissions. use them for coordination when they are present.\n\nthese features are not guaranteed for every account in this studio. for detailed instructions on controls you have access to, see sanity's [user guides](https://www.sanity.io/docs/user-guides), including [history](https://www.sanity.io/docs/user-guides/history-experience). your project administrator can confirm what is enabled.\n\n## verify and get help\n\nfor a restored announcement, compare its public title, overview, body, and image after publishing. for missing access or history, include the document title and the action you need when requesting help. see [support](troubleshooting.md#ask-for-help)."
+	},
+	{
+		"id": "troubleshooting",
+		"title": "Troubleshooting and support",
+		"category": "Publishing and support",
+		"summary": "Find help with sign-in, missing changes, validation errors, images, and broken links.",
+		"keywords": [
+			"error",
+			"support",
+			"problem",
+			"not showing",
+			"404",
+			"disabled",
+			"help",
+			"broken"
+		],
+		"updatedAt": "2026-10-12",
+		"markdown": "Start with the symptom below. If the issue continues, contact your website maintainer with the details listed at the end of this article.\n\n## I cannot sign in or edit\n\nOpen your website's `/studio` address and sign in with the account invited to the Sanity project. If you have multiple accounts, check which one is active. For an access-denied message or missing editing/publishing controls, ask the project administrator to check your invitation and role.\n\n## Publish is disabled\n\nCheck the editor's validation messages and open each affected field. A post needs **Title**, **Slug**, **Overview**, and **Cover Image**. A page needs **Title**, **Slug**, and **Overview**. Home needs **Title** and **Description**. Timeline milestones require **Title** and **Duration**, and each timeline block allows at most two groups.\n\nWait for an image upload or document save to finish. Check for a connection warning. If all errors are resolved and publishing is still unavailable, confirm your role with the project administrator.\n\n## My changes are not on the website\n\n1. Confirm that you published the intended document, rather than only saving or previewing it.\n2. Confirm the field affects the section you are checking. Home's post list and Settings' menu list currently do not control the public listings or navigation.\n3. Open the correct public address outside draft preview, then refresh or use a private window.\n4. Check whether any linked documents also need publishing.\n5. If published content stays old, ask the maintainer to check the website's content refresh. Include the affected addresses and the time you published.\n\nSearch engines and social networks can retain older descriptions and images even after the website itself updates. Check the website first.\n\n## A page or post is not found\n\nCheck that the document is published and has the expected slug. Posts use `/posts/<slug>`; Pages use `/<slug>`. A slug change gives a new address and can leave old links broken. Check that a Page does not conflict with an existing route such as `about`, `contact`, `posts`, `studio`, or `api`.\n\nIf an intended navigation link is missing, remember that a Page is not automatically added to the menu. Ask the developer for navigation changes.\n\n## An image is missing or cropped badly\n\nWait for the upload, then verify that the field contains the selected image. Reopen its crop/hotspot controls and keep the important subject inside the crop. Check the listing, full post, and latest-update card, since they use different frames. Read [Work with photos](images.md).\n\nThe website logo is separate from uploaded post images. Replacing a cover image does not replace the logo.\n\n## Preview is different or will not open\n\nThe homepage preview currently uses a different layout from the public homepage. Use the public homepage to check its final layout after publishing. Previewing does not publish drafts.\n\nFor a missing page/post preview, generate its slug and wait for saving. Check that you are signed in and that the correct address is selected in Presentation. If preview reports an access/configuration problem or stays blank, send the error to the maintainer rather than changing unrelated content.\n\n## Posts or timeline dates look wrong\n\nPosts are ordered by **Publish Date**, not the time you last edited them. Set intentional dates and avoid relying on the ordering of missing or identical dates. A future date does not delay publication.\n\nTimeline date labels have a known display limitation. See [Build a timeline](timelines.md#current-date-limitation) and ask the maintainer to fix it if accurate displayed years are needed.\n\n## Ask for help\n\nUse the support contact shown below this guide if one is configured. Otherwise, contact the person who maintains the website or gave you Studio access.\n\nInclude the document title, website address, what you tried, what you expected, the exact error message, and roughly when it happened. A screenshot can help explain a layout or error. Do not include passwords or account tokens.\n\nFor editing questions, Sanity also provides [editor user guides](https://www.sanity.io/docs/user-guides/content-operations-cheatsheet). Your maintainer handles behavior specific to this website.",
+		"headings": [
+			{
+				"id": "i-cannot-sign-in-or-edit",
+				"title": "I cannot sign in or edit"
+			},
+			{
+				"id": "publish-is-disabled",
+				"title": "Publish is disabled"
+			},
+			{
+				"id": "my-changes-are-not-on-the-website",
+				"title": "My changes are not on the website"
+			},
+			{
+				"id": "a-page-or-post-is-not-found",
+				"title": "A page or post is not found"
+			},
+			{
+				"id": "an-image-is-missing-or-cropped-badly",
+				"title": "An image is missing or cropped badly"
+			},
+			{
+				"id": "preview-is-different-or-will-not-open",
+				"title": "Preview is different or will not open"
+			},
+			{
+				"id": "posts-or-timeline-dates-look-wrong",
+				"title": "Posts or timeline dates look wrong"
+			},
+			{
+				"id": "ask-for-help",
+				"title": "Ask for help"
+			}
+		],
+		"searchText": "troubleshooting and support find help with sign-in, missing changes, validation errors, images, and broken links. error support problem not showing 404 disabled help broken start with the symptom below. if the issue continues, contact your website maintainer with the details listed at the end of this article.\n\n## i cannot sign in or edit\n\nopen your website's `/studio` address and sign in with the account invited to the sanity project. if you have multiple accounts, check which one is active. for an access-denied message or missing editing/publishing controls, ask the project administrator to check your invitation and role.\n\n## publish is disabled\n\ncheck the editor's validation messages and open each affected field. a post needs **title**, **slug**, **overview**, and **cover image**. a page needs **title**, **slug**, and **overview**. home needs **title** and **description**. timeline milestones require **title** and **duration**, and each timeline block allows at most two groups.\n\nwait for an image upload or document save to finish. check for a connection warning. if all errors are resolved and publishing is still unavailable, confirm your role with the project administrator.\n\n## my changes are not on the website\n\n1. confirm that you published the intended document, rather than only saving or previewing it.\n2. confirm the field affects the section you are checking. home's post list and settings' menu list currently do not control the public listings or navigation.\n3. open the correct public address outside draft preview, then refresh or use a private window.\n4. check whether any linked documents also need publishing.\n5. if published content stays old, ask the maintainer to check the website's content refresh. include the affected addresses and the time you published.\n\nsearch engines and social networks can retain older descriptions and images even after the website itself updates. check the website first.\n\n## a page or post is not found\n\ncheck that the document is published and has the expected slug. posts use `/posts/<slug>`; pages use `/<slug>`. a slug change gives a new address and can leave old links broken. check that a page does not conflict with an existing route such as `about`, `contact`, `posts`, `studio`, or `api`.\n\nif an intended navigation link is missing, remember that a page is not automatically added to the menu. ask the developer for navigation changes.\n\n## an image is missing or cropped badly\n\nwait for the upload, then verify that the field contains the selected image. reopen its crop/hotspot controls and keep the important subject inside the crop. check the listing, full post, and latest-update card, since they use different frames. read [work with photos](images.md).\n\nthe website logo is separate from uploaded post images. replacing a cover image does not replace the logo.\n\n## preview is different or will not open\n\nthe homepage preview currently uses a different layout from the public homepage. use the public homepage to check its final layout after publishing. previewing does not publish drafts.\n\nfor a missing page/post preview, generate its slug and wait for saving. check that you are signed in and that the correct address is selected in presentation. if preview reports an access/configuration problem or stays blank, send the error to the maintainer rather than changing unrelated content.\n\n## posts or timeline dates look wrong\n\nposts are ordered by **publish date**, not the time you last edited them. set intentional dates and avoid relying on the ordering of missing or identical dates. a future date does not delay publication.\n\ntimeline date labels have a known display limitation. see [build a timeline](timelines.md#current-date-limitation) and ask the maintainer to fix it if accurate displayed years are needed.\n\n## ask for help\n\nuse the support contact shown below this guide if one is configured. otherwise, contact the person who maintains the website or gave you studio access.\n\ninclude the document title, website address, what you tried, what you expected, the exact error message, and roughly when it happened. a screenshot can help explain a layout or error. do not include passwords or account tokens.\n\nfor editing questions, sanity also provides [editor user guides](https://www.sanity.io/docs/user-guides/content-operations-cheatsheet). your maintainer handles behavior specific to this website."
+	},
+	{
+		"id": "checklist",
+		"title": "Before you publish",
+		"category": "Publishing and support",
+		"summary": "A short checklist for clear, accurate, and complete website updates.",
+		"keywords": [
+			"checklist",
+			"review",
+			"publish",
+			"proofread",
+			"verify"
+		],
+		"updatedAt": "2026-10-12",
+		"markdown": "Use this checklist before publishing a new item or updating an existing one.\n\n## Check the content\n\n- The title tells readers what the update is about.\n- Names, dates, times, addresses, and contact details have been confirmed.\n- The overview makes sense on its own and matches the full story.\n- Old event dates and instructions have been removed from reused content.\n- Paragraphs and lists are easy to read, and links go to the intended pages.\n\n## Check the images and address\n\n- The cover or body photos are appropriate and the pantry has permission to use them.\n- Important subjects remain visible in the relevant crops.\n- Meaningful body images have **Alt text**; captions are accurate where used.\n- A new document has a clear, valid slug. An existing slug stays the same unless you intended to change the address and arranged updated links or redirects.\n- A custom Page does not conflict with a fixed website route.\n\n## Check publishing\n\n- All required fields are complete and validation errors are resolved.\n- The draft has finished saving.\n- **Publish Date** is correct for post ordering; a future date is not being used as a substitute for scheduling.\n- Referenced documents are published where needed.\n- Preview has been checked where available. The current homepage preview does not match the public layout.\n\n## Check the public result\n\nAfter publishing, open the website outside draft preview. Check the individual post/page, links, and any affected shared areas. For a new latest post, check `/posts` and the homepage's latest-update section. For Settings changes, check the footer or sharing-image result as appropriate.\n\nIf something is wrong, edit the document, review, and publish the correction. For persistent problems, see [Troubleshooting and support](troubleshooting.md).",
+		"headings": [
+			{
+				"id": "check-the-content",
+				"title": "Check the content"
+			},
+			{
+				"id": "check-the-images-and-address",
+				"title": "Check the images and address"
+			},
+			{
+				"id": "check-publishing",
+				"title": "Check publishing"
+			},
+			{
+				"id": "check-the-public-result",
+				"title": "Check the public result"
+			}
+		],
+		"searchText": "before you publish a short checklist for clear, accurate, and complete website updates. checklist review publish proofread verify use this checklist before publishing a new item or updating an existing one.\n\n## check the content\n\n- the title tells readers what the update is about.\n- names, dates, times, addresses, and contact details have been confirmed.\n- the overview makes sense on its own and matches the full story.\n- old event dates and instructions have been removed from reused content.\n- paragraphs and lists are easy to read, and links go to the intended pages.\n\n## check the images and address\n\n- the cover or body photos are appropriate and the pantry has permission to use them.\n- important subjects remain visible in the relevant crops.\n- meaningful body images have **alt text**; captions are accurate where used.\n- a new document has a clear, valid slug. an existing slug stays the same unless you intended to change the address and arranged updated links or redirects.\n- a custom page does not conflict with a fixed website route.\n\n## check publishing\n\n- all required fields are complete and validation errors are resolved.\n- the draft has finished saving.\n- **publish date** is correct for post ordering; a future date is not being used as a substitute for scheduling.\n- referenced documents are published where needed.\n- preview has been checked where available. the current homepage preview does not match the public layout.\n\n## check the public result\n\nafter publishing, open the website outside draft preview. check the individual post/page, links, and any affected shared areas. for a new latest post, check `/posts` and the homepage's latest-update section. for settings changes, check the footer or sharing-image result as appropriate.\n\nif something is wrong, edit the document, review, and publish the correction. for persistent problems, see [troubleshooting and support](troubleshooting.md)."
+	}
+]

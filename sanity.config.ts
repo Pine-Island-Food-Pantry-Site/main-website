@@ -11,6 +11,7 @@ import { presentationTool } from 'sanity/presentation'
 // import { unsplashImageAsset } from 'sanity-plugin-asset-source-unsplash'
 
 import { apiVersion, dataset, projectId, studioUrl } from '@/sanity/lib/api'
+import { helpPlugin } from '@/sanity/plugins/help'
 import { locate } from '@/sanity/plugins/locate'
 import { pageStructure, singletonPlugin } from '@/sanity/plugins/settings'
 import page from '@/sanity/schemas/documents/page'
@@ -60,6 +61,7 @@ export default defineConfig({
 		}),
 		// Configures the global "new document" button, and document actions, to suit the Settings document singleton
 		singletonPlugin([home.name, settings.name]),
+		helpPlugin({ supportEmail: process.env.NEXT_PUBLIC_CMS_SUPPORT_EMAIL }),
 		// Add an image asset source for Unsplash
 		// unsplashImageAsset({
 		// 	// If you don't have an Unsplash API key, you can disable the plugin
