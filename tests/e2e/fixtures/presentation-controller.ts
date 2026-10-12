@@ -8,6 +8,23 @@ import {
 } from '@sanity/presentation-comlink'
 import type { ClientPerspective, ContentSourceMap } from 'next-sanity'
 
+function previewPath(requestedPath: string | null): string {
+	// Return constants so the fixture cannot load arbitrary URLs or script schemes.
+	switch (requestedPath) {
+		case '/':
+			return '/'
+		case '/posts?search=fixture':
+			return '/posts?search=fixture'
+		case '/fixture-custom-page':
+			return '/fixture-custom-page'
+		case '/posts/fixture-pantry-announcement':
+			return '/posts/fixture-pantry-announcement'
+		default:
+			throw new Error('The preview fixture only supports known local routes')
+	}
+}
+
+const path = previewPath(new URL(location.href).searchParams.get('path'))
 const iframe = document.querySelector<HTMLIFrameElement>('#preview')
 if (!iframe?.contentWindow) throw new Error('Preview iframe is missing')
 const controller = createController({ targetOrigin: location.origin })
@@ -196,7 +213,7 @@ window.presentationFixture = {
 }
 loaders.start()
 overlays.start()
-iframe.src = new URL(location.href).searchParams.get('path') || '/'
+iframe.src = path
 
 declare global {
 	interface Window {

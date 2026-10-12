@@ -39,7 +39,7 @@ async function enableLocalPreview(
 	])
 }
 
-async function openPreview(page: Page, path: string) {
+async function mountPreview(page: Page, path: string) {
 	await page.route('**/__presentation-fixture?*', (route) =>
 		route.fulfill({
 			contentType: 'text/html',
@@ -48,11 +48,34 @@ async function openPreview(page: Page, path: string) {
 	)
 	await page.goto(`/__presentation-fixture?path=${encodeURIComponent(path)}`)
 	await page.addScriptTag({ content: controllerScript })
+}
+
+async function openPreview(page: Page, path: string) {
+	await mountPreview(page, path)
 	await expect
 		.poll(() => page.evaluate(() => window.presentationFixture.connected))
 		.toBe(true)
 	return page.frameLocator('#preview')
 }
+
+test('the preview fixture rejects script schemes and arbitrary URLs', async ({
+	page,
+}) => {
+	const errors: string[] = []
+	page.on('pageerror', (error) => errors.push(error.message))
+	for (const path of [
+		'javascript:alert(1)',
+		'https://example.com/',
+		'//example.com/',
+		'/api/draft',
+	]) {
+		await mountPreview(page, path)
+		await expect(page.locator('#preview')).not.toHaveAttribute('src')
+	}
+	expect(errors).toHaveLength(4)
+	for (const error of errors)
+		expect(error).toBe('The preview fixture only supports known local routes')
+})
 
 test('public requests ignore a perspective cookie without authorised draft mode', async ({
 	page,
