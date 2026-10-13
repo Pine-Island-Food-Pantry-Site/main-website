@@ -88,7 +88,7 @@ These are findings from code inspection, not verified production behavior. Decid
 
 1. **Home post selection is disconnected.** The schema exposes `Posts`, the home query requests `showcaseProjects`, the home component expects `posts`, and the public homepage selects its latest post separately. Establish the intended behavior before describing a selection workflow.
 2. **Menu settings do not control navigation.** The navbar renders fixed links and ignores `menuItems`. Connect the field, or label/hide it so admins do not expect an edit to affect the site.
-3. **Homepage preview differs from the public homepage.** Draft mode renders a different home component and query from the public landing page. Verify and align preview before presenting it as an accurate homepage preview.
+3. **Homepage preview alignment (resolved in #45).** Draft and public views now share the landing-page renderer and latest-post query, with live cover-image/overview editing and accurate document locations. The publishing guide explains perspectives and fixed content.
 4. **Timeline date fields and rendering disagree.** The schema stores `duration.publishedAt`, while the milestone renderer reads `duration.start` and `duration.end`. Resolve the intended date format before writing this tutorial.
 5. **Overview validation counts blocks.** `max(155)` is applied to an array, so it does not enforce a 155-character description. A short description can be editorial advice; do not describe this as an enforced character limit unless validation changes.
 6. **Body-image alt fallback differs from the field description.** The schema promises fallback to caption, but the renderer passes only `alt`. Correct the behavior or description before documenting the fallback.

@@ -52,9 +52,10 @@ export interface PagePayload {
 }
 
 export interface PostPayload {
+	_id: string
 	coverImage?: Image
 	description?: PortableTextBlock[]
-	duration?: string
+	duration?: { publishedAt?: string }
 	overview?: PortableTextBlock[]
 	slug: string
 	tags?: string[]
@@ -62,6 +63,7 @@ export interface PostPayload {
 }
 
 export interface LandingPagePayload {
+	_id?: string
 	coverImage?: Image
 	overview?: PortableTextBlock[]
 	slug?: string

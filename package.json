@@ -9,6 +9,7 @@
 		"docs:generate": "node scripts/generate-cms-help.mjs",
 		"docs:check": "node scripts/generate-cms-help.mjs --check",
 		"test:docs": "node --test tests/cms-help.test.mjs",
+		"test:presentation": "node --test tests/presentation.test.mjs && playwright test --config playwright.presentation.config.ts",
 		"prebuild": "npm run docs:generate",
 		"predev": "npm run docs:generate",
 		"build": "next build",
@@ -49,6 +50,8 @@
 	"devDependencies": {
 		"@biomejs/biome": "^2.5.15",
 		"@playwright/test": "^1.63.0",
+		"@sanity/comlink": "^4.0.3",
+		"@sanity/presentation-comlink": "^2.2.3",
 		"@tailwindcss/postcss": "^4.3.3",
 		"@types/node": "^26.6.4",
 		"@types/react": "^19.3.0",
@@ -56,6 +59,8 @@
 		"@typescript/native-preview": "^7.0.0-dev.20260707.2",
 		"autoprefixer": "^10.6.1",
 		"baseline-browser-mapping": "^2.11.27",
+		"esbuild": "^0.28.2",
+		"groq-js": "^2.0.0",
 		"postcss": "^8.5.29",
 		"tailwindcss": "^4.3.3",
 		"typescript": "7.0.2"

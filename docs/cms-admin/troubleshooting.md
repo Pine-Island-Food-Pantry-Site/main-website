@@ -34,7 +34,9 @@ The website logo is separate from uploaded post images. Replacing a cover image 
 
 ## Preview is different or will not open
 
-The homepage preview currently uses a different layout from the public homepage. Use the public homepage to check its final layout after publishing. Previewing does not publish drafts.
+Check the selected **Drafts** or **Published** perspective. Saved changes appear in Drafts; the public website uses published content. The homepage's latest update is selected by **Publish Date**, so it may show a different post between perspectives. Previewing does not publish drafts.
+
+Enable **Edit** to see controls for CMS content. Fixed homepage copy and navigation have no editing controls; ask the developer to change them. A preview opened from Presentation can stay connected in a separate window; ordinary standalone browsing leaves draft mode automatically.
 
 For a missing page/post preview, generate its slug and wait for saving. Check that you are signed in and that the correct address is selected in Presentation. If preview reports an access/configuration problem or stays blank, send the error to the maintainer rather than changing unrelated content.
 

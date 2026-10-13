@@ -34,7 +34,9 @@ Set `NEXT_PUBLIC_CMS_SUPPORT_EMAIL` to the maintainer's approved contact address
 
 Review the relevant articles whenever schemas, frontend rendering, routes, preview, or Studio actions change. Use the actual deployed Studio labels. Check which subscription/role features are available before promising history retention, scheduling, comments, tasks, or releases.
 
-The guide describes current behavior, including unused Home post/menu lists, the homepage-preview mismatch, and timeline date-display limitations. Remove those notes and update the corresponding field descriptions when a fix is shipped. Migrating fixed website content into the CMS is separate work.
+The guide describes current behavior, including unused Home post/menu lists and timeline date-display limitations. Remove those notes and update the corresponding field descriptions when a fix is shipped. Presentation uses the same homepage and post-listing renderers as the public website, with live CMS field targets. Migrating fixed website content into the CMS is separate work.
+
+Run `npm run test:presentation` when changing preview behavior. It builds and starts the website on port 3100, then checks desktop/mobile previews using an in-memory Presentation controller. It requires the usual local Sanity read configuration and Playwright Chromium (`npx playwright install chromium`). The fixture supplies draft updates and field source maps without saving or publishing content to the dataset. These checks also run in the UI Tests workflow.
 
 The generator keeps its own deterministic JSON formatting; Biome's formatter is disabled only for that generated file. Validation of the sources and generated output remains available through the documentation commands.
 

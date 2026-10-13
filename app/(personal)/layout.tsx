@@ -4,6 +4,7 @@ import { toPlainText } from '@portabletext/react'
 import type { Metadata, Viewport } from 'next'
 import dynamic from 'next/dynamic'
 import { draftMode } from 'next/headers'
+import { VisualEditing } from 'next-sanity/visual-editing'
 import { Suspense } from 'react'
 
 import { Footer } from '@/components/global/Footer'
@@ -63,7 +64,12 @@ export default async function IndexRoute({
 					<Footer />
 				</Suspense>
 			</div>
-			{(await draftMode()).isEnabled && <LiveVisualEditing />}
+			{(await draftMode()).isEnabled ? (
+				<Suspense>
+					<LiveVisualEditing />
+					<VisualEditing />
+				</Suspense>
+			) : null}
 		</>
 	)
 }
