@@ -1,0 +1,30 @@
+{
+  "cli_version": "0.10.7-nightly.202609190623.ae303f31d",
+  "checkpoint_id": "18a6dab87d76",
+  "strategy": "manual-commit",
+  "branch": "feat/dark-mode-night-sky",
+  "checkpoints_count": 9,
+  "files_touched": [
+    "styles/about.module.css",
+    "styles/contact.module.css",
+    "styles/index.css",
+    "styles/landing.module.css",
+    "styles/navbar.module.css"
+  ],
+  "sessions": [
+    {
+      "metadata": "/18/a6dab87d76/0/metadata.json",
+      "transcript": "/18/a6dab87d76/0/full.jsonl",
+      "compact_transcript": "/18/a6dab87d76/0/transcript.jsonl",
+      "content_hash": "/18/a6dab87d76/0/content_hash.txt",
+      "prompt": "/18/a6dab87d76/0/prompt.txt"
+    }
+  ],
+  "token_usage": {
+    "input_tokens": 252,
+    "cache_creation_tokens": 265345,
+    "cache_read_tokens": 13731084,
+    "output_tokens": 72516,
+    "api_call_count": 126
+  }
+}

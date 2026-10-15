@@ -1,0 +1,33 @@
+ok so on the dark mode of this site, the color scheme does not look great. DO NOT mess with the light theme, that it the real base design. we need to make dark mode gradient background look and feel more like a night sky in the sub tropics. feels free to start the dev server and chrome mcp if you ened to look at the site for ref
+
+---
+
+great job! lets try to add subtle borders around the navbar and the cards that appear over that background. but just in dark mode
+
+---
+
+ok lets see if we can make the green svg anchors look better in dark mode and either make the gap abouve the fotter bigger in hieght or get rid of it. it looks off now
+
+---
+
+lets try making the anchors the same gradient as the buttons
+
+---
+
+Great job but there are two sets of anchor SVGs. You only did the bottom one. Do the top too
+
+---
+
+do the food pattern too and apply the gradient to light mode as well for the same items
+
+---
+
+on light mode add a 1px black border around the svgs and also fix the footer gap on light mode too
+
+---
+
+contact page has a black gap right underneath the nav on contact page
+
+---
+
+lets fix those e2e tests real quick
