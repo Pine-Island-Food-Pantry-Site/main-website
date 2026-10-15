@@ -1,5 +1,5 @@
 .container {
-	margin-top: 0;
+	margin-top: var(--nav-offset);
 	min-height: 100vh;
 	padding-bottom: 10vh;
 	display: flex;
@@ -57,7 +57,7 @@
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	box-shadow: var(--drop-shadow-1);
+	box-shadow: var(--card-edge), var(--drop-shadow-1);
 }
 
 .reach_inner_card {
@@ -97,7 +97,7 @@
 	padding: 1em;
 	width: 100%;
 	max-width: 1000px;
-	box-shadow: var(--drop-shadow-1);
+	box-shadow: var(--card-edge), var(--drop-shadow-1);
 	border-radius: 10px;
 }
 
@@ -164,10 +164,4 @@
 	margin-top: 0.75rem;
 	text-align: center;
 	font-size: 0.875rem;
-}
-
-@media screen and (min-width: 768px) {
-	.container {
-		margin-top: 1em;
-	}
 }
