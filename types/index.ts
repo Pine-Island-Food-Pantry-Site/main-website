@@ -18,6 +18,11 @@ export interface MilestoneItem {
 	title?: string
 }
 
+export type PostListItemPayload = Pick<
+	PostPayload,
+	'_id' | 'coverImage' | 'overview' | 'slug' | 'title'
+>
+
 export interface Posts {
 	_type: string
 	coverImage?: Image

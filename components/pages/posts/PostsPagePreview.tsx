@@ -4,7 +4,7 @@ import type { QueryResponseInitial } from '@sanity/react-loader'
 
 import { allPostsQuery } from '@/sanity/lib/queries'
 import { useQuery } from '@/sanity/loader/useQuery'
-import type { PostPayload } from '@/types'
+import type { PostListItemPayload } from '@/types'
 
 import PostsPage, { type PostsPageSearchParams } from './PostsPage'
 
@@ -12,10 +12,10 @@ export default function PostsPagePreview({
 	initial,
 	searchParams,
 }: {
-	initial: QueryResponseInitial<PostPayload[]>
+	initial: QueryResponseInitial<PostListItemPayload[]>
 	searchParams?: PostsPageSearchParams
 }) {
-	const { data, encodeDataAttribute } = useQuery<PostPayload[]>(
+	const { data, encodeDataAttribute } = useQuery<PostListItemPayload[]>(
 		allPostsQuery,
 		{},
 		{ initial },

@@ -62,16 +62,15 @@ export const latestPostQuery = groq`
   }
 `
 
-// groq query to get all posts
+// groq query to get all posts for the listing page. Fetch only the fields the
+// listing renders: in draft mode every string carries stega edit markers, so
+// full post bodies would multiply the preview payload.
 export const allPostsQuery = groq`
   *[_type == "post"] | order(duration.publishedAt desc) {
     _id,
     coverImage,
-    description,
-    duration,
     overview,
     "slug": slug.current,
-    tags,
     title,
   }
 `
