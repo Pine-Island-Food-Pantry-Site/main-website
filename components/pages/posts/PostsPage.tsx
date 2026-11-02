@@ -8,7 +8,7 @@ import Pagination from '@/components/Posts/Pagination'
 import PostsList from '@/components/Posts/PostsList'
 import SearchForm from '@/components/Posts/SearchForm'
 import styles from '@/styles/posts.module.css'
-import type { PostPayload } from '@/types'
+import type { PostListItemPayload } from '@/types'
 
 export type PostsPageSearchParams = {
 	search?: string | string[]
@@ -35,7 +35,7 @@ export default function PostsPage({
 	searchParams: resolvedSearchParams,
 	encodeDataAttribute,
 }: {
-	data: PostPayload[]
+	data: PostListItemPayload[]
 	searchParams?: PostsPageSearchParams
 	encodeDataAttribute?: EncodeDataAttributeCallback
 }) {

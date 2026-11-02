@@ -21,6 +21,7 @@ import type {
 	HomePagePayload,
 	LandingPagePayload,
 	PagePayload,
+	PostListItemPayload,
 	PostPayload,
 	SettingsPayload,
 } from '@/types'
@@ -117,7 +118,7 @@ export function loadPage(slug: string) {
 }
 
 export function loadAllPosts() {
-	return loadQuery<PostPayload[]>(
+	return loadQuery<PostListItemPayload[]>(
 		allPostsQuery,
 		{},
 		{ next: { tags: ['post'] } },
