@@ -1,0 +1,9 @@
+update npm packages and switch vercel to node 26 it is supported now
+
+---
+
+2 fix the preview
+
+---
+
+commit and pr
