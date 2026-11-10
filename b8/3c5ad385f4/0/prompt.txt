@@ -1,0 +1,1 @@
+lets exclude next-env.d.ts file too, and fix logo.svg
