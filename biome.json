@@ -7,7 +7,7 @@
 	},
 	"files": {
 		"ignoreUnknown": true,
-		"includes": ["**", "!!.sanity", "!!.claude", "!!.entire"]
+		"includes": ["**", "!!.sanity", "!!.claude", "!!.entire", "!next-env.d.ts"]
 	},
 	"overrides": [
 		{
