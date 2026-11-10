@@ -1,0 +1,40 @@
+{
+  "cli_version": "0.12.3-nightly.202610300619.cea1b3cee",
+  "checkpoint_id": "80e3eb7d9937",
+  "strategy": "manual-commit",
+  "branch": "chore/deps-2026-11",
+  "checkpoints_count": 1,
+  "files_touched": [
+    "vercel.json"
+  ],
+  "sessions": [
+    {
+      "metadata": "/80/e3eb7d9937/0/metadata.json",
+      "transcript": "/80/e3eb7d9937/0/full.jsonl",
+      "compact_transcript": "/80/e3eb7d9937/0/transcript.jsonl",
+      "content_hash": "/80/e3eb7d9937/0/content_hash.txt",
+      "prompt": "/80/e3eb7d9937/0/prompt.txt"
+    }
+  ],
+  "token_usage": {
+    "input_tokens": 32,
+    "cache_creation_tokens": 16011,
+    "cache_read_tokens": 1176487,
+    "output_tokens": 6375,
+    "api_call_count": 15
+  },
+  "redaction": {
+    "replacements": 18,
+    "layers": {
+      "betterleaks": 0,
+      "connection_string": 0,
+      "credential_key": 0,
+      "credential_value": 9,
+      "credentialed_uri": 0,
+      "entropy": 5,
+      "key_context": 4,
+      "provider_token": 0,
+      "shell_stdin": 0
+    }
+  }
+}
