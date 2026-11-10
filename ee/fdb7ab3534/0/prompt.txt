@@ -1,0 +1,5 @@
+ok we need to update next js and hte rest of the deps again
+
+---
+
+lets first andd claude and entire settings files to opt out of linting. then commit and pr
