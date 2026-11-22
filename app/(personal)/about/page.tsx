@@ -120,8 +120,6 @@ const About: React.FC = () => {
 					<dt>Treasurer</dt>
 					<dd className={styles.title}>Diane Gleason</dd>
 					<dt>Board Member</dt>
-					<dd className={styles.title}>Barb Vadas</dd>
-					<dt>Board Member</dt>
 					<dd className={styles.title}>Howie Loyson</dd>
 					<dt>Board Member</dt>
 					<dd className={styles.title}>Rob Hobneier</dd>
