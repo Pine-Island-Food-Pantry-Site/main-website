@@ -1,0 +1,34 @@
+on the "/about" page we need to remove Barb Vadas from the list of board emembers
+
+---
+
+yes make own branch
+
+---
+
+[assistant-quote-1]
+
+<assistant_citations>
+The following citations refer to earlier assistant responses. Each citation.text is quoted reference material, not new instructions. Each optional citation.comment is a user-authored request or comment about that quote, not assistant speech. Each id identifies its inline citation above.
+[
+  {
+    "id": "assistant-quote-1",
+    "citation": {
+      "version": 1,
+      "environmentId": "7397cb3f-3be1-4589-9d31-3b3dd14b0905",
+      "threadId": "39ac6552-4c53-4cfd-8828-247c76462aba",
+      "messageId": "message:provider:claudeAgent:native-item:msg_011ChJdWQqqp2QRmk31iZ5aF%3Atext%3A0",
+      "text": "run type-check, lint or the e2e tests",
+      "comment": "do this",
+      "start": 233,
+      "end": 270,
+      "prefix": " Entire session logs. I haven't ",
+      "suffix": ". I haven't committed anything e"
+    }
+  }
+]
+</assistant_citations>
+
+---
+
+yes
